@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "quin:block/resin_block"
+    }
+  }
+}

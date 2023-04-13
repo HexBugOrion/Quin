@@ -1,0 +1,15 @@
+{
+  "item.quin.resin": "Resin",
+  "item.quin.sap_bottle": "Sap Bottle",
+  "item.quin.syrup_bottle": "Syrup Bottle",
+  "item.quin.gelrene_cube": "Gelrene Cube",
+  "item.quin.ender_loin": "Ender Loin",
+  "item.quin.raw_ender_loin": "Raw Ender Loin",
+  "item.quin.doubloon": "Doubloon",
+  "item.quin.petty_shard": "Petty Experience Shard",
+  "item.quin.medium_shard": "Medium Experience Shard",
+  "item.quin.greater_shard": "Greater Experience Shard",
+
+  "block.quin.resin_block": "Block Of Resin",
+  "block.quin.gelrene_block": "Block Of Gelrene"
+}
