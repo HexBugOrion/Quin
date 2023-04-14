@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "bottom": "quin:block/tree_tap_bottom",
+    "front": "quin:block/tree_tap_front_filled",
+    "particle": "quin:block/tree_tap_side",
+    "side": "quin:block/tree_tap_side",
+    "top": "quin:block/tree_tap_top"
+  }
+}

@@ -24,7 +24,7 @@ public class CommonRegistry {
     public static final Item RESIN = new Item(new FabricItemSettings());
     public static final Block RESIN_BLOCK = new Block(FabricBlockSettings.of(Material.ORGANIC_PRODUCT).sounds(BlockSoundGroup.PACKED_MUD).strength(0,0));
 
-    public static final TreeTapBlock TREE_TAP = new TreeTapBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).strength(2,3));
+    public static final TreeTapBlock TREE_TAP = new TreeTapBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).strength(2,3).requiresTool());
 
     public static final Item RESIN_CHISEL = new Item(new FabricItemSettings().maxDamage(238));
 

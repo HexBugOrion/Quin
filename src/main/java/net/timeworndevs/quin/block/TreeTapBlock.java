@@ -28,8 +28,9 @@ import net.timeworndevs.quin.common.CommonRegistry;
 import org.jetbrains.annotations.Nullable;
 
 public class TreeTapBlock extends HorizontalFacingBlock {
-    public static final int MAX_LEVEL = 3;
-    public static final IntProperty FILL_LEVEL;
+
+    public static final IntProperty FILL_LEVEL = IntProperty.of("fill_level", 0, 2);
+
 
     public TreeTapBlock(Settings settings) {
         super(settings);
@@ -79,6 +80,7 @@ public class TreeTapBlock extends HorizontalFacingBlock {
             }if (!world.isClient()) {
                 player.incrementStat(Stats.USED.getOrCreateStat(item));
             }
+            world.setBlockState(pos, state.with(FILL_LEVEL, 0));
             return ActionResult.SUCCESS;
         } else {
             return ActionResult.FAIL;
@@ -129,9 +131,5 @@ public class TreeTapBlock extends HorizontalFacingBlock {
 
     public boolean canPathfindThrough(BlockState state, BlockView world, BlockPos pos, NavigationType type) {
         return false;
-    }
-
-    static {
-        FILL_LEVEL = Properties.AGE_3;
     }
 }
