@@ -12,8 +12,10 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.stat.Stats;
+import net.minecraft.state.StateManager;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Properties;
+import net.minecraft.state.property.Property;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
@@ -55,43 +57,10 @@ public class TreeTapBlock extends HorizontalFacingBlock {
         dropStack(world, pos, new ItemStack(CommonRegistry.RESIN, 1));
     }
 
-    /*
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         ItemStack itemStack = player.getStackInHand(hand);
         int i = (Integer)state.get(FILL_LEVEL);
-        if (i >= 3) {
-            Item item = itemStack.getItem();
-            if (itemStack.isOf(CommonRegistry.RESIN_CHISEL)) {
-                world.playSound(player, player.getX(), player.getY(), player.getZ(), SoundEvents.BLOCK_BEEHIVE_SHEAR, SoundCategory.BLOCKS, 1.0f, 1.0f);
-                dropResin(world, pos);
-                itemStack.damage(1, player, (playerx)-> {
-                    playerx.sendToolBreakStatus(hand);
-                });
-                world.emitGameEvent(player, GameEvent.SHEAR, pos);
-            } else if (itemStack.isOf(Items.GLASS_BOTTLE)) {
-                itemStack.decrement(1);
-                world.playSound(player, player.getX(), player.getY(), player.getZ(), SoundEvents.ITEM_BOTTLE_FILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
-                if (itemStack.isEmpty()) {
-                    player.setStackInHand(hand, new ItemStack(CommonRegistry.SAP_BOTTLE));
-                } else if (!player.getInventory().insertStack(new ItemStack(CommonRegistry.SAP_BOTTLE))) {
-                    player.dropItem(new ItemStack(CommonRegistry.SAP_BOTTLE), false);
-                }
-
-                world.emitGameEvent(player, GameEvent.FLUID_PICKUP, pos);
-            }if (!world.isClient()) {
-                player.incrementStat(Stats.USED.getOrCreateStat(item));
-            }
-
-        } else {
-            return super.onUse(state, world, pos, player, hand, hit);
-        }
-    }
-     */
-
-    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-        ItemStack itemStack = player.getStackInHand(hand);
-        int i = (Integer)state.get(FILL_LEVEL);
-        if (i >= 3) {
+        if (i >= 2) {
             Item item = itemStack.getItem();
             if (itemStack.isOf(CommonRegistry.RESIN_CHISEL)) {
                 world.playSound(player, player.getX(), player.getY(), player.getZ(), SoundEvents.BLOCK_BEEHIVE_SHEAR, SoundCategory.BLOCKS, 1.0f, 1.0f);
@@ -155,6 +124,10 @@ public class TreeTapBlock extends HorizontalFacingBlock {
 
     public void grow(ServerWorld world, Random random, BlockPos pos, BlockState state) {
         world.setBlockState(pos, (BlockState)state.with(FILL_LEVEL, (Integer)state.get(FILL_LEVEL) + 1), 2);
+    }
+
+    protected void appendProperties(StateManager.Builder<Block, BlockState> builder){
+        builder.add(new Property[]{FACING, FILL_LEVEL});
     }
 
     public boolean canPathfindThrough(BlockState state, BlockView world, BlockPos pos, NavigationType type) {
