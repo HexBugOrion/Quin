@@ -5,19 +5,16 @@
     "I": {
     "item": "minecraft:iron_ingot"
   },
-    "C": {
-    "item": "minecraft:cauldron"
-  },
-    "#": {
-      "tag": "minecraft:planks"
+    "/": {
+      "item": "minecraft:stick"
     }
   },
   "pattern": [
-    "## ",
-    "IC "
+    "II ",
+    " / "
   ],
   "result": {
-    "item": "quin:tree_tap"
+    "item": "quin:resin_chisel"
   },
   "show_notification": true
 }
