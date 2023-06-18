@@ -5,7 +5,7 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
-import net.minecraft.block.Material;
+import net.minecraft.block.MapColor;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -25,9 +25,9 @@ public class CommonRegistry {
     }
 
     public static final Item RESIN = new Item(new FabricItemSettings());
-    public static final Block RESIN_BLOCK = new Block(FabricBlockSettings.of(Material.ORGANIC_PRODUCT).sounds(BlockSoundGroup.PACKED_MUD).strength(0,0));
+    public static final Block RESIN_BLOCK = new Block(FabricBlockSettings.of().mapColor(MapColor.BROWN).sounds(BlockSoundGroup.PACKED_MUD).strength(0,0));
 
-    public static final TreeTapBlock TREE_TAP = new TreeTapBlock(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).strength(2,3).requiresTool());
+    public static final TreeTapBlock TREE_TAP = new TreeTapBlock(FabricBlockSettings.of().mapColor(MapColor.OAK_TAN).sounds(BlockSoundGroup.WOOD).strength(2,3).requiresTool());
 
     public static final Item RESIN_CHISEL = new Item(new FabricItemSettings().maxDamage(238));
 
@@ -40,7 +40,7 @@ public class CommonRegistry {
     //public static final Item DOUBLOON = new Item(new FabricItemSettings());
 
     //public static final Item GELRENE_CUBE = new Item(new FabricItemSettings());
-    public static final Block GELRENE_BLOCK = new Block(FabricBlockSettings.of(Material.SOLID_ORGANIC).sounds(BlockSoundGroup.CALCITE));
+    public static final Block GELRENE_BLOCK = new Block(FabricBlockSettings.of().mapColor(MapColor.PALE_GREEN).sounds(BlockSoundGroup.CALCITE));
 
     //public static final PettyEXPShardItem PETTY_EXP_SHARD = new PettyEXPShardItem(new FabricItemSettings());
     //public static final MediumEXPShardItem MEDIUM_EXP_SHARD = new MediumEXPShardItem(new FabricItemSettings());

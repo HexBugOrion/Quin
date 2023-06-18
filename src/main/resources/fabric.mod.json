@@ -6,16 +6,16 @@
   "name": "Quin",
   "description": "A Vanilla+ with NO worldgen at all!",
   "authors": [
-    "Me!"
+    "{VoxelDragon6} (Author, developer, spriter)",
+    "TigerWolf (Emotional support)",
+    "The Mavensburg Community (Ideas)"
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
     "sources": "https://github.com/FabricMC/fabric-example-mod"
   },
-
   "license": "MIT",
   "icon": "assets/modid/icon.png",
-
   "environment": "*",
   "entrypoints": {
     "main": [
@@ -28,11 +28,10 @@
   "mixins": [
 
   ],
-
   "depends": {
-    "fabricloader": ">=0.14.9",
+    "fabricloader": ">=0.14.21",
     "fabric-api": "*",
-    "minecraft": "~1.19",
+    "minecraft": "~1.20.1",
     "java": ">=17"
   },
   "suggests": {
