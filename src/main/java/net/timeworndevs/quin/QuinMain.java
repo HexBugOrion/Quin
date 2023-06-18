@@ -1,7 +1,7 @@
 package net.timeworndevs.quin;
 
 import net.fabricmc.api.ModInitializer;
-import net.minecraft.block.BeehiveBlock;
+import net.minecraft.block.Blocks;
 import net.timeworndevs.quin.common.CommonRegistry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,7 +12,6 @@ public class QuinMain implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-
 		CommonRegistry.register();
 	}
 }

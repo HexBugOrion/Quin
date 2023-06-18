@@ -20,6 +20,9 @@
   "entrypoints": {
     "main": [
       "net.timeworndevs.quin.QuinMain"
+    ],
+    "fabric-datagen": [
+      "net.timeworndevs.datagen.DataGenMain"
     ]
   },
   "mixins": [

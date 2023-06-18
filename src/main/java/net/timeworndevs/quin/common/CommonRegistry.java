@@ -19,7 +19,10 @@ import net.timeworndevs.quin.item.PettyEXPShardItem;
 
 public class CommonRegistry {
 
-
+    //preparations for registry rework
+    private static Block registerBlock(String id, Block block) {
+        return (Block)Registry.register(Registries.BLOCK, id, block);
+    }
 
     public static final Item RESIN = new Item(new FabricItemSettings());
     public static final Block RESIN_BLOCK = new Block(FabricBlockSettings.of(Material.ORGANIC_PRODUCT).sounds(BlockSoundGroup.PACKED_MUD).strength(0,0));
@@ -31,17 +34,19 @@ public class CommonRegistry {
     public static final Item SAP_BOTTLE = new Item(new FabricItemSettings().maxCount(16));
     public static final Item SYRUP_BOTTLE = new HoneyBottleItem(new FabricItemSettings().maxCount(16).food(FoodComponents.HONEY_BOTTLE).recipeRemainder(Items.GLASS_BOTTLE));
 
-    public static final Item ENDER_LOIN = new Item(new FabricItemSettings());
-    public static final Item RAW_ENDER_LOIN = new Item(new FabricItemSettings());
+    //public static final Item ENDER_LOIN = new Item(new FabricItemSettings());
+    //public static final Item RAW_ENDER_LOIN = new Item(new FabricItemSettings());
 
-    public static final Item DOUBLOON = new Item(new FabricItemSettings());
+    //public static final Item DOUBLOON = new Item(new FabricItemSettings());
 
-    public static final Item GELRENE_CUBE = new Item(new FabricItemSettings());
+    //public static final Item GELRENE_CUBE = new Item(new FabricItemSettings());
     public static final Block GELRENE_BLOCK = new Block(FabricBlockSettings.of(Material.SOLID_ORGANIC).sounds(BlockSoundGroup.CALCITE));
 
-    public static final PettyEXPShardItem PETTY_EXP_SHARD = new PettyEXPShardItem(new FabricItemSettings());
-    public static final MediumEXPShardItem MEDIUM_EXP_SHARD = new MediumEXPShardItem(new FabricItemSettings());
-    public static final GreaterEXPShardItem GREATER_EXP_SHARD = new GreaterEXPShardItem(new FabricItemSettings());
+    //public static final PettyEXPShardItem PETTY_EXP_SHARD = new PettyEXPShardItem(new FabricItemSettings());
+    //public static final MediumEXPShardItem MEDIUM_EXP_SHARD = new MediumEXPShardItem(new FabricItemSettings());
+    //public static final GreaterEXPShardItem GREATER_EXP_SHARD = new GreaterEXPShardItem(new FabricItemSettings());
+
+
 
     public static void register() {
         Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "resin"), RESIN);
@@ -64,29 +69,29 @@ public class CommonRegistry {
         Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "syrup_bottle"), SYRUP_BOTTLE);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(content -> {content.addAfter(Items.HONEY_BOTTLE, SYRUP_BOTTLE);});
 
-        Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "ender_loin"), ENDER_LOIN);
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(content -> {content.addAfter(SYRUP_BOTTLE, ENDER_LOIN);});
+        //Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "ender_loin"), ENDER_LOIN);
+        //ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(content -> {content.addAfter(SYRUP_BOTTLE, ENDER_LOIN);});
 
-        Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "raw_ender_loin"), RAW_ENDER_LOIN);
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(content -> {content.addAfter(ENDER_LOIN, RAW_ENDER_LOIN);});
+        //Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "raw_ender_loin"), RAW_ENDER_LOIN);
+        //ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(content -> {content.addAfter(ENDER_LOIN, RAW_ENDER_LOIN);});
 
-        Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "doubloon"), DOUBLOON);
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(content ->{content.addAfter(Items.EMERALD, DOUBLOON);});
+        //Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "doubloon"), DOUBLOON);
+        //ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(content ->{content.addAfter(Items.EMERALD, DOUBLOON);});
 
-        Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "gelrene_cube"), GELRENE_CUBE);
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(content ->{content.addAfter(SAP_BOTTLE, GELRENE_CUBE);});
+        //Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "gelrene_cube"), GELRENE_CUBE);
+        //ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(content ->{content.addAfter(SAP_BOTTLE, GELRENE_CUBE);});
 
         Registry.register(Registries.BLOCK, new Identifier(QuinMain.MODID, "gelrene_block"), GELRENE_BLOCK);
         Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "gelrene_block"), new BlockItem(GELRENE_BLOCK, new FabricItemSettings()));
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.add(GELRENE_BLOCK);});
 
-        Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "petty_shard"), PETTY_EXP_SHARD);
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(content ->{content.addAfter(GELRENE_CUBE, PETTY_EXP_SHARD);});
+        //Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "petty_shard"), PETTY_EXP_SHARD);
+        //ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(content ->{content.addAfter(GELRENE_CUBE, PETTY_EXP_SHARD);});
 
-        Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "medium_shard"), MEDIUM_EXP_SHARD);
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(content ->{content.addAfter(PETTY_EXP_SHARD, MEDIUM_EXP_SHARD);});
+        //Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "medium_shard"), MEDIUM_EXP_SHARD);
+        //ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(content ->{content.addAfter(PETTY_EXP_SHARD, MEDIUM_EXP_SHARD);});
 
-        Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "greater_shard"), GREATER_EXP_SHARD);
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(content ->{content.addAfter(MEDIUM_EXP_SHARD, GREATER_EXP_SHARD);});
+        //Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "greater_shard"), GREATER_EXP_SHARD);
+        //ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(content ->{content.addAfter(MEDIUM_EXP_SHARD, GREATER_EXP_SHARD);});
     }
 }
