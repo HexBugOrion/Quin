@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.MapColor;
+import net.minecraft.block.PillarBlock;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -13,9 +14,6 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.timeworndevs.quin.QuinMain;
 import net.timeworndevs.quin.block.TreeTapBlock;
-import net.timeworndevs.quin.item.GreaterEXPShardItem;
-import net.timeworndevs.quin.item.MediumEXPShardItem;
-import net.timeworndevs.quin.item.PettyEXPShardItem;
 
 public class CommonRegistry {
 
@@ -39,14 +37,15 @@ public class CommonRegistry {
 
     //public static final Item DOUBLOON = new Item(new FabricItemSettings());
 
-    //public static final Item GELRENE_CUBE = new Item(new FabricItemSettings());
+    public static final Item GELRENE_CUBE = new Item(new FabricItemSettings());
     public static final Block GELRENE_BLOCK = new Block(FabricBlockSettings.of().mapColor(MapColor.PALE_GREEN).sounds(BlockSoundGroup.CALCITE));
 
     //public static final PettyEXPShardItem PETTY_EXP_SHARD = new PettyEXPShardItem(new FabricItemSettings());
     //public static final MediumEXPShardItem MEDIUM_EXP_SHARD = new MediumEXPShardItem(new FabricItemSettings());
     //public static final GreaterEXPShardItem GREATER_EXP_SHARD = new GreaterEXPShardItem(new FabricItemSettings());
 
-
+    public static final PillarBlock DRIFTWOOD_LOG = new PillarBlock(FabricBlockSettings.of().mapColor(MapColor.OFF_WHITE).strength(2.0f).sounds(BlockSoundGroup.NETHER_WOOD));
+    public static final Block DRIFTWOOD_PLANKS = new Block(FabricBlockSettings.of().mapColor(MapColor.OFF_WHITE).strength(2.0F, 3.0F).sounds(BlockSoundGroup.NETHER_WOOD));
 
     public static void register() {
         Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "resin"), RESIN);
@@ -78,8 +77,8 @@ public class CommonRegistry {
         //Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "doubloon"), DOUBLOON);
         //ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(content ->{content.addAfter(Items.EMERALD, DOUBLOON);});
 
-        //Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "gelrene_cube"), GELRENE_CUBE);
-        //ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(content ->{content.addAfter(SAP_BOTTLE, GELRENE_CUBE);});
+        Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "gelrene_cube"), GELRENE_CUBE);
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(content ->{content.addAfter(SAP_BOTTLE, GELRENE_CUBE);});
 
         Registry.register(Registries.BLOCK, new Identifier(QuinMain.MODID, "gelrene_block"), GELRENE_BLOCK);
         Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "gelrene_block"), new BlockItem(GELRENE_BLOCK, new FabricItemSettings()));
@@ -93,5 +92,14 @@ public class CommonRegistry {
 
         //Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "greater_shard"), GREATER_EXP_SHARD);
         //ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(content ->{content.addAfter(MEDIUM_EXP_SHARD, GREATER_EXP_SHARD);});
+
+        Registry.register(Registries.BLOCK, new Identifier(QuinMain.MODID, "driftwood_log"), DRIFTWOOD_LOG);
+        Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "driftwood_log"), new BlockItem(DRIFTWOOD_LOG, new FabricItemSettings()));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.add(DRIFTWOOD_LOG);});
+
+        Registry.register(Registries.BLOCK, new Identifier(QuinMain.MODID, "driftwood_planks"), DRIFTWOOD_PLANKS);
+        Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "driftwood_planks"), new BlockItem(DRIFTWOOD_PLANKS, new FabricItemSettings()));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.add(DRIFTWOOD_PLANKS);});
+
     }
 }

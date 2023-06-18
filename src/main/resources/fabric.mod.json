@@ -11,8 +11,8 @@
     "The Mavensburg Community (Ideas)"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "...",
+    "sources": "https://github.com/HexBugOrion/Quin"
   },
   "license": "MIT",
   "icon": "assets/modid/icon.png",
