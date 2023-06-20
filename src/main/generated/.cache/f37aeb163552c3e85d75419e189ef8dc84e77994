@@ -1,2 +1,6 @@
-// 1.20.1	2023-06-20T12:24:40.17777	Quin/Block Loot Tables
-b7eb5f636c082baa0e2715a2a7402b1e3dfd9e47 data/quin/loot_tables/blocks/driftwood_door.json
+// 1.20.1	2023-06-20T15:13:13.161439	Quin/Block Loot Tables
+d465cfea76ddd60ff5b43d153c4dfacc194da960 data/quin/loot_tables/blocks/driftwood.json
+48f2883f2fcf91f93235104e39a98ccd44225869 data/quin/loot_tables/blocks/driftwood_fence.json
+2b2a4bde1a1c86393b28fa3ff9b81ef1ddeed22d data/minecraft/loot_tables/blocks/air.json
+2ad68c73826d34c41a00707de47ac031a3a3744c data/quin/loot_tables/blocks/driftwood_trapdoor.json
+26ab4b0247fc0c6a57b6d9ccd0bd5a305d6403bd data/quin/loot_tables/blocks/driftwood_fence_gate.json

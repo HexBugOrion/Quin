@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "quin:block/driftwood_slab"
+    },
+    "type=double": {
+      "model": "quin:block/driftwood_planks"
+    },
+    "type=top": {
+      "model": "quin:block/driftwood_slab_top"
+    }
+  }
+}

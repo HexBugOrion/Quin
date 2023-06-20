@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "quin:block/driftwood_planks",
+    "side": "quin:block/driftwood_planks",
+    "top": "quin:block/driftwood_planks"
+  }
+}

@@ -2,6 +2,15 @@
   "replace": false,
   "values": [
     "quin:driftwood_log",
-    "quin:driftwood_planks"
+    "quin:driftwood",
+    "quin:driftwood_planks",
+    "quin:driftwood_stairs",
+    "quin:driftwood_slab",
+    "quin:driftwood_fence",
+    "quin:driftwood_fence_gate",
+    "quin:driftwood_door",
+    "quin:driftwood_trapdoor",
+    "quin:driftwood_pressure_plate",
+    "quin:driftwood_button"
   ]
 }

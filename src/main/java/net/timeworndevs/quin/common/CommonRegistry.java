@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.advancement.criterion.FishingRodHookedCriterion;
 import net.minecraft.block.*;
+import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -16,10 +17,7 @@ import net.timeworndevs.quin.block.TreeTapBlock;
 
 public class CommonRegistry {
 
-    //preparations for registry rework
-    private static Block registerBlock(String id, Block block) {
-        return (Block)Registry.register(Registries.BLOCK, id, block);
-    }
+
 
     public static final Item RESIN = new Item(new FabricItemSettings());
     public static final Block RESIN_BLOCK = new Block(FabricBlockSettings.of().mapColor(MapColor.BROWN).sounds(BlockSoundGroup.PACKED_MUD).strength(0,0));
@@ -31,23 +29,44 @@ public class CommonRegistry {
     public static final Item SAP_BOTTLE = new Item(new FabricItemSettings().maxCount(16));
     public static final Item SYRUP_BOTTLE = new HoneyBottleItem(new FabricItemSettings().maxCount(16).food(FoodComponents.HONEY_BOTTLE).recipeRemainder(Items.GLASS_BOTTLE));
 
-    //public static final Item ENDER_LOIN = new Item(new FabricItemSettings());
-    //public static final Item RAW_ENDER_LOIN = new Item(new FabricItemSettings());
-
-    //public static final Item DOUBLOON = new Item(new FabricItemSettings());
 
     public static final Item GELRENE_CUBE = new Item(new FabricItemSettings());
     public static final Block GELRENE_BLOCK = new Block(FabricBlockSettings.of().mapColor(MapColor.PALE_GREEN).sounds(BlockSoundGroup.CALCITE));
 
-    //public static final PettyEXPShardItem PETTY_EXP_SHARD = new PettyEXPShardItem(new FabricItemSettings());
-    //public static final MediumEXPShardItem MEDIUM_EXP_SHARD = new MediumEXPShardItem(new FabricItemSettings());
-    //public static final GreaterEXPShardItem GREATER_EXP_SHARD = new GreaterEXPShardItem(new FabricItemSettings());
-
     public static final PillarBlock DRIFTWOOD_LOG = new PillarBlock(FabricBlockSettings.of().mapColor(MapColor.OFF_WHITE).strength(2.0f).sounds(BlockSoundGroup.NETHER_WOOD));
     public static final PillarBlock DRIFTWOOD = new PillarBlock(FabricBlockSettings.of().mapColor(MapColor.OFF_WHITE).strength(2.0f).sounds(BlockSoundGroup.NETHER_WOOD));
     public static final Block DRIFTWOOD_PLANKS = new Block(FabricBlockSettings.of().mapColor(MapColor.OFF_WHITE).strength(2.0F, 3.0F).sounds(BlockSoundGroup.NETHER_WOOD));
+    public static final StairsBlock DRIFTWOOD_STAIRS = new StairsBlock(DRIFTWOOD_PLANKS.getDefaultState(),FabricBlockSettings.of().mapColor(MapColor.OFF_WHITE).strength(2.0F, 3.0F).sounds(BlockSoundGroup.NETHER_WOOD));
+    public static final SlabBlock DRIFTWOOD_SLAB = new SlabBlock(FabricBlockSettings.of().mapColor(MapColor.OFF_WHITE).strength(2.0F, 3.0F).sounds(BlockSoundGroup.NETHER_WOOD));
+    public static final FenceBlock DRIFTWOOD_FENCE = new FenceBlock(FabricBlockSettings.of().mapColor(MapColor.OFF_WHITE).strength(2.0F, 3.0F).sounds(BlockSoundGroup.NETHER_WOOD));
+    public static final FenceGateBlock DRIFTWOOD_FENCE_GATE = new FenceGateBlock(FabricBlockSettings.of().mapColor(MapColor.OFF_WHITE).strength(2.0F, 3.0F).sounds(BlockSoundGroup.NETHER_WOOD), WoodType.CRIMSON);
     public static final DoorBlock DRIFTWOOD_DOOR = new DoorBlock(FabricBlockSettings.of().mapColor(MapColor.OFF_WHITE), BlockSetType.CRIMSON);
+    public static final TrapdoorBlock DRIFTWOOD_TRAPDOOR = new TrapdoorBlock(FabricBlockSettings.of().mapColor(MapColor.OFF_WHITE), BlockSetType.CRIMSON);
+    public static final PressurePlateBlock DRIFTWOOD_PRESSURE_PLATE = new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.of().mapColor(MapColor.OFF_WHITE), BlockSetType.CRIMSON);
+    public static final ButtonBlock DRIFTWOOD_BUTTON = new ButtonBlock(FabricBlockSettings.of().mapColor(MapColor.OFF_WHITE).pistonBehavior(PistonBehavior.DESTROY), BlockSetType.CRIMSON, 30, true);
 
+    /*
+        ItemGroup registry notes:
+
+        Wood types:
+        (Building)
+        Logs-
+        Woods-
+        Stripped Logs-
+        Stripped Woods-
+        Planks-
+        Stairs-
+        Slabs-
+        Fences-
+        Gates-
+        Doors-
+        Trapdoors-
+        Pressure Plates-
+        Buttons-
+        (Functional)
+        Signs-
+        Hanging Signs-
+        */
 
     public static void register() {
         Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "resin"), RESIN);
@@ -70,30 +89,12 @@ public class CommonRegistry {
         Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "syrup_bottle"), SYRUP_BOTTLE);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(content -> {content.addAfter(Items.HONEY_BOTTLE, SYRUP_BOTTLE);});
 
-        //Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "ender_loin"), ENDER_LOIN);
-        //ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(content -> {content.addAfter(SYRUP_BOTTLE, ENDER_LOIN);});
-
-        //Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "raw_ender_loin"), RAW_ENDER_LOIN);
-        //ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(content -> {content.addAfter(ENDER_LOIN, RAW_ENDER_LOIN);});
-
-        //Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "doubloon"), DOUBLOON);
-        //ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(content ->{content.addAfter(Items.EMERALD, DOUBLOON);});
-
         Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "gelrene_cube"), GELRENE_CUBE);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(content ->{content.addAfter(SAP_BOTTLE, GELRENE_CUBE);});
 
         Registry.register(Registries.BLOCK, new Identifier(QuinMain.MODID, "gelrene_block"), GELRENE_BLOCK);
         Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "gelrene_block"), new BlockItem(GELRENE_BLOCK, new FabricItemSettings()));
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.add(GELRENE_BLOCK);});
-
-        //Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "petty_shard"), PETTY_EXP_SHARD);
-        //ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(content ->{content.addAfter(GELRENE_CUBE, PETTY_EXP_SHARD);});
-
-        //Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "medium_shard"), MEDIUM_EXP_SHARD);
-        //ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(content ->{content.addAfter(PETTY_EXP_SHARD, MEDIUM_EXP_SHARD);});
-
-        //Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "greater_shard"), GREATER_EXP_SHARD);
-        //ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(content ->{content.addAfter(MEDIUM_EXP_SHARD, GREATER_EXP_SHARD);});
 
         //logs
         Registry.register(Registries.BLOCK, new Identifier(QuinMain.MODID, "driftwood_log"), DRIFTWOOD_LOG);
@@ -110,32 +111,45 @@ public class CommonRegistry {
         Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "driftwood_planks"), new BlockItem(DRIFTWOOD_PLANKS, new FabricItemSettings()));
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.add(DRIFTWOOD_PLANKS);});
 
+        //stairs
+        Registry.register(Registries.BLOCK, new Identifier(QuinMain.MODID, "driftwood_stairs"), DRIFTWOOD_STAIRS);
+        Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "driftwood_stairs"), new BlockItem(DRIFTWOOD_STAIRS, new FabricItemSettings()));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.add(DRIFTWOOD_STAIRS);});
+
+        //slabs
+        Registry.register(Registries.BLOCK, new Identifier(QuinMain.MODID, "driftwood_slab"), DRIFTWOOD_SLAB);
+        Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "driftwood_slab"), new BlockItem(DRIFTWOOD_SLAB, new FabricItemSettings()));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.add(DRIFTWOOD_SLAB);});
+
+        //fences
+        Registry.register(Registries.BLOCK, new Identifier(QuinMain.MODID, "driftwood_fence"), DRIFTWOOD_FENCE);
+        Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "driftwood_fence"), new BlockItem(DRIFTWOOD_FENCE, new FabricItemSettings()));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.add(DRIFTWOOD_FENCE);});
+
+        //gates
+        Registry.register(Registries.BLOCK, new Identifier(QuinMain.MODID, "driftwood_fence_gate"), DRIFTWOOD_FENCE_GATE);
+        Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "driftwood_fence_gate"), new BlockItem(DRIFTWOOD_FENCE_GATE, new FabricItemSettings()));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.add(DRIFTWOOD_FENCE_GATE);});
+
         //door
         Registry.register(Registries.BLOCK, new Identifier(QuinMain.MODID, "driftwood_door"), DRIFTWOOD_DOOR);
         Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "driftwood_door"), new BlockItem(DRIFTWOOD_DOOR, new FabricItemSettings()));
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.add(DRIFTWOOD_DOOR);});
 
-        /*
-        ItemGroup registry notes:
+        //trapdoor
+        Registry.register(Registries.BLOCK, new Identifier(QuinMain.MODID, "driftwood_trapdoor"), DRIFTWOOD_TRAPDOOR);
+        Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "driftwood_trapdoor"), new BlockItem(DRIFTWOOD_TRAPDOOR, new FabricItemSettings()));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.add(DRIFTWOOD_TRAPDOOR);});
 
-        Wood types:
-        (Building)
-        Log-
-        Wood-
-        Stripped-
-        Stripped Wood-
-        Planks-
-        Stairs-
-        Slab-
-        Fence-
-        Gate-
-        Door-
-        Trapdoor-
-        Pressure Plate-
-        Button-
-        (Functional)
-        Sign-
-        Hanging Sign-
-        */
+        //pressure plate
+        Registry.register(Registries.BLOCK, new Identifier(QuinMain.MODID, "driftwood_pressure_plate"), DRIFTWOOD_PRESSURE_PLATE);
+        Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "driftwood_pressure_plate"), new BlockItem(DRIFTWOOD_PRESSURE_PLATE, new FabricItemSettings()));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.add(DRIFTWOOD_PRESSURE_PLATE);});
+
+        //button
+        Registry.register(Registries.BLOCK, new Identifier(QuinMain.MODID, "driftwood_button"), DRIFTWOOD_BUTTON);
+        Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "driftwood_button"), new BlockItem(DRIFTWOOD_BUTTON, new FabricItemSettings()));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.add(DRIFTWOOD_BUTTON);});
+
     }
 }
