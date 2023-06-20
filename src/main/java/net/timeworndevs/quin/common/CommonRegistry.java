@@ -44,6 +44,7 @@ public class CommonRegistry {
     //public static final GreaterEXPShardItem GREATER_EXP_SHARD = new GreaterEXPShardItem(new FabricItemSettings());
 
     public static final PillarBlock DRIFTWOOD_LOG = new PillarBlock(FabricBlockSettings.of().mapColor(MapColor.OFF_WHITE).strength(2.0f).sounds(BlockSoundGroup.NETHER_WOOD));
+    public static final PillarBlock DRIFTWOOD = new PillarBlock(FabricBlockSettings.of().mapColor(MapColor.OFF_WHITE).strength(2.0f).sounds(BlockSoundGroup.NETHER_WOOD));
     public static final Block DRIFTWOOD_PLANKS = new Block(FabricBlockSettings.of().mapColor(MapColor.OFF_WHITE).strength(2.0F, 3.0F).sounds(BlockSoundGroup.NETHER_WOOD));
     public static final DoorBlock DRIFTWOOD_DOOR = new DoorBlock(FabricBlockSettings.of().mapColor(MapColor.OFF_WHITE), BlockSetType.CRIMSON);
 
@@ -99,6 +100,11 @@ public class CommonRegistry {
         Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "driftwood_log"), new BlockItem(DRIFTWOOD_LOG, new FabricItemSettings()));
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.add(DRIFTWOOD_LOG);});
 
+        //woods
+        Registry.register(Registries.BLOCK, new Identifier(QuinMain.MODID, "driftwood"), DRIFTWOOD);
+        Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "driftwood"), new BlockItem(DRIFTWOOD, new FabricItemSettings()));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.add(DRIFTWOOD);});
+
         //planks
         Registry.register(Registries.BLOCK, new Identifier(QuinMain.MODID, "driftwood_planks"), DRIFTWOOD_PLANKS);
         Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "driftwood_planks"), new BlockItem(DRIFTWOOD_PLANKS, new FabricItemSettings()));
@@ -108,5 +114,28 @@ public class CommonRegistry {
         Registry.register(Registries.BLOCK, new Identifier(QuinMain.MODID, "driftwood_door"), DRIFTWOOD_DOOR);
         Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "driftwood_door"), new BlockItem(DRIFTWOOD_DOOR, new FabricItemSettings()));
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.add(DRIFTWOOD_DOOR);});
+
+        /*
+        ItemGroup registry notes:
+
+        Wood types:
+        (Building)
+        Log-
+        Wood-
+        Stripped-
+        Stripped Wood-
+        Planks-
+        Stairs-
+        Slab-
+        Fence-
+        Gate-
+        Door-
+        Trapdoor-
+        Pressure Plate-
+        Button-
+        (Functional)
+        Sign-
+        Hanging Sign-
+        */
     }
 }
