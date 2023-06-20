@@ -19,9 +19,9 @@ public class DataGenMain implements DataGeneratorEntrypoint {
 
         @Override
         public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-            blockStateModelGenerator.registerSimpleCubeAll(CommonRegistry.GELRENE_BLOCK);
-            blockStateModelGenerator.registerSimpleCubeAll(CommonRegistry.DRIFTWOOD_PLANKS);
-
+            //blockStateModelGenerator.registerSimpleCubeAll(CommonRegistry.GELRENE_BLOCK);
+            //blockStateModelGenerator.registerSimpleCubeAll(CommonRegistry.DRIFTWOOD_PLANKS);
+            blockStateModelGenerator.registerDoor(CommonRegistry.DRIFTWOOD_DOOR);
             //blockStateModelGenerator.registerLog(CommonRegistry.DRIFTWOOD_LOG);
         }
 
@@ -39,9 +39,10 @@ public class DataGenMain implements DataGeneratorEntrypoint {
 
         @Override
         public void generate() {
-            addDrop(CommonRegistry.GELRENE_BLOCK);
-            addDrop(CommonRegistry.DRIFTWOOD_PLANKS);
-            addDrop(CommonRegistry.DRIFTWOOD_LOG);
+            //addDrop(CommonRegistry.GELRENE_BLOCK);
+            //addDrop(CommonRegistry.DRIFTWOOD_PLANKS);
+            //addDrop(CommonRegistry.DRIFTWOOD_LOG);
+            //addDrop(CommonRegistry.DRIFTWOOD_DOOR);
         }
     }
 
