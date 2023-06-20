@@ -1,6 +1,8 @@
 package net.timeworndevs.quin.common;
 
 
+import com.terraformersmc.terraform.sign.TerraformSign;
+import com.terraformersmc.terraform.sign.block.TerraformSignBlock;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -14,6 +16,7 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.timeworndevs.quin.QuinMain;
 import net.timeworndevs.quin.block.TreeTapBlock;
+import org.apache.logging.log4j.core.net.MailManager;
 
 public class CommonRegistry {
 
@@ -44,7 +47,9 @@ public class CommonRegistry {
     public static final TrapdoorBlock DRIFTWOOD_TRAPDOOR = new TrapdoorBlock(FabricBlockSettings.of().mapColor(MapColor.OFF_WHITE), BlockSetType.CRIMSON);
     public static final PressurePlateBlock DRIFTWOOD_PRESSURE_PLATE = new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.of().mapColor(MapColor.OFF_WHITE), BlockSetType.CRIMSON);
     public static final ButtonBlock DRIFTWOOD_BUTTON = new ButtonBlock(FabricBlockSettings.of().mapColor(MapColor.OFF_WHITE).pistonBehavior(PistonBehavior.DESTROY), BlockSetType.CRIMSON, 30, true);
-
+    //it's sign time
+    //public static final Identifier DRIFTWOOD_GUI_TEXTURE = Identifier.of(QuinMain.MODID, "textures/gui/sign/driftwood_sign");
+    //public static final TerraformSignBlock DRIFTWOOD_SIGN = new TerraformSignBlock(DRIFTWOOD_GUI_TEXTURE,FabricBlockSettings.of().mapColor(MapColor.OFF_WHITE));
     /*
         ItemGroup registry notes:
 
