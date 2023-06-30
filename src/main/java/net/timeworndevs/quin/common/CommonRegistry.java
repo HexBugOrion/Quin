@@ -1,7 +1,12 @@
 package net.timeworndevs.quin.common;
 
 
+import com.terraformersmc.terraform.boat.api.TerraformBoatType;
+import com.terraformersmc.terraform.boat.api.TerraformBoatTypeRegistry;
+import com.terraformersmc.terraform.boat.api.item.TerraformBoatItemHelper;
+import com.terraformersmc.terraform.sign.block.TerraformHangingSignBlock;
 import com.terraformersmc.terraform.sign.block.TerraformSignBlock;
+import com.terraformersmc.terraform.sign.block.TerraformWallHangingSignBlock;
 import com.terraformersmc.terraform.sign.block.TerraformWallSignBlock;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -11,6 +16,7 @@ import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.timeworndevs.quin.QuinMain;
@@ -34,6 +40,7 @@ public class CommonRegistry {
     public static final Item GELRENE_CUBE = new Item(new FabricItemSettings());
     public static final Block GELRENE_BLOCK = new Block(FabricBlockSettings.of().mapColor(MapColor.PALE_GREEN).sounds(BlockSoundGroup.CALCITE));
 
+    //Driftwood Set!
     public static final PillarBlock DRIFTWOOD_LOG = new PillarBlock(FabricBlockSettings.of().mapColor(MapColor.OFF_WHITE).strength(2.0f).sounds(BlockSoundGroup.NETHER_WOOD));
     public static final PillarBlock DRIFTWOOD = new PillarBlock(FabricBlockSettings.of().mapColor(MapColor.OFF_WHITE).strength(2.0f).sounds(BlockSoundGroup.NETHER_WOOD));
     public static final Block DRIFTWOOD_PLANKS = new Block(FabricBlockSettings.of().mapColor(MapColor.OFF_WHITE).strength(2.0F, 3.0F).sounds(BlockSoundGroup.NETHER_WOOD));
@@ -45,35 +52,34 @@ public class CommonRegistry {
     public static final TrapdoorBlock DRIFTWOOD_TRAPDOOR = new TrapdoorBlock(FabricBlockSettings.of().mapColor(MapColor.OFF_WHITE), BlockSetType.CRIMSON);
     public static final PressurePlateBlock DRIFTWOOD_PRESSURE_PLATE = new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.of().mapColor(MapColor.OFF_WHITE), BlockSetType.CRIMSON);
     public static final ButtonBlock DRIFTWOOD_BUTTON = new ButtonBlock(FabricBlockSettings.of().mapColor(MapColor.OFF_WHITE).pistonBehavior(PistonBehavior.DESTROY), BlockSetType.CRIMSON, 30, true);
-    //it's sign time
     public static final Identifier DRIFTWOOD_SIGN_TEXTURE = Identifier.of(QuinMain.MODID, "entity/signs/driftwood_sign");
-    public static final TerraformSignBlock DRIFTWOOD_SIGN = new TerraformSignBlock(DRIFTWOOD_SIGN_TEXTURE,FabricBlockSettings.of().mapColor(MapColor.OFF_WHITE).sounds(BlockSoundGroup.NETHER_WOOD).noCollision());
+    public static final TerraformSignBlock DRIFTWOOD_SIGN = new TerraformSignBlock(DRIFTWOOD_SIGN_TEXTURE, FabricBlockSettings.of().mapColor(MapColor.OFF_WHITE).sounds(BlockSoundGroup.NETHER_WOOD).noCollision());
     public static final TerraformWallSignBlock DRIFTWOOD_WALL_SIGN = new TerraformWallSignBlock(DRIFTWOOD_SIGN_TEXTURE, FabricBlockSettings.of().mapColor(MapColor.OFF_WHITE).sounds(BlockSoundGroup.NETHER_WOOD).noCollision().dropsLike(DRIFTWOOD_SIGN));
-    
-    /*
-        ItemGroup registry notes:
+    public static final Identifier DRIFTWOOD_HANGING_SIGN_TEXTURE = Identifier.of(QuinMain.MODID, "entity/signs/hanging/driftwood");
+    public static final Identifier DRIFTWOOD_HANGING_SIGN_GUI = Identifier.of(QuinMain.MODID, "textures/gui/hanging_signs/driftwood");
+    public static final TerraformHangingSignBlock DRIFTWOOD_HANGING_SIGN = new TerraformHangingSignBlock(DRIFTWOOD_HANGING_SIGN_TEXTURE, DRIFTWOOD_HANGING_SIGN_GUI, FabricBlockSettings.of().mapColor(MapColor.OFF_WHITE).sounds(BlockSoundGroup.NETHER_WOOD).noCollision());
+    public static final TerraformWallHangingSignBlock DRIFTWOOD_WALL_HANGING_SIGN = new TerraformWallHangingSignBlock(DRIFTWOOD_HANGING_SIGN_TEXTURE, DRIFTWOOD_HANGING_SIGN_GUI, FabricBlockSettings.of().mapColor(MapColor.OFF_WHITE).sounds(BlockSoundGroup.NETHER_WOOD).noCollision().dropsLike(DRIFTWOOD_HANGING_SIGN));
+    //boat time
 
-        Wood types:
-        (Building)
-        Logs-
-        Woods-
-        Stripped Logs-
-        Stripped Woods-
-        Planks-
-        Stairs-
-        Slabs-
-        Fences-
-        Gates-
-        Doors-
-        Trapdoors-
-        Pressure Plates-
-        Buttons-
-        (Functional)
-        Signs-
-        Hanging Signs-
-        */
+    public static Item DRIFTWOOD_BOAT;
+    public static Item DRIFTWOOD_CHEST_BOAT;
+
+    public static void registerAbnormalItems(){
+        final Identifier DRIFTWOOD_BOAT_ID = Identifier.of(QuinMain.MODID, "driftwood_boat");
+        final Identifier DRIFTWOOD_CHEST_BOAT_ID = Identifier.of(QuinMain.MODID, "driftwood_chest_boat");
+        final RegistryKey<TerraformBoatType> DRIFTWOOD_BOAT_KEY = TerraformBoatTypeRegistry.createKey(Identifier.of(QuinMain.MODID, "drfitwood"));
+
+        DRIFTWOOD_BOAT = TerraformBoatItemHelper.registerBoatItem(DRIFTWOOD_BOAT_ID, DRIFTWOOD_BOAT_KEY, false);
+        DRIFTWOOD_CHEST_BOAT = TerraformBoatItemHelper.registerBoatItem(DRIFTWOOD_CHEST_BOAT_ID, DRIFTWOOD_BOAT_KEY, true);
+
+        TerraformBoatType DRIFTWOOD = new TerraformBoatType.Builder().item(DRIFTWOOD_BOAT).chestItem(DRIFTWOOD_CHEST_BOAT).planks(DRIFTWOOD_PLANKS.asItem()).build();
+
+        Registry.register(TerraformBoatTypeRegistry.INSTANCE, DRIFTWOOD_BOAT_KEY, DRIFTWOOD);
+    }
 
     public static void register() {
+        registerAbnormalItems();
+
         Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "resin"), RESIN);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(content -> {content.addAfter(Items.EXPERIENCE_BOTTLE, RESIN);});
 
@@ -158,7 +164,14 @@ public class CommonRegistry {
 
         //sign
         Registry.register(Registries.BLOCK, new Identifier(QuinMain.MODID, "driftwood_sign"), DRIFTWOOD_SIGN);
-        Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "driftwood_sign"), new BlockItem(DRIFTWOOD_SIGN, new FabricItemSettings()));
+        Registry.register(Registries.BLOCK, new Identifier(QuinMain.MODID, "driftwood_wall_sign"), DRIFTWOOD_WALL_SIGN);
+        Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "driftwood_sign"), new SignItem(new FabricItemSettings().maxCount(16), DRIFTWOOD_SIGN, DRIFTWOOD_WALL_SIGN));
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(content -> {content.add(DRIFTWOOD_SIGN);});
+
+        //hanging sign
+        Registry.register(Registries.BLOCK, new Identifier(QuinMain.MODID, "driftwood_hanging_sign"), DRIFTWOOD_HANGING_SIGN);
+        Registry.register(Registries.BLOCK, new Identifier(QuinMain.MODID, "driftwood_wall_hanging_side"), DRIFTWOOD_WALL_HANGING_SIGN);
+        Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "driftwood_wall_sign"), new HangingSignItem(DRIFTWOOD_HANGING_SIGN, DRIFTWOOD_WALL_HANGING_SIGN, new FabricItemSettings().maxCount(16)));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(content -> {content.add(DRIFTWOOD_HANGING_SIGN);});
     }
 }

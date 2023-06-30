@@ -1,6 +1,2 @@
-// 1.20.1	2023-06-20T15:13:13.160412	Quin/Model Definitions
-3bc6ced1dce8988766e8ccfef4f77440d4f2846f assets/quin/models/block/driftwood_trapdoor_bottom.json
-a36ab0ce11dbbe3b96536fdbd920dd61f9309176 assets/quin/models/block/driftwood_trapdoor_open.json
-7f1afc90bfe2d27a04744f6790dbc249638326c9 assets/quin/models/item/driftwood_trapdoor.json
-cf3f4baa610745e95d823b954283c9c213ddfe48 assets/quin/blockstates/driftwood_trapdoor.json
-1a1f736eabd84e6f4b51f04a26b0f56e8012183a assets/quin/models/block/driftwood_trapdoor_top.json
+// 1.20.1	2023-06-30T14:47:41.948168	Quin/Model Definitions
+71835fa7e8da9eb78a1d61e468a52a141c0f3cdd assets/quin/models/item/driftwood_wall_sign.json
