@@ -59,26 +59,8 @@ public class CommonRegistry {
     public static final Identifier DRIFTWOOD_HANGING_SIGN_GUI = Identifier.of(QuinMain.MODID, "textures/gui/hanging_signs/driftwood");
     public static final TerraformHangingSignBlock DRIFTWOOD_HANGING_SIGN = new TerraformHangingSignBlock(DRIFTWOOD_HANGING_SIGN_TEXTURE, DRIFTWOOD_HANGING_SIGN_GUI, FabricBlockSettings.of().mapColor(MapColor.OFF_WHITE).sounds(BlockSoundGroup.NETHER_WOOD).noCollision());
     public static final TerraformWallHangingSignBlock DRIFTWOOD_WALL_HANGING_SIGN = new TerraformWallHangingSignBlock(DRIFTWOOD_HANGING_SIGN_TEXTURE, DRIFTWOOD_HANGING_SIGN_GUI, FabricBlockSettings.of().mapColor(MapColor.OFF_WHITE).sounds(BlockSoundGroup.NETHER_WOOD).noCollision().dropsLike(DRIFTWOOD_HANGING_SIGN));
-    //boat time
-
-    public static Item DRIFTWOOD_BOAT;
-    public static Item DRIFTWOOD_CHEST_BOAT;
-
-    public static void registerAbnormalItems(){
-        final Identifier DRIFTWOOD_BOAT_ID = Identifier.of(QuinMain.MODID, "driftwood_boat");
-        final Identifier DRIFTWOOD_CHEST_BOAT_ID = Identifier.of(QuinMain.MODID, "driftwood_chest_boat");
-        final RegistryKey<TerraformBoatType> DRIFTWOOD_BOAT_KEY = TerraformBoatTypeRegistry.createKey(Identifier.of(QuinMain.MODID, "drfitwood"));
-
-        DRIFTWOOD_BOAT = TerraformBoatItemHelper.registerBoatItem(DRIFTWOOD_BOAT_ID, DRIFTWOOD_BOAT_KEY, false);
-        DRIFTWOOD_CHEST_BOAT = TerraformBoatItemHelper.registerBoatItem(DRIFTWOOD_CHEST_BOAT_ID, DRIFTWOOD_BOAT_KEY, true);
-
-        TerraformBoatType DRIFTWOOD = new TerraformBoatType.Builder().item(DRIFTWOOD_BOAT).chestItem(DRIFTWOOD_CHEST_BOAT).planks(DRIFTWOOD_PLANKS.asItem()).build();
-
-        Registry.register(TerraformBoatTypeRegistry.INSTANCE, DRIFTWOOD_BOAT_KEY, DRIFTWOOD);
-    }
 
     public static void register() {
-        registerAbnormalItems();
 
         Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "resin"), RESIN);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(content -> {content.addAfter(Items.EXPERIENCE_BOTTLE, RESIN);});
