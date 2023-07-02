@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "quin:driftwood"
+    }
+  ],
+  "result": {
+    "item": "quin:driftwood_planks",
+    "count": 4
+  }
+}
