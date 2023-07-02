@@ -52,13 +52,15 @@ public class CommonRegistry {
     public static final TrapdoorBlock DRIFTWOOD_TRAPDOOR = new TrapdoorBlock(FabricBlockSettings.of().mapColor(MapColor.OFF_WHITE), BlockSetType.CRIMSON);
     public static final PressurePlateBlock DRIFTWOOD_PRESSURE_PLATE = new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.of().mapColor(MapColor.OFF_WHITE), BlockSetType.CRIMSON);
     public static final ButtonBlock DRIFTWOOD_BUTTON = new ButtonBlock(FabricBlockSettings.of().mapColor(MapColor.OFF_WHITE).pistonBehavior(PistonBehavior.DESTROY), BlockSetType.CRIMSON, 30, true);
-    public static final Identifier DRIFTWOOD_SIGN_TEXTURE = Identifier.of(QuinMain.MODID, "entity/signs/driftwood_sign");
-    public static final TerraformSignBlock DRIFTWOOD_SIGN = new TerraformSignBlock(DRIFTWOOD_SIGN_TEXTURE, FabricBlockSettings.of().mapColor(MapColor.OFF_WHITE).sounds(BlockSoundGroup.NETHER_WOOD).noCollision());
-    public static final TerraformWallSignBlock DRIFTWOOD_WALL_SIGN = new TerraformWallSignBlock(DRIFTWOOD_SIGN_TEXTURE, FabricBlockSettings.of().mapColor(MapColor.OFF_WHITE).sounds(BlockSoundGroup.NETHER_WOOD).noCollision().dropsLike(DRIFTWOOD_SIGN));
-    public static final Identifier DRIFTWOOD_HANGING_SIGN_TEXTURE = Identifier.of(QuinMain.MODID, "entity/signs/hanging/driftwood");
-    public static final Identifier DRIFTWOOD_HANGING_SIGN_GUI = Identifier.of(QuinMain.MODID, "textures/gui/hanging_signs/driftwood");
-    public static final TerraformHangingSignBlock DRIFTWOOD_HANGING_SIGN = new TerraformHangingSignBlock(DRIFTWOOD_HANGING_SIGN_TEXTURE, DRIFTWOOD_HANGING_SIGN_GUI, FabricBlockSettings.of().mapColor(MapColor.OFF_WHITE).sounds(BlockSoundGroup.NETHER_WOOD).noCollision());
-    public static final TerraformWallHangingSignBlock DRIFTWOOD_WALL_HANGING_SIGN = new TerraformWallHangingSignBlock(DRIFTWOOD_HANGING_SIGN_TEXTURE, DRIFTWOOD_HANGING_SIGN_GUI, FabricBlockSettings.of().mapColor(MapColor.OFF_WHITE).sounds(BlockSoundGroup.NETHER_WOOD).noCollision().dropsLike(DRIFTWOOD_HANGING_SIGN));
+    
+    //todo: fix these goddamn idiotic signs and their fucking loot tables
+    //public static final Identifier DRIFTWOOD_SIGN_TEXTURE = Identifier.of(QuinMain.MODID, "entity/signs/driftwood_sign");
+    //public static final TerraformSignBlock DRIFTWOOD_SIGN = new TerraformSignBlock(DRIFTWOOD_SIGN_TEXTURE, FabricBlockSettings.of().mapColor(MapColor.OFF_WHITE).sounds(BlockSoundGroup.NETHER_WOOD).noCollision());
+    //public static final TerraformWallSignBlock DRIFTWOOD_WALL_SIGN = new TerraformWallSignBlock(DRIFTWOOD_SIGN_TEXTURE, FabricBlockSettings.of().mapColor(MapColor.OFF_WHITE).sounds(BlockSoundGroup.NETHER_WOOD).noCollision().dropsLike(DRIFTWOOD_SIGN));
+    //public static final Identifier DRIFTWOOD_HANGING_SIGN_TEXTURE = Identifier.of(QuinMain.MODID, "entity/signs/hanging/driftwood");
+    //public static final Identifier DRIFTWOOD_HANGING_SIGN_GUI = Identifier.of(QuinMain.MODID, "textures/gui/hanging_signs/driftwood");
+    //public static final TerraformHangingSignBlock DRIFTWOOD_HANGING_SIGN = new TerraformHangingSignBlock(DRIFTWOOD_HANGING_SIGN_TEXTURE, DRIFTWOOD_HANGING_SIGN_GUI, FabricBlockSettings.of().mapColor(MapColor.OFF_WHITE).sounds(BlockSoundGroup.NETHER_WOOD).noCollision());
+    //public static final TerraformWallHangingSignBlock DRIFTWOOD_WALL_HANGING_SIGN = new TerraformWallHangingSignBlock(DRIFTWOOD_HANGING_SIGN_TEXTURE, DRIFTWOOD_HANGING_SIGN_GUI, FabricBlockSettings.of().mapColor(MapColor.OFF_WHITE).sounds(BlockSoundGroup.NETHER_WOOD).noCollision().dropsLike(DRIFTWOOD_HANGING_SIGN));
 
     public static void register() {
 
@@ -143,15 +145,15 @@ public class CommonRegistry {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(DRIFTWOOD_PRESSURE_PLATE, DRIFTWOOD_BUTTON);});
 
         //sign
-        Registry.register(Registries.BLOCK, new Identifier(QuinMain.MODID, "driftwood_sign"), DRIFTWOOD_SIGN);
-        Registry.register(Registries.BLOCK, new Identifier(QuinMain.MODID, "driftwood_wall_sign"), DRIFTWOOD_WALL_SIGN);
-        Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "driftwood_sign"), new SignItem(new FabricItemSettings().maxCount(16), DRIFTWOOD_SIGN, DRIFTWOOD_WALL_SIGN));
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(content -> {content.addAfter(Items.WARPED_HANGING_SIGN, DRIFTWOOD_SIGN);});
+        //Registry.register(Registries.BLOCK, new Identifier(QuinMain.MODID, "driftwood_sign"), DRIFTWOOD_SIGN);
+        //Registry.register(Registries.BLOCK, new Identifier(QuinMain.MODID, "driftwood_wall_sign"), DRIFTWOOD_WALL_SIGN);
+        //Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "driftwood_sign"), new SignItem(new FabricItemSettings().maxCount(16), DRIFTWOOD_SIGN, DRIFTWOOD_WALL_SIGN));
+        //ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(content -> {content.addAfter(Items.WARPED_HANGING_SIGN, DRIFTWOOD_SIGN);});
 
         //hanging sign
-        Registry.register(Registries.BLOCK, new Identifier(QuinMain.MODID, "driftwood_hanging_sign"), DRIFTWOOD_HANGING_SIGN);
-        Registry.register(Registries.BLOCK, new Identifier(QuinMain.MODID, "driftwood_wall_hanging_side"), DRIFTWOOD_WALL_HANGING_SIGN);
-        Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "driftwood_hanging_sign"), new HangingSignItem(DRIFTWOOD_HANGING_SIGN, DRIFTWOOD_WALL_HANGING_SIGN, new FabricItemSettings().maxCount(16)));
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(content -> {content.addAfter(DRIFTWOOD_SIGN, DRIFTWOOD_HANGING_SIGN);});
+        //Registry.register(Registries.BLOCK, new Identifier(QuinMain.MODID, "driftwood_hanging_sign"), DRIFTWOOD_HANGING_SIGN);
+        //Registry.register(Registries.BLOCK, new Identifier(QuinMain.MODID, "driftwood_wall_hanging_side"), DRIFTWOOD_WALL_HANGING_SIGN);
+        //Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "driftwood_hanging_sign"), new HangingSignItem(DRIFTWOOD_HANGING_SIGN, DRIFTWOOD_WALL_HANGING_SIGN, new FabricItemSettings().maxCount(16)));
+        //ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(content -> {content.addAfter(DRIFTWOOD_SIGN, DRIFTWOOD_HANGING_SIGN);});
     }
 }
