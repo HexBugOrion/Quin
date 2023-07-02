@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:driftwood_sign"
+          "name": "quin:driftwood_sign"
         }
       ],
       "rolls": 1.0
