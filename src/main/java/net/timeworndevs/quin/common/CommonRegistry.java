@@ -83,77 +83,75 @@ public class CommonRegistry {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(content -> {content.addAfter(Items.HONEY_BOTTLE, SYRUP_BOTTLE);});
 
         Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "gelrene_cube"), GELRENE_CUBE);
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(content ->{content.addAfter(SAP_BOTTLE, GELRENE_CUBE);});
 
         Registry.register(Registries.BLOCK, new Identifier(QuinMain.MODID, "gelrene_block"), GELRENE_BLOCK);
         Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "gelrene_block"), new BlockItem(GELRENE_BLOCK, new FabricItemSettings()));
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.add(GELRENE_BLOCK);});
 
         //logs
         Registry.register(Registries.BLOCK, new Identifier(QuinMain.MODID, "driftwood_log"), DRIFTWOOD_LOG);
         Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "driftwood_log"), new BlockItem(DRIFTWOOD_LOG, new FabricItemSettings()));
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.add(DRIFTWOOD_LOG);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(Items.WARPED_BUTTON, DRIFTWOOD_LOG);});
 
         //woods
         Registry.register(Registries.BLOCK, new Identifier(QuinMain.MODID, "driftwood"), DRIFTWOOD);
         Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "driftwood"), new BlockItem(DRIFTWOOD, new FabricItemSettings()));
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.add(DRIFTWOOD);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(DRIFTWOOD_LOG, DRIFTWOOD);});
 
         //planks
         Registry.register(Registries.BLOCK, new Identifier(QuinMain.MODID, "driftwood_planks"), DRIFTWOOD_PLANKS);
         Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "driftwood_planks"), new BlockItem(DRIFTWOOD_PLANKS, new FabricItemSettings()));
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.add(DRIFTWOOD_PLANKS);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(DRIFTWOOD, DRIFTWOOD_PLANKS);});
 
         //stairs
         Registry.register(Registries.BLOCK, new Identifier(QuinMain.MODID, "driftwood_stairs"), DRIFTWOOD_STAIRS);
         Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "driftwood_stairs"), new BlockItem(DRIFTWOOD_STAIRS, new FabricItemSettings()));
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.add(DRIFTWOOD_STAIRS);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(DRIFTWOOD_PLANKS, DRIFTWOOD_STAIRS);});
 
         //slabs
         Registry.register(Registries.BLOCK, new Identifier(QuinMain.MODID, "driftwood_slab"), DRIFTWOOD_SLAB);
         Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "driftwood_slab"), new BlockItem(DRIFTWOOD_SLAB, new FabricItemSettings()));
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.add(DRIFTWOOD_SLAB);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(DRIFTWOOD_STAIRS, DRIFTWOOD_SLAB);});
 
         //fences
         Registry.register(Registries.BLOCK, new Identifier(QuinMain.MODID, "driftwood_fence"), DRIFTWOOD_FENCE);
         Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "driftwood_fence"), new BlockItem(DRIFTWOOD_FENCE, new FabricItemSettings()));
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.add(DRIFTWOOD_FENCE);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(DRIFTWOOD_SLAB, DRIFTWOOD_FENCE);});
 
         //gates
         Registry.register(Registries.BLOCK, new Identifier(QuinMain.MODID, "driftwood_fence_gate"), DRIFTWOOD_FENCE_GATE);
         Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "driftwood_fence_gate"), new BlockItem(DRIFTWOOD_FENCE_GATE, new FabricItemSettings()));
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.add(DRIFTWOOD_FENCE_GATE);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(DRIFTWOOD_FENCE, DRIFTWOOD_FENCE_GATE);});
 
         //door
         Registry.register(Registries.BLOCK, new Identifier(QuinMain.MODID, "driftwood_door"), DRIFTWOOD_DOOR);
         Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "driftwood_door"), new BlockItem(DRIFTWOOD_DOOR, new FabricItemSettings()));
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.add(DRIFTWOOD_DOOR);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(DRIFTWOOD_FENCE_GATE, DRIFTWOOD_DOOR);});
 
         //trapdoor
         Registry.register(Registries.BLOCK, new Identifier(QuinMain.MODID, "driftwood_trapdoor"), DRIFTWOOD_TRAPDOOR);
         Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "driftwood_trapdoor"), new BlockItem(DRIFTWOOD_TRAPDOOR, new FabricItemSettings()));
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.add(DRIFTWOOD_TRAPDOOR);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(DRIFTWOOD_DOOR, DRIFTWOOD_TRAPDOOR);});
 
         //pressure plate
         Registry.register(Registries.BLOCK, new Identifier(QuinMain.MODID, "driftwood_pressure_plate"), DRIFTWOOD_PRESSURE_PLATE);
         Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "driftwood_pressure_plate"), new BlockItem(DRIFTWOOD_PRESSURE_PLATE, new FabricItemSettings()));
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.add(DRIFTWOOD_PRESSURE_PLATE);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(DRIFTWOOD_TRAPDOOR, DRIFTWOOD_PRESSURE_PLATE);});
 
         //button
         Registry.register(Registries.BLOCK, new Identifier(QuinMain.MODID, "driftwood_button"), DRIFTWOOD_BUTTON);
         Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "driftwood_button"), new BlockItem(DRIFTWOOD_BUTTON, new FabricItemSettings()));
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.add(DRIFTWOOD_BUTTON);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(DRIFTWOOD_PRESSURE_PLATE, DRIFTWOOD_BUTTON);});
 
         //sign
         Registry.register(Registries.BLOCK, new Identifier(QuinMain.MODID, "driftwood_sign"), DRIFTWOOD_SIGN);
         Registry.register(Registries.BLOCK, new Identifier(QuinMain.MODID, "driftwood_wall_sign"), DRIFTWOOD_WALL_SIGN);
         Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "driftwood_sign"), new SignItem(new FabricItemSettings().maxCount(16), DRIFTWOOD_SIGN, DRIFTWOOD_WALL_SIGN));
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(content -> {content.add(DRIFTWOOD_SIGN);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(content -> {content.addAfter(Items.WARPED_HANGING_SIGN, DRIFTWOOD_SIGN);});
 
         //hanging sign
         Registry.register(Registries.BLOCK, new Identifier(QuinMain.MODID, "driftwood_hanging_sign"), DRIFTWOOD_HANGING_SIGN);
         Registry.register(Registries.BLOCK, new Identifier(QuinMain.MODID, "driftwood_wall_hanging_side"), DRIFTWOOD_WALL_HANGING_SIGN);
-        Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "driftwood_wall_sign"), new HangingSignItem(DRIFTWOOD_HANGING_SIGN, DRIFTWOOD_WALL_HANGING_SIGN, new FabricItemSettings().maxCount(16)));
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(content -> {content.add(DRIFTWOOD_HANGING_SIGN);});
+        Registry.register(Registries.ITEM, new Identifier(QuinMain.MODID, "driftwood_hanging_sign"), new HangingSignItem(DRIFTWOOD_HANGING_SIGN, DRIFTWOOD_WALL_HANGING_SIGN, new FabricItemSettings().maxCount(16)));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(content -> {content.addAfter(DRIFTWOOD_SIGN, DRIFTWOOD_HANGING_SIGN);});
     }
 }

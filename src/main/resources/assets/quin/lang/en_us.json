@@ -17,6 +17,14 @@
   "block.quin.driftwood_log": "Driftwood Log",
   "block.quin.driftwood": "Driftwood",
   "block.quin.driftwood_planks": "Driftwood Planks",
+  "block.quin.driftwood_slab": "Driftwood Slab",
+  "block.quin.driftwood_stairs": "Driftwood stairs",
+  "block.quin.driftwood_fence": "Driftwood Fence",
+  "block.quin.driftwood_fence_gate": "Driftwood Fence Gate",
   "block.quin.driftwood_door": "Driftwood Door",
-  "block.quin.driftwood_sign": "Driftwood Sign"
+  "block.quin.driftwood_trapdoor": "Driftwood Trapdoor",
+  "block.quin.driftwood_button": "Driftwood Button",
+  "block.quin.driftwood_pressure_plate": "Driftwood Pressure Plate",
+  "block.quin.driftwood_sign": "Driftwood Sign",
+  "block.quin.driftwood_hanging_sign": "Driftwood Hanging Sign"
 }
