@@ -23,7 +23,7 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.*;
 import net.minecraft.world.event.GameEvent;
-import net.timeworndevs.quin.common.CommonRegistry;
+import net.timeworndevs.quin.common.CommonDeprecatedRegistry;
 import org.jetbrains.annotations.Nullable;
 
 public class TreeTapBlock extends HorizontalFacingBlock {
@@ -51,7 +51,7 @@ public class TreeTapBlock extends HorizontalFacingBlock {
     }
 
     public static void dropResin(World world, BlockPos pos) {
-        dropStack(world, pos, new ItemStack(CommonRegistry.RESIN, 1));
+        dropStack(world, pos, new ItemStack(CommonDeprecatedRegistry.RESIN, 1));
     }
 
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
@@ -59,7 +59,7 @@ public class TreeTapBlock extends HorizontalFacingBlock {
         int i = (Integer)state.get(FILL_LEVEL);
         if (i >= 2) {
             Item item = itemStack.getItem();
-            if (itemStack.isOf(CommonRegistry.RESIN_CHISEL)) {
+            if (itemStack.isOf(CommonDeprecatedRegistry.RESIN_CHISEL)) {
                 world.playSound(player, player.getX(), player.getY(), player.getZ(), SoundEvents.BLOCK_BEEHIVE_SHEAR, SoundCategory.BLOCKS, 1.0f, 1.0f);
                 dropResin(world, pos);
                 itemStack.damage(1, player, (playerx)-> {
@@ -70,9 +70,9 @@ public class TreeTapBlock extends HorizontalFacingBlock {
                 itemStack.decrement(1);
                 world.playSound(player, player.getX(), player.getY(), player.getZ(), SoundEvents.ITEM_BOTTLE_FILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
                 if (itemStack.isEmpty()) {
-                    player.setStackInHand(hand, new ItemStack(CommonRegistry.SAP_BOTTLE));
-                } else if (!player.getInventory().insertStack(new ItemStack(CommonRegistry.SAP_BOTTLE))) {
-                    player.dropItem(new ItemStack(CommonRegistry.SAP_BOTTLE), false);
+                    player.setStackInHand(hand, new ItemStack(CommonDeprecatedRegistry.SAP_BOTTLE));
+                } else if (!player.getInventory().insertStack(new ItemStack(CommonDeprecatedRegistry.SAP_BOTTLE))) {
+                    player.dropItem(new ItemStack(CommonDeprecatedRegistry.SAP_BOTTLE), false);
                 }
 
                 world.emitGameEvent(player, GameEvent.FLUID_PICKUP, pos);

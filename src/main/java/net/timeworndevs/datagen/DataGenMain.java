@@ -7,10 +7,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
-import net.minecraft.data.client.Models;
-import net.minecraft.item.Item;
-import net.timeworndevs.quin.QuinMain;
-import net.timeworndevs.quin.common.CommonRegistry;
+import net.timeworndevs.quin.common.CommonDeprecatedRegistry;
 
 public class DataGenMain implements DataGeneratorEntrypoint {
 
@@ -38,10 +35,10 @@ public class DataGenMain implements DataGeneratorEntrypoint {
 
         @Override
         public void generate() {
-            addDrop(CommonRegistry.DRIFTWOOD_SIGN);
-            addDrop(CommonRegistry.DRIFTWOOD_WALL_SIGN);
-            addDrop(CommonRegistry.DRIFTWOOD_HANGING_SIGN);
-            addDrop(CommonRegistry.DRIFTWOOD_WALL_HANGING_SIGN);
+            addDrop(CommonDeprecatedRegistry.DRIFTWOOD_SIGN);
+            addDrop(CommonDeprecatedRegistry.DRIFTWOOD_WALL_SIGN);
+            addDrop(CommonDeprecatedRegistry.DRIFTWOOD_HANGING_SIGN);
+            addDrop(CommonDeprecatedRegistry.DRIFTWOOD_WALL_HANGING_SIGN);
         }
     }
 
