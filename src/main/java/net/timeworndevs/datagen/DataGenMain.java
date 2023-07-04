@@ -38,6 +38,10 @@ public class DataGenMain implements DataGeneratorEntrypoint {
 
         @Override
         public void generate() {
+            addDrop(CommonRegistry.DRIFTWOOD_SIGN);
+            addDrop(CommonRegistry.DRIFTWOOD_WALL_SIGN);
+            addDrop(CommonRegistry.DRIFTWOOD_HANGING_SIGN);
+            addDrop(CommonRegistry.DRIFTWOOD_WALL_HANGING_SIGN);
         }
     }
 
