@@ -35,10 +35,6 @@ public class DataGenMain implements DataGeneratorEntrypoint {
 
         @Override
         public void generate() {
-            addDrop(CommonDeprecatedRegistry.DRIFTWOOD_SIGN);
-            addDrop(CommonDeprecatedRegistry.DRIFTWOOD_WALL_SIGN);
-            addDrop(CommonDeprecatedRegistry.DRIFTWOOD_HANGING_SIGN);
-            addDrop(CommonDeprecatedRegistry.DRIFTWOOD_WALL_HANGING_SIGN);
         }
     }
 
