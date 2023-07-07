@@ -63,11 +63,13 @@ public class CommonBlockRegistry {
         //DRIFTWOOD_HANGING_SIGN = QuinRegistry.register("driftwood_hanging_sign", new TerraformHangingSignBlock(DRIFTWOOD_HANGING_SIGN_TEXTURE, DRIFTWOOD_HANGING_SIGN_GUI_TEXTURE, FabricBlockSettings.of().mapColor(MapColor.OFF_WHITE).sounds(BlockSoundGroup.NETHER_WOOD).noCollision()));
         //DRIFTWOOD_WALL_HANGING_SIGN = QuinRegistry.register("driftwood_wall_hanging_sign", new TerraformWallHangingSignBlock(DRIFTWOOD_HANGING_SIGN_TEXTURE, DRIFTWOOD_HANGING_SIGN_GUI_TEXTURE, FabricBlockSettings.of().mapColor(MapColor.OFF_WHITE).sounds(BlockSoundGroup.NETHER_WOOD).noCollision().dropsLike(DRIFTWOOD_HANGING_SIGN)));
 
+        addBurnables();
     }
+
 
     public static void addBurnables() {
         FlammableBlockRegistry flammableRegistry = FlammableBlockRegistry.getDefaultInstance();
 
-        flammableRegistry.add(RESIN_BLOCK,5,6);
+        flammableRegistry.add(RESIN_BLOCK,10,60);
     }
 }
