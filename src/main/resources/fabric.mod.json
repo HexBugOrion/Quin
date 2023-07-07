@@ -22,7 +22,7 @@
       "net.timeworndevs.quin.QuinMain"
     ],
     "client": [
-      "net.timewordevs.quin.QuinClient"
+      "net.timeworndevs.quin.QuinClient"
     ],
     "fabric-datagen": [
       "net.timeworndevs.datagen.DataGenMain"
