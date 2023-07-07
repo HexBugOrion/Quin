@@ -13,7 +13,7 @@ public class QuinClient implements ClientModInitializer {
     }
 
     private static void initializeTextures() {
-        SpriteIdentifierRegistry.INSTANCE.addIdentifier(new SpriteIdentifier(TexturedRenderLayers.SIGNS_ATLAS_TEXTURE, CommonBlockRegistry.DRIFTWOOD_SIGN.getTexture()));
-        SpriteIdentifierRegistry.INSTANCE.addIdentifier(new SpriteIdentifier(TexturedRenderLayers.SIGNS_ATLAS_TEXTURE, CommonBlockRegistry.DRIFTWOOD_HANGING_SIGN.getTexture()));
+        //SpriteIdentifierRegistry.INSTANCE.addIdentifier(new SpriteIdentifier(TexturedRenderLayers.SIGNS_ATLAS_TEXTURE, CommonBlockRegistry.DRIFTWOOD_SIGN.getTexture()));
+        //SpriteIdentifierRegistry.INSTANCE.addIdentifier(new SpriteIdentifier(TexturedRenderLayers.SIGNS_ATLAS_TEXTURE, CommonBlockRegistry.DRIFTWOOD_HANGING_SIGN.getTexture()));
     }
 }
