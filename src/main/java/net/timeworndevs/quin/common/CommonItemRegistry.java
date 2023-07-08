@@ -30,6 +30,26 @@ public class CommonItemRegistry {
     public static BlockItem DRIFTWOOD_PRESSURE_PLATE;
     public static BlockItem DRIFTWOOD_BUTTON;
 
+    public static BlockItem ROPE;
+
+    public static BlockItem TINTED_CRYSTAL;
+    public static BlockItem WHITE_CRYSTAL;
+    public static BlockItem LIGHT_GRAY_CRYSTAL;
+    public static BlockItem GRAY_CRYSTAL;
+    public static BlockItem BLACK_CRYSTAL;
+    public static BlockItem BROWN_CRYSTAL;
+    public static BlockItem RED_CRYSTAL;
+    public static BlockItem ORANGE_CRYSTAL;
+    public static BlockItem YELLOW_CRYSTAL;
+    public static BlockItem LIME_CRYSTAL;
+    public static BlockItem GREEN_CRYSTAL;
+    public static BlockItem CYAN_CRYSTAL;
+    public static BlockItem LIGHT_BLUE_CRYSTAL;
+    public static BlockItem BLUE_CRYSTAL;
+    public static BlockItem PURPLE_CRYSTAL;
+    public static BlockItem MAGENTA_CRYSTAL;
+    public static BlockItem PINK_CRYSTAL;
+
     //public static SignItem DRIFTWOOD_SIGN;
     //public static HangingSignItem DRIFTWOOD_HANGING_SIGN;
 
@@ -57,7 +77,27 @@ public class CommonItemRegistry {
         //DRIFTWOOD_SIGN = QuinRegistry.register("driftwood_sign", new SignItem(new Item.Settings().maxCount(16),CommonBlockRegistry.DRIFTWOOD_SIGN, CommonBlockRegistry.DRIFTWOOD_WALL_SIGN));
         //DRIFTWOOD_HANGING_SIGN = QuinRegistry.register("driftwood_hanging_sign", new HangingSignItem(CommonBlockRegistry.DRIFTWOOD_HANGING_SIGN, CommonBlockRegistry.DRIFTWOOD_WALL_HANGING_SIGN, new Item.Settings().maxCount(16)));
 
+        ROPE = QuinRegistry.register("rope", new BlockItem(CommonBlockRegistry.ROPE, new Item.Settings()));
+
         itemGroupAdditions();
+
+        TINTED_CRYSTAL = QuinRegistry.register("tinted_crystal", new BlockItem(CommonBlockRegistry.TINTED_CRYSTAL, new Item.Settings()));
+        WHITE_CRYSTAL = QuinRegistry.register("white_crystal", new BlockItem(CommonBlockRegistry.WHITE_CRYSTAL, new Item.Settings()));
+        LIGHT_GRAY_CRYSTAL = QuinRegistry.register("light_gray_crystal", new BlockItem(CommonBlockRegistry.LIGHT_GRAY_CRYSTAL, new Item.Settings()));
+        GRAY_CRYSTAL = QuinRegistry.register("gray_crystal", new BlockItem(CommonBlockRegistry.GRAY_CRYSTAL, new Item.Settings()));
+        BLACK_CRYSTAL = QuinRegistry.register("black_crystal", new BlockItem(CommonBlockRegistry.BLACK_CRYSTAL, new Item.Settings()));
+        BROWN_CRYSTAL = QuinRegistry.register("brown_crystal", new BlockItem(CommonBlockRegistry.BROWN_CRYSTAL, new Item.Settings()));
+        RED_CRYSTAL = QuinRegistry.register("red_crystal", new BlockItem(CommonBlockRegistry.RED_CRYSTAL, new Item.Settings()));
+        ORANGE_CRYSTAL = QuinRegistry.register("orange_crystal", new BlockItem(CommonBlockRegistry.ORANGE_CRYSTAL, new Item.Settings()));
+        YELLOW_CRYSTAL = QuinRegistry.register("yellow_crystal", new BlockItem(CommonBlockRegistry.YELLOW_CRYSTAL, new Item.Settings()));
+        LIME_CRYSTAL = QuinRegistry.register("lime_crystal", new BlockItem(CommonBlockRegistry.LIME_CRYSTAL, new Item.Settings()));
+        GREEN_CRYSTAL = QuinRegistry.register("green_crystal", new BlockItem(CommonBlockRegistry.GREEN_CRYSTAL, new Item.Settings()));
+        CYAN_CRYSTAL = QuinRegistry.register("cyan_crystal", new BlockItem(CommonBlockRegistry.CYAN_CRYSTAL, new Item.Settings()));
+        LIGHT_BLUE_CRYSTAL = QuinRegistry.register("light_blue_crystal", new BlockItem(CommonBlockRegistry.LIGHT_BLUE_CRYSTAL, new Item.Settings()));
+        BLUE_CRYSTAL = QuinRegistry.register("blue_crystal", new BlockItem(CommonBlockRegistry.BLUE_CRYSTAL, new Item.Settings()));
+        PURPLE_CRYSTAL = QuinRegistry.register("purple_crystal", new BlockItem(CommonBlockRegistry.PURPLE_CRYSTAL, new Item.Settings()));
+        MAGENTA_CRYSTAL = QuinRegistry.register("magenta_crystal", new BlockItem(CommonBlockRegistry.MAGENTA_CRYSTAL, new Item.Settings()));
+        PINK_CRYSTAL = QuinRegistry.register("pink_crystal", new BlockItem(CommonBlockRegistry.PINK_CRYSTAL, new Item.Settings()));
     }
 
     public static void itemGroupAdditions(){
@@ -82,6 +122,26 @@ public class CommonItemRegistry {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(DRIFTWOOD_PRESSURE_PLATE, DRIFTWOOD_BUTTON);});
         //ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(content -> {content.addAfter(Items.WARPED_HANGING_SIGN, DRIFTWOOD_SIGN);});
         //ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(content -> {content.addAfter(DRIFTWOOD_SIGN, DRIFTWOOD_HANGING_SIGN);});
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(Items.CHAIN, ROPE);});
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(content -> {content.add(TINTED_CRYSTAL);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(content -> {content.add(WHITE_CRYSTAL);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(content -> {content.add(LIGHT_GRAY_CRYSTAL);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(content -> {content.add(GRAY_CRYSTAL);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(content -> {content.add(BLACK_CRYSTAL);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(content -> {content.add(BROWN_CRYSTAL);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(content -> {content.add(RED_CRYSTAL);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(content -> {content.add(ORANGE_CRYSTAL);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(content -> {content.add(YELLOW_CRYSTAL);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(content -> {content.add(LIME_CRYSTAL);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(content -> {content.add(GREEN_CRYSTAL);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(content -> {content.add(CYAN_CRYSTAL);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(content -> {content.add(LIGHT_BLUE_CRYSTAL);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(content -> {content.add(BLUE_CRYSTAL);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(content -> {content.add(PURPLE_CRYSTAL);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(content -> {content.add(MAGENTA_CRYSTAL);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(content -> {content.add(PINK_CRYSTAL);});
 
         addFurnaceFuels();
     }

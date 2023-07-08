@@ -26,5 +26,24 @@
   "block.quin.driftwood_button": "Driftwood Button",
   "block.quin.driftwood_pressure_plate": "Driftwood Pressure Plate",
   "block.quin.driftwood_sign": "Driftwood Sign",
-  "block.quin.driftwood_hanging_sign": "Driftwood Hanging Sign"
+  "block.quin.driftwood_hanging_sign": "Driftwood Hanging Sign",
+  "block.quin.rope": "Rope",
+
+  "block.quin.tinted_crystal": "Tinted Crystal",
+  "block.quin.white_crystal": "White Crystal",
+  "block.quin.light_gray_crystal": "Light Gray Crystal",
+  "block.quin.gray_crystal": "Gray Crystal",
+  "block.quin.black_crystal": "Black Crystal",
+  "block.quin.brown_crystal": "Brown Crystal",
+  "block.quin.red_crystal": "Red Crystal",
+  "block.quin.orange_crystal": "Orange Crystal",
+  "block.quin.yellow_crystal": "Yellow Crystal",
+  "block.quin.lime_crystal": "Lime Crystal",
+  "block.quin.green_crystal": "Green Crystal",
+  "block.quin.cyan_crystal": "Cyan Crystal",
+  "block.quin.light_blue_crystal": "Light Blue Crystal",
+  "block.quin.blue_crystal": "Blue Crystal",
+  "block.quin.purple_crystal": "Purple Crystal",
+  "block.quin.magenta_crystal": "Magenta Crystal",
+  "block.quin.pink_crystal": "Pink Crystal"
 }

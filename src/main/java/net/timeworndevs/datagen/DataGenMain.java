@@ -7,6 +7,8 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
+import net.timeworndevs.quin.common.CommonBlockRegistry;
+import net.timeworndevs.quin.common.CommonItemRegistry;
 
 public class DataGenMain implements DataGeneratorEntrypoint {
 
@@ -18,7 +20,8 @@ public class DataGenMain implements DataGeneratorEntrypoint {
 
         @Override
         public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-            }
+
+        }
 
         @Override
         public void generateItemModels(ItemModelGenerator itemModelGenerator) {
@@ -34,6 +37,7 @@ public class DataGenMain implements DataGeneratorEntrypoint {
 
         @Override
         public void generate() {
+
         }
     }
 

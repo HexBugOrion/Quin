@@ -1,7 +1,22 @@
 {
   "replace": false,
   "values": [
-    "quin:gelrene_block",
-    "quin:tree_tap"
+    "quin:tree_tap",
+
+    "quin:white_crystal",
+    "quin:light_gray_crystal",
+    "quin:gray_crystal",
+    "quin:brown_crystal",
+    "quin:red_crystal",
+    "quin:orange_crystal",
+    "quin:yellow_crystal",
+    "quin:lime_crystal",
+    "quin:green_crystal",
+    "quin:cyan_crystal",
+    "quin:light_blue_crystal",
+    "quin:blue_crystal",
+    "quin:purple_crystal",
+    "quin:magenta_crystal",
+    "quin:pink_crystal"
   ]
 }
