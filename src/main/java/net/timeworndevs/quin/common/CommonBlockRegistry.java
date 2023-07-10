@@ -130,6 +130,7 @@ public class CommonBlockRegistry {
         WAXED_COPPER_PANEL = QuinRegistry.register("waxed_copper_panel", new Block(FabricBlockSettings.of().mapColor(MapColor.ORANGE).strength(3.0F, 6.0F).sounds(BlockSoundGroup.COPPER).requiresTool()));
 
         addBurnables();
+        registerOxidized();
     }
 
     public static void addBurnables() {
@@ -139,14 +140,14 @@ public class CommonBlockRegistry {
     }
 
     public static void registerOxidized() {
-        OxidizableBlocksRegistry.registerOxidizableBlockPair(EXPOSED_COPPER_PANEL, COPPER_PANEL);
-        OxidizableBlocksRegistry.registerOxidizableBlockPair(WEATHERED_COPPER_PANEL, EXPOSED_COPPER_PANEL);
-        OxidizableBlocksRegistry.registerOxidizableBlockPair(OXIDIZED_COPPER_PANEL, WEATHERED_COPPER_PANEL);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(COPPER_PANEL, EXPOSED_COPPER_PANEL);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(EXPOSED_COPPER_PANEL, WEATHERED_COPPER_PANEL);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(WEATHERED_COPPER_PANEL, OXIDIZED_COPPER_PANEL);
 
-        OxidizableBlocksRegistry.registerWaxableBlockPair(WAXED_COPPER_PANEL, COPPER_PANEL);
-        OxidizableBlocksRegistry.registerWaxableBlockPair(WAXED_EXPOSED_COPPER_PANEL, EXPOSED_COPPER_PANEL);
-        OxidizableBlocksRegistry.registerWaxableBlockPair(WAXED_WEATHERED_COPPER_PANEL, WEATHERED_COPPER_PANEL);
-        OxidizableBlocksRegistry.registerWaxableBlockPair(WAXED_OXIDIZED_COPPER_PANEL, OXIDIZED_COPPER_PANEL);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(COPPER_PANEL, WAXED_COPPER_PANEL);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(EXPOSED_COPPER_PANEL, WAXED_EXPOSED_COPPER_PANEL);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(WEATHERED_COPPER_PANEL, WAXED_WEATHERED_COPPER_PANEL);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(OXIDIZED_COPPER_PANEL, WAXED_OXIDIZED_COPPER_PANEL);
     }
 
 }
