@@ -45,5 +45,14 @@
   "block.quin.blue_crystal": "Blue Crystal",
   "block.quin.purple_crystal": "Purple Crystal",
   "block.quin.magenta_crystal": "Magenta Crystal",
-  "block.quin.pink_crystal": "Pink Crystal"
+  "block.quin.pink_crystal": "Pink Crystal",
+
+  "block.quin.copper_panel": "Copper Panel",
+  "block.quin.exposed_copper_panel": "Exposed Copper Panel",
+  "block.quin.weathered_copper_panel": "Weathered Copper Panel",
+  "block.quin.oxidized_copper_panel": "Oxidized Copper Panel",
+  "block.quin.waxed_copper_panel": "Waxed Copper Panel",
+  "block.quin.waxed_exposed_copper_panel": "Waxed Exposed Copper Panel",
+  "block.quin.waxed_weathered_copper_panel": "Waxed Weathered Copper Panel",
+  "block.quin.waxed_oxidized_copper_panel": "Waxed Oxidized Copper Panel"
 }
