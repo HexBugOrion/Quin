@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "quin:block/exposed_copper_panel"
+    }
+  }
+}

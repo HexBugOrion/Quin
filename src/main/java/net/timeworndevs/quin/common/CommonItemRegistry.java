@@ -3,8 +3,6 @@ package net.timeworndevs.quin.common;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.block.Blocks;
-import net.minecraft.block.CactusBlock;
-import net.minecraft.block.entity.AbstractFurnaceBlockEntity;
 import net.minecraft.item.*;
 import net.timeworndevs.quin.init.QuinRegistry;
 
@@ -50,6 +48,16 @@ public class CommonItemRegistry {
     public static BlockItem MAGENTA_CRYSTAL;
     public static BlockItem PINK_CRYSTAL;
 
+    public static BlockItem OXIDIZED_COPPER_PANEL;
+    public static BlockItem WEATHERED_COPPER_PANEL;
+    public static BlockItem EXPOSED_COPPER_PANEL;
+    public static BlockItem COPPER_PANEL;
+    public static BlockItem WAXED_OXIDIZED_COPPER_PANEL;
+    public static BlockItem WAXED_WEATHERED_COPPER_PANEL;
+    public static BlockItem WAXED_EXPOSED_COPPER_PANEL;
+    public static BlockItem WAXED_COPPER_PANEL;
+
+
     //public static SignItem DRIFTWOOD_SIGN;
     //public static HangingSignItem DRIFTWOOD_HANGING_SIGN;
 
@@ -79,7 +87,6 @@ public class CommonItemRegistry {
 
         ROPE = QuinRegistry.register("rope", new BlockItem(CommonBlockRegistry.ROPE, new Item.Settings()));
 
-        itemGroupAdditions();
 
         TINTED_CRYSTAL = QuinRegistry.register("tinted_crystal", new BlockItem(CommonBlockRegistry.TINTED_CRYSTAL, new Item.Settings()));
         WHITE_CRYSTAL = QuinRegistry.register("white_crystal", new BlockItem(CommonBlockRegistry.WHITE_CRYSTAL, new Item.Settings()));
@@ -98,6 +105,19 @@ public class CommonItemRegistry {
         PURPLE_CRYSTAL = QuinRegistry.register("purple_crystal", new BlockItem(CommonBlockRegistry.PURPLE_CRYSTAL, new Item.Settings()));
         MAGENTA_CRYSTAL = QuinRegistry.register("magenta_crystal", new BlockItem(CommonBlockRegistry.MAGENTA_CRYSTAL, new Item.Settings()));
         PINK_CRYSTAL = QuinRegistry.register("pink_crystal", new BlockItem(CommonBlockRegistry.PINK_CRYSTAL, new Item.Settings()));
+
+        OXIDIZED_COPPER_PANEL = QuinRegistry.register("oxidized_copper_panel", new BlockItem(CommonBlockRegistry.OXIDIZED_COPPER_PANEL, new Item.Settings()));
+        WEATHERED_COPPER_PANEL = QuinRegistry.register("weathered_copper_panel", new BlockItem(CommonBlockRegistry.WEATHERED_COPPER_PANEL, new Item.Settings()));
+        EXPOSED_COPPER_PANEL = QuinRegistry.register("exposed_copper_panel", new BlockItem(CommonBlockRegistry.EXPOSED_COPPER_PANEL, new Item.Settings()));
+        COPPER_PANEL = QuinRegistry.register("copper_panel", new BlockItem(CommonBlockRegistry.COPPER_PANEL, new Item.Settings()));
+
+        WAXED_OXIDIZED_COPPER_PANEL = QuinRegistry.register("waxed_oxidized_copper_panel", new BlockItem(CommonBlockRegistry.WAXED_OXIDIZED_COPPER_PANEL, new Item.Settings()));
+        WAXED_WEATHERED_COPPER_PANEL = QuinRegistry.register("waxed_weathered_copper_panel", new BlockItem(CommonBlockRegistry.WAXED_WEATHERED_COPPER_PANEL, new Item.Settings()));
+        WAXED_EXPOSED_COPPER_PANEL = QuinRegistry.register("waxed_exposed_copper_panel", new BlockItem(CommonBlockRegistry.WAXED_EXPOSED_COPPER_PANEL, new Item.Settings()));
+        WAXED_COPPER_PANEL = QuinRegistry.register("waxed_copper_panel", new BlockItem(CommonBlockRegistry.WAXED_COPPER_PANEL, new Item.Settings()));
+
+        itemGroupAdditions();
+        addFurnaceFuels();
     }
 
     public static void itemGroupAdditions(){
@@ -143,7 +163,14 @@ public class CommonItemRegistry {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(content -> {content.add(MAGENTA_CRYSTAL);});
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(content -> {content.add(PINK_CRYSTAL);});
 
-        addFurnaceFuels();
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(Items.OXIDIZED_COPPER, OXIDIZED_COPPER_PANEL);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(Items.WEATHERED_COPPER, WEATHERED_COPPER_PANEL);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(Items.EXPOSED_COPPER, EXPOSED_COPPER_PANEL);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(Items.COPPER_BLOCK, COPPER_PANEL);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(Items.WAXED_OXIDIZED_COPPER, WAXED_OXIDIZED_COPPER_PANEL);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(Items.WAXED_WEATHERED_COPPER, WAXED_WEATHERED_COPPER_PANEL);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(Items.WAXED_EXPOSED_COPPER, WAXED_EXPOSED_COPPER_PANEL);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(Items.WAXED_COPPER_BLOCK, WAXED_COPPER_PANEL);});
     }
 
     public static void addFurnaceFuels() {

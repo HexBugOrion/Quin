@@ -8,6 +8,7 @@ import com.terraformersmc.terraform.wood.block.PillarLogHelper;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
+import net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry;
 import net.fabricmc.fabric.impl.blockrenderlayer.BlockRenderLayerMapImpl;
 import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
@@ -58,6 +59,16 @@ public class CommonBlockRegistry {
     public static Block MAGENTA_CRYSTAL;
     public static Block PINK_CRYSTAL;
 
+    public static Block OXIDIZED_COPPER_PANEL;
+    public static Block WEATHERED_COPPER_PANEL;
+    public static Block EXPOSED_COPPER_PANEL;
+    public static Block COPPER_PANEL;
+
+    public static Block WAXED_OXIDIZED_COPPER_PANEL;
+    public static Block WAXED_WEATHERED_COPPER_PANEL;
+    public static Block WAXED_EXPOSED_COPPER_PANEL;
+    public static Block WAXED_COPPER_PANEL;
+
 
     //public static TerraformSignBlock DRIFTWOOD_SIGN;
     //public static TerraformWallSignBlock DRIFTWOOD_WALL_SIGN;
@@ -90,32 +101,52 @@ public class CommonBlockRegistry {
 
         ROPE = QuinRegistry.register("rope", new ChainBlock(FabricBlockSettings.of().mapColor(MapColor.OAK_TAN).sounds(BlockSoundGroup.WOOL).noCollision()));
 
-        TINTED_CRYSTAL = QuinRegistry.register("tinted_crystal", new TintedGlassBlock(FabricBlockSettings.of().nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS)));
-        WHITE_CRYSTAL = QuinRegistry.register("white_crystal", new StainedGlassBlock(DyeColor.WHITE, FabricBlockSettings.of().nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS).requiresTool()));
-        LIGHT_GRAY_CRYSTAL = QuinRegistry.register("light_gray_crystal", new StainedGlassBlock(DyeColor.LIGHT_GRAY, FabricBlockSettings.of().nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS).requiresTool()));
-        GRAY_CRYSTAL = QuinRegistry.register("gray_crystal", new StainedGlassBlock(DyeColor.GRAY, FabricBlockSettings.of().nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS).requiresTool()));
-        BLACK_CRYSTAL = QuinRegistry.register("black_crystal", new StainedGlassBlock(DyeColor.BLACK, FabricBlockSettings.of().nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS).requiresTool()));
-        BROWN_CRYSTAL = QuinRegistry.register("brown_crystal", new StainedGlassBlock(DyeColor.BROWN, FabricBlockSettings.of().nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS).requiresTool()));
-        RED_CRYSTAL = QuinRegistry.register("red_crystal", new StainedGlassBlock(DyeColor.RED, FabricBlockSettings.of().nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS).requiresTool()));
-        ORANGE_CRYSTAL = QuinRegistry.register("orange_crystal", new StainedGlassBlock(DyeColor.ORANGE, FabricBlockSettings.of().nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS).requiresTool()));
-        YELLOW_CRYSTAL = QuinRegistry.register("yellow_crystal", new StainedGlassBlock(DyeColor.YELLOW, FabricBlockSettings.of().nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS).requiresTool()));
-        LIME_CRYSTAL = QuinRegistry.register("lime_crystal", new StainedGlassBlock(DyeColor.LIME, FabricBlockSettings.of().nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS).requiresTool()));
-        GREEN_CRYSTAL = QuinRegistry.register("green_crystal", new StainedGlassBlock(DyeColor.GREEN, FabricBlockSettings.of().nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS).requiresTool()));
-        CYAN_CRYSTAL = QuinRegistry.register("cyan_crystal", new StainedGlassBlock(DyeColor.CYAN, FabricBlockSettings.of().nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS).requiresTool()));
-        LIGHT_BLUE_CRYSTAL = QuinRegistry.register("light_blue_crystal", new StainedGlassBlock(DyeColor.LIGHT_BLUE, FabricBlockSettings.of().nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS).requiresTool()));
-        BLUE_CRYSTAL = QuinRegistry.register("blue_crystal", new StainedGlassBlock(DyeColor.BLUE, FabricBlockSettings.of().nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS).requiresTool()));
-        PURPLE_CRYSTAL = QuinRegistry.register("purple_crystal", new StainedGlassBlock(DyeColor.PURPLE, FabricBlockSettings.of().nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS).requiresTool()));
-        MAGENTA_CRYSTAL = QuinRegistry.register("magenta_crystal", new StainedGlassBlock(DyeColor.MAGENTA, FabricBlockSettings.of().nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS).requiresTool()));
-        PINK_CRYSTAL = QuinRegistry.register("pink_crystal", new StainedGlassBlock(DyeColor.PINK, FabricBlockSettings.of().nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS).requiresTool()));
+        TINTED_CRYSTAL = QuinRegistry.register("tinted_crystal", new TintedGlassBlock(FabricBlockSettings.of().mapColor(MapColor.GRAY).nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS)));
+        WHITE_CRYSTAL = QuinRegistry.register("white_crystal", new StainedGlassBlock(DyeColor.WHITE, FabricBlockSettings.of().mapColor(MapColor.WHITE).nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS).requiresTool()));
+        LIGHT_GRAY_CRYSTAL = QuinRegistry.register("light_gray_crystal", new StainedGlassBlock(DyeColor.LIGHT_GRAY, FabricBlockSettings.of().mapColor(MapColor.LIGHT_GRAY).nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS).requiresTool()));
+        GRAY_CRYSTAL = QuinRegistry.register("gray_crystal", new StainedGlassBlock(DyeColor.GRAY, FabricBlockSettings.of().mapColor(MapColor.GRAY).nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS).requiresTool()));
+        BLACK_CRYSTAL = QuinRegistry.register("black_crystal", new StainedGlassBlock(DyeColor.BLACK, FabricBlockSettings.of().mapColor(MapColor.BLACK).nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS).requiresTool()));
+        BROWN_CRYSTAL = QuinRegistry.register("brown_crystal", new StainedGlassBlock(DyeColor.BROWN, FabricBlockSettings.of().mapColor(MapColor.BROWN).nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS).requiresTool()));
+        RED_CRYSTAL = QuinRegistry.register("red_crystal", new StainedGlassBlock(DyeColor.RED, FabricBlockSettings.of().mapColor(MapColor.RED).nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS).requiresTool()));
+        ORANGE_CRYSTAL = QuinRegistry.register("orange_crystal", new StainedGlassBlock(DyeColor.ORANGE, FabricBlockSettings.of().mapColor(MapColor.ORANGE).nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS).requiresTool()));
+        YELLOW_CRYSTAL = QuinRegistry.register("yellow_crystal", new StainedGlassBlock(DyeColor.YELLOW, FabricBlockSettings.of().mapColor(MapColor.YELLOW).nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS).requiresTool()));
+        LIME_CRYSTAL = QuinRegistry.register("lime_crystal", new StainedGlassBlock(DyeColor.LIME, FabricBlockSettings.of().mapColor(MapColor.LIME).nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS).requiresTool()));
+        GREEN_CRYSTAL = QuinRegistry.register("green_crystal", new StainedGlassBlock(DyeColor.GREEN, FabricBlockSettings.of().mapColor(MapColor.GREEN).nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS).requiresTool()));
+        CYAN_CRYSTAL = QuinRegistry.register("cyan_crystal", new StainedGlassBlock(DyeColor.CYAN, FabricBlockSettings.of().mapColor(MapColor.CYAN).nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS).requiresTool()));
+        LIGHT_BLUE_CRYSTAL = QuinRegistry.register("light_blue_crystal", new StainedGlassBlock(DyeColor.LIGHT_BLUE, FabricBlockSettings.of().mapColor(MapColor.LIGHT_BLUE).nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS).requiresTool()));
+        BLUE_CRYSTAL = QuinRegistry.register("blue_crystal", new StainedGlassBlock(DyeColor.BLUE, FabricBlockSettings.of().mapColor(MapColor.BLUE).nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS).requiresTool()));
+        PURPLE_CRYSTAL = QuinRegistry.register("purple_crystal", new StainedGlassBlock(DyeColor.PURPLE, FabricBlockSettings.of().mapColor(MapColor.PURPLE).nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS).requiresTool()));
+        MAGENTA_CRYSTAL = QuinRegistry.register("magenta_crystal", new StainedGlassBlock(DyeColor.MAGENTA, FabricBlockSettings.of().mapColor(MapColor.MAGENTA).nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS).requiresTool()));
+        PINK_CRYSTAL = QuinRegistry.register("pink_crystal", new StainedGlassBlock(DyeColor.PINK, FabricBlockSettings.of().mapColor(MapColor.PINK).nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS).requiresTool()));
+
+        OXIDIZED_COPPER_PANEL = QuinRegistry.register("oxidized_copper_panel", new Block(FabricBlockSettings.of().mapColor(MapColor.TEAL).strength(3.0F, 6.0F).sounds(BlockSoundGroup.COPPER).requiresTool()));
+        WEATHERED_COPPER_PANEL = QuinRegistry.register("weathered_copper_panel", new Block(FabricBlockSettings.of().mapColor(MapColor.DARK_AQUA).strength(3.0F, 6.0F).sounds(BlockSoundGroup.COPPER).requiresTool()));
+        EXPOSED_COPPER_PANEL = QuinRegistry.register("exposed_copper_panel", new Block(FabricBlockSettings.of().mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).strength(3.0F, 6.0F).sounds(BlockSoundGroup.COPPER).requiresTool()));
+        COPPER_PANEL = QuinRegistry.register("copper_panel", new Block(FabricBlockSettings.of().mapColor(MapColor.ORANGE).strength(3.0F, 6.0F).sounds(BlockSoundGroup.COPPER).requiresTool()));
+
+        WAXED_OXIDIZED_COPPER_PANEL = QuinRegistry.register("waxed_oxidized_copper_panel", new Block(FabricBlockSettings.of().mapColor(MapColor.TEAL).strength(3.0F, 6.0F).sounds(BlockSoundGroup.COPPER).requiresTool()));
+        WAXED_WEATHERED_COPPER_PANEL = QuinRegistry.register("waxed_weathered_copper_panel", new Block(FabricBlockSettings.of().mapColor(MapColor.DARK_AQUA).strength(3.0F, 6.0F).sounds(BlockSoundGroup.COPPER).requiresTool()));
+        WAXED_EXPOSED_COPPER_PANEL = QuinRegistry.register("waxed_exposed_copper_panel", new Block(FabricBlockSettings.of().mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).strength(3.0F, 6.0F).sounds(BlockSoundGroup.COPPER).requiresTool()));
+        WAXED_COPPER_PANEL = QuinRegistry.register("waxed_copper_panel", new Block(FabricBlockSettings.of().mapColor(MapColor.ORANGE).strength(3.0F, 6.0F).sounds(BlockSoundGroup.COPPER).requiresTool()));
 
         addBurnables();
     }
-
 
     public static void addBurnables() {
         FlammableBlockRegistry flammableRegistry = FlammableBlockRegistry.getDefaultInstance();
 
         flammableRegistry.add(RESIN_BLOCK,10,60);
+    }
+
+    public static void registerOxidized() {
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(EXPOSED_COPPER_PANEL, COPPER_PANEL);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(WEATHERED_COPPER_PANEL, EXPOSED_COPPER_PANEL);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(OXIDIZED_COPPER_PANEL, WEATHERED_COPPER_PANEL);
+
+        OxidizableBlocksRegistry.registerWaxableBlockPair(WAXED_COPPER_PANEL, COPPER_PANEL);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(WAXED_EXPOSED_COPPER_PANEL, EXPOSED_COPPER_PANEL);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(WAXED_WEATHERED_COPPER_PANEL, WEATHERED_COPPER_PANEL);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(WAXED_OXIDIZED_COPPER_PANEL, OXIDIZED_COPPER_PANEL);
     }
 
 }
