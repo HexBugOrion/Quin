@@ -13,11 +13,14 @@ import net.fabricmc.fabric.impl.blockrenderlayer.BlockRenderLayerMapImpl;
 import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.client.render.RenderLayer;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.timeworndevs.quin.QuinMain;
 import net.timeworndevs.quin.block.TreeTapBlock;
+import net.timeworndevs.quin.block.UnderwaterTorchBlock;
+import net.timeworndevs.quin.block.UnderwaterWallTorchBlock;
 import net.timeworndevs.quin.init.QuinRegistry;
 
 
@@ -68,6 +71,27 @@ public class CommonBlockRegistry {
     public static Block WAXED_WEATHERED_COPPER_PANEL;
     public static Block WAXED_EXPOSED_COPPER_PANEL;
     public static Block WAXED_COPPER_PANEL;
+
+    public static Block OXIDIZED_COPPER_PANEL_STAIRS;
+    public static Block WEATHERED_COPPER_PANEL_STAIRS;
+    public static Block EXPOSED_COPPER_PANEL_STAIRS;
+    public static Block COPPER_PANEL_STAIRS;
+    public static Block WAXED_OXIDIZED_COPPER_PANEL_STAIRS;
+    public static Block WAXED_WEATHERED_COPPER_PANEL_STAIRS;
+    public static Block WAXED_EXPOSED_COPPER_PANEL_STAIRS;
+    public static Block WAXED_COPPER_PANEL_STAIRS;
+
+    public static Block OXIDIZED_COPPER_PANEL_SLAB;
+    public static Block WEATHERED_COPPER_PANEL_SLAB;
+    public static Block EXPOSED_COPPER_PANEL_SLAB;
+    public static Block COPPER_PANEL_SLAB;
+    public static Block WAXED_OXIDIZED_COPPER_PANEL_SLAB;
+    public static Block WAXED_WEATHERED_COPPER_PANEL_SLAB;
+    public static Block WAXED_EXPOSED_COPPER_PANEL_SLAB;
+    public static Block WAXED_COPPER_PANEL_SLAB;
+
+    public static Block UNDERWATER_TORCH;
+    public static Block UNDERWATER_WALL_TORCH;
 
 
     //public static TerraformSignBlock DRIFTWOOD_SIGN;
@@ -123,11 +147,31 @@ public class CommonBlockRegistry {
         WEATHERED_COPPER_PANEL = QuinRegistry.register("weathered_copper_panel", new OxidizableBlock(Oxidizable.OxidationLevel.WEATHERED,FabricBlockSettings.of().mapColor(MapColor.DARK_AQUA).strength(3.0F, 6.0F).sounds(BlockSoundGroup.COPPER).requiresTool()));
         EXPOSED_COPPER_PANEL = QuinRegistry.register("exposed_copper_panel", new OxidizableBlock(Oxidizable.OxidationLevel.EXPOSED,FabricBlockSettings.of().mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).strength(3.0F, 6.0F).sounds(BlockSoundGroup.COPPER).requiresTool()));
         COPPER_PANEL = QuinRegistry.register("copper_panel", new OxidizableBlock(Oxidizable.OxidationLevel.UNAFFECTED,FabricBlockSettings.of().mapColor(MapColor.ORANGE).strength(3.0F, 6.0F).sounds(BlockSoundGroup.COPPER).requiresTool()));
-
         WAXED_OXIDIZED_COPPER_PANEL = QuinRegistry.register("waxed_oxidized_copper_panel", new Block(FabricBlockSettings.of().mapColor(MapColor.TEAL).strength(3.0F, 6.0F).sounds(BlockSoundGroup.COPPER).requiresTool()));
         WAXED_WEATHERED_COPPER_PANEL = QuinRegistry.register("waxed_weathered_copper_panel", new Block(FabricBlockSettings.of().mapColor(MapColor.DARK_AQUA).strength(3.0F, 6.0F).sounds(BlockSoundGroup.COPPER).requiresTool()));
         WAXED_EXPOSED_COPPER_PANEL = QuinRegistry.register("waxed_exposed_copper_panel", new Block(FabricBlockSettings.of().mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).strength(3.0F, 6.0F).sounds(BlockSoundGroup.COPPER).requiresTool()));
         WAXED_COPPER_PANEL = QuinRegistry.register("waxed_copper_panel", new Block(FabricBlockSettings.of().mapColor(MapColor.ORANGE).strength(3.0F, 6.0F).sounds(BlockSoundGroup.COPPER).requiresTool()));
+
+        OXIDIZED_COPPER_PANEL_STAIRS = QuinRegistry.register("oxidized_copper_panel_stairs", new OxidizableStairsBlock(Oxidizable.OxidationLevel.OXIDIZED, OXIDIZED_COPPER_PANEL.getDefaultState(), FabricBlockSettings.of().mapColor(MapColor.TEAL).strength(3.0F, 6.0F).sounds(BlockSoundGroup.COPPER).requiresTool()));
+        WEATHERED_COPPER_PANEL_STAIRS = QuinRegistry.register("weathered_copper_panel_stairs", new OxidizableStairsBlock(Oxidizable.OxidationLevel.WEATHERED, WEATHERED_COPPER_PANEL.getDefaultState(), FabricBlockSettings.of().mapColor(MapColor.DARK_AQUA).strength(3.0F, 6.0F).sounds(BlockSoundGroup.COPPER).requiresTool()));
+        EXPOSED_COPPER_PANEL_STAIRS = QuinRegistry.register("exposed_copper_panel_stairs", new OxidizableStairsBlock(Oxidizable.OxidationLevel.EXPOSED, EXPOSED_COPPER_PANEL.getDefaultState(), FabricBlockSettings.of().mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).strength(3.0F, 6.0F).sounds(BlockSoundGroup.COPPER).requiresTool()));
+        COPPER_PANEL_STAIRS = QuinRegistry.register("copper_panel_stairs", new OxidizableStairsBlock(Oxidizable.OxidationLevel.UNAFFECTED, COPPER_PANEL.getDefaultState(), FabricBlockSettings.of().mapColor(MapColor.ORANGE).strength(3.0F, 6.0F).sounds(BlockSoundGroup.COPPER).requiresTool()));
+        WAXED_OXIDIZED_COPPER_PANEL_STAIRS = QuinRegistry.register("waxed_oxidized_copper_panel_stairs", new StairsBlock(WAXED_OXIDIZED_COPPER_PANEL.getDefaultState(), FabricBlockSettings.of().mapColor(MapColor.TEAL).strength(3.0F, 6.0F).sounds(BlockSoundGroup.COPPER).requiresTool()));
+        WAXED_WEATHERED_COPPER_PANEL_STAIRS = QuinRegistry.register("waxed_weathered_copper_panel_stairs", new StairsBlock(WAXED_WEATHERED_COPPER_PANEL.getDefaultState(), FabricBlockSettings.of().mapColor(MapColor.TEAL).strength(3.0F, 6.0F).sounds(BlockSoundGroup.COPPER).requiresTool()));
+        WAXED_EXPOSED_COPPER_PANEL_STAIRS = QuinRegistry.register("waxed_exposed_copper_panel_stairs", new StairsBlock(WAXED_EXPOSED_COPPER_PANEL.getDefaultState(), FabricBlockSettings.of().mapColor(MapColor.TEAL).strength(3.0F, 6.0F).sounds(BlockSoundGroup.COPPER).requiresTool()));
+        WAXED_COPPER_PANEL_STAIRS = QuinRegistry.register("waxed_copper_panel_stairs", new StairsBlock(WAXED_COPPER_PANEL.getDefaultState(), FabricBlockSettings.of().mapColor(MapColor.TEAL).strength(3.0F, 6.0F).sounds(BlockSoundGroup.COPPER).requiresTool()));
+
+        OXIDIZED_COPPER_PANEL_SLAB = QuinRegistry.register("oxidized_copper_panel_slab", new OxidizableSlabBlock(Oxidizable.OxidationLevel.OXIDIZED, FabricBlockSettings.of().mapColor(MapColor.TEAL).strength(3.0F, 6.0F).sounds(BlockSoundGroup.COPPER).requiresTool()));
+        WEATHERED_COPPER_PANEL_SLAB = QuinRegistry.register("weathered_copper_panel_slab", new OxidizableSlabBlock(Oxidizable.OxidationLevel.WEATHERED, FabricBlockSettings.of().mapColor(MapColor.DARK_AQUA).strength(3.0F, 6.0F).sounds(BlockSoundGroup.COPPER).requiresTool()));
+        EXPOSED_COPPER_PANEL_SLAB = QuinRegistry.register("exposed_copper_panel_slab", new OxidizableSlabBlock(Oxidizable.OxidationLevel.EXPOSED, FabricBlockSettings.of().mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).strength(3.0F, 6.0F).sounds(BlockSoundGroup.COPPER).requiresTool()));
+        COPPER_PANEL_SLAB = QuinRegistry.register("copper_panel_slab", new OxidizableSlabBlock(Oxidizable.OxidationLevel.UNAFFECTED, FabricBlockSettings.of().mapColor(MapColor.ORANGE).strength(3.0F, 6.0F).sounds(BlockSoundGroup.COPPER).requiresTool()));
+        WAXED_OXIDIZED_COPPER_PANEL_SLAB = QuinRegistry.register("waxed_oxidized_copper_panel_slab", new SlabBlock(FabricBlockSettings.of().mapColor(MapColor.TEAL).strength(3.0F, 6.0F).sounds(BlockSoundGroup.COPPER).requiresTool()));
+        WAXED_WEATHERED_COPPER_PANEL_SLAB = QuinRegistry.register("waxed_weathered_copper_panel_slab", new SlabBlock(FabricBlockSettings.of().mapColor(MapColor.TEAL).strength(3.0F, 6.0F).sounds(BlockSoundGroup.COPPER).requiresTool()));
+        WAXED_EXPOSED_COPPER_PANEL_SLAB = QuinRegistry.register("waxed_exposed_copper_panel_slab", new SlabBlock(FabricBlockSettings.of().mapColor(MapColor.TEAL).strength(3.0F, 6.0F).sounds(BlockSoundGroup.COPPER).requiresTool()));
+        WAXED_COPPER_PANEL_SLAB = QuinRegistry.register("waxed_copper_panel_slab", new SlabBlock(FabricBlockSettings.of().mapColor(MapColor.TEAL).strength(3.0F, 6.0F).sounds(BlockSoundGroup.COPPER).requiresTool()));
+
+        UNDERWATER_TORCH = QuinRegistry.register("underwater_torch", new UnderwaterTorchBlock(FabricBlockSettings.of().mapColor(MapColor.DARK_AQUA).breakInstantly().noCollision().luminance((state) -> {return 14;}).sounds(BlockSoundGroup.WOOD).pistonBehavior(PistonBehavior.DESTROY), ParticleTypes.GLOW));
+        UNDERWATER_WALL_TORCH = QuinRegistry.register("underwater_wall_torch", new UnderwaterWallTorchBlock(FabricBlockSettings.of().mapColor(MapColor.DARK_AQUA).breakInstantly().noCollision().luminance((state) -> {return 14;}).sounds(BlockSoundGroup.WOOD).pistonBehavior(PistonBehavior.DESTROY), ParticleTypes.GLOW));
 
         addBurnables();
         registerOxidized();
@@ -143,11 +187,26 @@ public class CommonBlockRegistry {
         OxidizableBlocksRegistry.registerOxidizableBlockPair(COPPER_PANEL, EXPOSED_COPPER_PANEL);
         OxidizableBlocksRegistry.registerOxidizableBlockPair(EXPOSED_COPPER_PANEL, WEATHERED_COPPER_PANEL);
         OxidizableBlocksRegistry.registerOxidizableBlockPair(WEATHERED_COPPER_PANEL, OXIDIZED_COPPER_PANEL);
-
         OxidizableBlocksRegistry.registerWaxableBlockPair(COPPER_PANEL, WAXED_COPPER_PANEL);
         OxidizableBlocksRegistry.registerWaxableBlockPair(EXPOSED_COPPER_PANEL, WAXED_EXPOSED_COPPER_PANEL);
         OxidizableBlocksRegistry.registerWaxableBlockPair(WEATHERED_COPPER_PANEL, WAXED_WEATHERED_COPPER_PANEL);
         OxidizableBlocksRegistry.registerWaxableBlockPair(OXIDIZED_COPPER_PANEL, WAXED_OXIDIZED_COPPER_PANEL);
+
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(COPPER_PANEL_STAIRS, EXPOSED_COPPER_PANEL_STAIRS);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(EXPOSED_COPPER_PANEL_STAIRS, WEATHERED_COPPER_PANEL_STAIRS);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(WEATHERED_COPPER_PANEL, OXIDIZED_COPPER_PANEL);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(COPPER_PANEL_STAIRS, WAXED_COPPER_PANEL_STAIRS);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(EXPOSED_COPPER_PANEL_STAIRS, WAXED_EXPOSED_COPPER_PANEL_STAIRS);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(WEATHERED_COPPER_PANEL_STAIRS, WAXED_WEATHERED_COPPER_PANEL_STAIRS);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(OXIDIZED_COPPER_PANEL_STAIRS, WAXED_OXIDIZED_COPPER_PANEL_STAIRS);
+
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(COPPER_PANEL_SLAB, EXPOSED_COPPER_PANEL_SLAB);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(EXPOSED_COPPER_PANEL_SLAB, WEATHERED_COPPER_PANEL_SLAB);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(WEATHERED_COPPER_PANEL, OXIDIZED_COPPER_PANEL);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(COPPER_PANEL_SLAB, WAXED_COPPER_PANEL_SLAB);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(EXPOSED_COPPER_PANEL_SLAB, WAXED_EXPOSED_COPPER_PANEL_SLAB);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(WEATHERED_COPPER_PANEL_SLAB, WAXED_WEATHERED_COPPER_PANEL_SLAB);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(OXIDIZED_COPPER_PANEL_SLAB, WAXED_OXIDIZED_COPPER_PANEL_SLAB);
     }
 
 }

@@ -1,9 +1,1 @@
-// 1.20.1	2023-07-10T11:55:57.720317	Quin/Block Loot Tables
-9b4b29722471ed020baecb4ba9ccd1c3a4d1833a data/quin/loot_tables/blocks/waxed_oxidized_copper_panel.json
-26c59a7e82ab5b6a253fa5aa2b6a6bfbd39c9638 data/quin/loot_tables/blocks/copper_panel.json
-93b80682de3ded99f09cca895f510967dc1613f7 data/quin/loot_tables/blocks/waxed_copper_panel.json
-aa74e7eb381497a1e7242e7f7f0ce04f4f2378cc data/quin/loot_tables/blocks/exposed_copper_panel.json
-7775dc81266ab8f3b4807a207deb5c9abd17d8d2 data/quin/loot_tables/blocks/oxidized_copper_panel.json
-5cc5d6bfe0d07e4e000a9f2e99de966c9bde4f82 data/quin/loot_tables/blocks/weathered_copper_panel.json
-1b0fda9899f80755e0b37b15636b382919df897e data/quin/loot_tables/blocks/waxed_weathered_copper_panel.json
-58e1110e6bab12a1f1cba68adf96673acc3fb7b7 data/quin/loot_tables/blocks/waxed_exposed_copper_panel.json
+// 1.20.1	2023-07-14T13:15:12.877236	Quin/Block Loot Tables

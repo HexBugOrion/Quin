@@ -3,7 +3,9 @@ package net.timeworndevs.quin.common;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.WallTorchBlock;
 import net.minecraft.item.*;
+import net.minecraft.util.math.Direction;
 import net.timeworndevs.quin.init.QuinRegistry;
 
 
@@ -57,6 +59,25 @@ public class CommonItemRegistry {
     public static BlockItem WAXED_EXPOSED_COPPER_PANEL;
     public static BlockItem WAXED_COPPER_PANEL;
 
+    public static BlockItem OXIDIZED_COPPER_PANEL_STAIRS;
+    public static BlockItem WEATHERED_COPPER_PANEL_STAIRS;
+    public static BlockItem EXPOSED_COPPER_PANEL_STAIRS;
+    public static BlockItem COPPER_PANEL_STAIRS;
+    public static BlockItem WAXED_OXIDIZED_COPPER_PANEL_STAIRS;
+    public static BlockItem WAXED_WEATHERED_COPPER_PANEL_STAIRS;
+    public static BlockItem WAXED_EXPOSED_COPPER_PANEL_STAIRS;
+    public static BlockItem WAXED_COPPER_PANEL_STAIRS;
+
+    public static BlockItem OXIDIZED_COPPER_PANEL_SLAB;
+    public static BlockItem WEATHERED_COPPER_PANEL_SLAB;
+    public static BlockItem EXPOSED_COPPER_PANEL_SLAB;
+    public static BlockItem COPPER_PANEL_SLAB;
+    public static BlockItem WAXED_OXIDIZED_COPPER_PANEL_SLAB;
+    public static BlockItem WAXED_WEATHERED_COPPER_PANEL_SLAB;
+    public static BlockItem WAXED_EXPOSED_COPPER_PANEL_SLAB;
+    public static BlockItem WAXED_COPPER_PANEL_SLAB;
+
+    public static BlockItem UNDERWATER_TORCH;
 
     //public static SignItem DRIFTWOOD_SIGN;
     //public static HangingSignItem DRIFTWOOD_HANGING_SIGN;
@@ -110,12 +131,30 @@ public class CommonItemRegistry {
         WEATHERED_COPPER_PANEL = QuinRegistry.register("weathered_copper_panel", new BlockItem(CommonBlockRegistry.WEATHERED_COPPER_PANEL, new Item.Settings()));
         EXPOSED_COPPER_PANEL = QuinRegistry.register("exposed_copper_panel", new BlockItem(CommonBlockRegistry.EXPOSED_COPPER_PANEL, new Item.Settings()));
         COPPER_PANEL = QuinRegistry.register("copper_panel", new BlockItem(CommonBlockRegistry.COPPER_PANEL, new Item.Settings()));
-
         WAXED_OXIDIZED_COPPER_PANEL = QuinRegistry.register("waxed_oxidized_copper_panel", new BlockItem(CommonBlockRegistry.WAXED_OXIDIZED_COPPER_PANEL, new Item.Settings()));
         WAXED_WEATHERED_COPPER_PANEL = QuinRegistry.register("waxed_weathered_copper_panel", new BlockItem(CommonBlockRegistry.WAXED_WEATHERED_COPPER_PANEL, new Item.Settings()));
         WAXED_EXPOSED_COPPER_PANEL = QuinRegistry.register("waxed_exposed_copper_panel", new BlockItem(CommonBlockRegistry.WAXED_EXPOSED_COPPER_PANEL, new Item.Settings()));
         WAXED_COPPER_PANEL = QuinRegistry.register("waxed_copper_panel", new BlockItem(CommonBlockRegistry.WAXED_COPPER_PANEL, new Item.Settings()));
 
+        OXIDIZED_COPPER_PANEL_STAIRS = QuinRegistry.register("oxidized_copper_panel_stairs", new BlockItem(CommonBlockRegistry.OXIDIZED_COPPER_PANEL_STAIRS, new Item.Settings()));
+        WEATHERED_COPPER_PANEL_STAIRS = QuinRegistry.register("weathered_copper_panel_stairs", new BlockItem(CommonBlockRegistry.WEATHERED_COPPER_PANEL_STAIRS, new Item.Settings()));
+        EXPOSED_COPPER_PANEL_STAIRS = QuinRegistry.register("exposed_copper_panel_stairs", new BlockItem(CommonBlockRegistry.EXPOSED_COPPER_PANEL_STAIRS, new Item.Settings()));
+        COPPER_PANEL_STAIRS = QuinRegistry.register("copper_panel_stairs", new BlockItem(CommonBlockRegistry.COPPER_PANEL_STAIRS, new Item.Settings()));
+        WAXED_OXIDIZED_COPPER_PANEL_STAIRS = QuinRegistry.register("waxed_oxidized_copper_panel_stairs", new BlockItem(CommonBlockRegistry.WAXED_OXIDIZED_COPPER_PANEL_STAIRS, new Item.Settings()));
+        WAXED_WEATHERED_COPPER_PANEL_STAIRS = QuinRegistry.register("waxed_weathered_copper_panel_stairs", new BlockItem(CommonBlockRegistry.WAXED_WEATHERED_COPPER_PANEL_STAIRS, new Item.Settings()));
+        WAXED_EXPOSED_COPPER_PANEL_STAIRS = QuinRegistry.register("waxed_exposed_copper_panel_stairs", new BlockItem(CommonBlockRegistry.WAXED_EXPOSED_COPPER_PANEL_STAIRS, new Item.Settings()));
+        WAXED_COPPER_PANEL_STAIRS = QuinRegistry.register("waxed_copper_panel_stairs", new BlockItem(CommonBlockRegistry.WAXED_COPPER_PANEL_STAIRS, new Item.Settings()));
+
+        OXIDIZED_COPPER_PANEL_SLAB = QuinRegistry.register("oxidized_copper_panel_slab", new BlockItem(CommonBlockRegistry.OXIDIZED_COPPER_PANEL_SLAB, new Item.Settings()));
+        WEATHERED_COPPER_PANEL_SLAB = QuinRegistry.register("weathered_copper_panel_slab", new BlockItem(CommonBlockRegistry.WEATHERED_COPPER_PANEL_SLAB, new Item.Settings()));
+        EXPOSED_COPPER_PANEL_SLAB = QuinRegistry.register("exposed_copper_panel_slab", new BlockItem(CommonBlockRegistry.EXPOSED_COPPER_PANEL_SLAB, new Item.Settings()));
+        COPPER_PANEL_SLAB = QuinRegistry.register("copper_panel_slab", new BlockItem(CommonBlockRegistry.COPPER_PANEL_SLAB, new Item.Settings()));
+        WAXED_OXIDIZED_COPPER_PANEL_SLAB = QuinRegistry.register("waxed_oxidized_copper_panel_slab", new BlockItem(CommonBlockRegistry.WAXED_OXIDIZED_COPPER_PANEL_SLAB, new Item.Settings()));
+        WAXED_WEATHERED_COPPER_PANEL_SLAB = QuinRegistry.register("waxed_weathered_copper_panel_slab", new BlockItem(CommonBlockRegistry.WAXED_WEATHERED_COPPER_PANEL_SLAB, new Item.Settings()));
+        WAXED_EXPOSED_COPPER_PANEL_SLAB = QuinRegistry.register("waxed_exposed_copper_panel_slab", new BlockItem(CommonBlockRegistry.WAXED_EXPOSED_COPPER_PANEL_SLAB, new Item.Settings()));
+        WAXED_COPPER_PANEL_SLAB = QuinRegistry.register("waxed_copper_panel_slab", new BlockItem(CommonBlockRegistry.WAXED_COPPER_PANEL_SLAB, new Item.Settings()));
+
+        UNDERWATER_TORCH = QuinRegistry.register("underwater_torch", new VerticallyAttachableBlockItem(CommonBlockRegistry.UNDERWATER_TORCH, CommonBlockRegistry.UNDERWATER_WALL_TORCH, new Item.Settings(), Direction.DOWN));
         itemGroupAdditions();
         addFurnaceFuels();
     }
@@ -171,6 +210,24 @@ public class CommonItemRegistry {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(Items.WAXED_WEATHERED_COPPER, WAXED_WEATHERED_COPPER_PANEL);});
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(Items.WAXED_EXPOSED_COPPER, WAXED_EXPOSED_COPPER_PANEL);});
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(Items.WAXED_COPPER_BLOCK, WAXED_COPPER_PANEL);});
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(OXIDIZED_COPPER_PANEL, OXIDIZED_COPPER_PANEL_STAIRS);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(WEATHERED_COPPER_PANEL, WEATHERED_COPPER_PANEL_STAIRS);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(EXPOSED_COPPER_PANEL, EXPOSED_COPPER_PANEL_STAIRS);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(COPPER_PANEL, COPPER_PANEL_STAIRS);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(WAXED_OXIDIZED_COPPER_PANEL, WAXED_OXIDIZED_COPPER_PANEL_STAIRS);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(WAXED_WEATHERED_COPPER_PANEL, WAXED_WEATHERED_COPPER_PANEL_STAIRS);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(WAXED_EXPOSED_COPPER_PANEL, WAXED_EXPOSED_COPPER_PANEL_STAIRS);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(WAXED_COPPER_PANEL, WAXED_COPPER_PANEL_STAIRS);});
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(OXIDIZED_COPPER_PANEL_STAIRS, OXIDIZED_COPPER_PANEL_SLAB);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(WEATHERED_COPPER_PANEL_STAIRS, WEATHERED_COPPER_PANEL_SLAB);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(EXPOSED_COPPER_PANEL_STAIRS, EXPOSED_COPPER_PANEL_SLAB);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(COPPER_PANEL_STAIRS, COPPER_PANEL_SLAB);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(WAXED_OXIDIZED_COPPER_PANEL_STAIRS, WAXED_OXIDIZED_COPPER_PANEL_SLAB);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(WAXED_WEATHERED_COPPER_PANEL_STAIRS, WAXED_WEATHERED_COPPER_PANEL_SLAB);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(WAXED_EXPOSED_COPPER_PANEL_STAIRS, WAXED_EXPOSED_COPPER_PANEL_SLAB);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(WAXED_COPPER_PANEL_STAIRS, WAXED_COPPER_PANEL_SLAB);});
     }
 
     public static void addFurnaceFuels() {

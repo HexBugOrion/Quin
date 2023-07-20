@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "quin:block/copper_panel_slab"
+    },
+    "type=double": {
+      "model": "quin:block/copper_panel"
+    },
+    "type=top": {
+      "model": "quin:block/copper_panel_slab_top"
+    }
+  }
+}

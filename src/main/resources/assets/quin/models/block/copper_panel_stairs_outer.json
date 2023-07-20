@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "quin:block/copper_panel",
+    "side": "quin:block/copper_panel",
+    "top": "quin:block/copper_panel"
+  }
+}

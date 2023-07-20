@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_stairs",
+  "category": "building",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "quin:waxed_exposed_copper_panel"
+    }
+  },
+  "result": {
+    "item": "quin:waxed_exposed_copper_panel_stairs",
+    "count": 4
+  }
+}

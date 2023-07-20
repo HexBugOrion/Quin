@@ -17,6 +17,37 @@
     "quin:blue_crystal",
     "quin:purple_crystal",
     "quin:magenta_crystal",
-    "quin:pink_crystal"
+    "quin:pink_crystal",
+
+    "quin:oxidized_copper_panel",
+    "quin:weathered_copper_panel",
+    "quin:exposed_copper_panel",
+    "quin:copper_panel",
+
+    "quin:oxidized_copper_panel_stairs",
+    "quin:weathered_copper_panel_stairs",
+    "quin:exposed_copper_panel_stairs",
+    "quin:copper_panel_stairs",
+
+    "quin:oxidized_copper_panel_slab",
+    "quin:weathered_copper_panel_slab",
+    "quin:exposed_copper_panel_slab",
+    "quin:copper_panel_slab",
+
+
+    "quin:waxed_oxidized_copper_panel",
+    "quin:waxed_weathered_copper_panel",
+    "quin:waxed_exposed_copper_panel",
+    "quin:waxed_copper_panel",
+
+    "quin:waxed_oxidized_copper_panel_stairs",
+    "quin:waxed_weathered_copper_panel_stairs",
+    "quin:waxed_exposed_copper_panel_stairs",
+    "quin:waxed_copper_panel_stairs",
+
+    "quin:waxed_oxidized_copper_panel_slab",
+    "quin:waxed_weathered_copper_panel_slab",
+    "quin:waxed_exposed_copper_panel_slab",
+    "quin:waxed_copper_panel_slab"
   ]
 }

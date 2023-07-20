@@ -1,0 +1,19 @@
+{
+  "comment": "This is the new cut copper recipe",
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "quin:waxed_oxidized_copper_panel"
+    }
+  },
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "result": {
+    "count": 4,
+    "item": "minecraft:waxed_oxidized_cut_copper"
+  },
+  "show_notification": true
+}

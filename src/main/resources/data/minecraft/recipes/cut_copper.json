@@ -1,0 +1,19 @@
+{
+  "comment": "This is to replace vanilla's cut copper recipe with copper panels",
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "minecraft:copper_block"
+    }
+  },
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "result": {
+    "count": 4,
+    "item": "quin:copper_panel"
+  },
+  "show_notification": true
+}

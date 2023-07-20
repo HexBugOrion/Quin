@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "quin:block/exposed_copper_panel",
+    "side": "quin:block/exposed_copper_panel",
+    "top": "quin:block/exposed_copper_panel"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "quin:exposed_copper_panel"
+  },
+  "result": "quin:exposed_copper_panel_slab"
+}

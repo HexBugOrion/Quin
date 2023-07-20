@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "quin:oxidized_copper_panel"
+  },
+  "result": "quin:oxidized_copper_panel_stairs"
+}

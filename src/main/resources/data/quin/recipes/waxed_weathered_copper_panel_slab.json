@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "copper_panel_slab",
+  "category": "building",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "quin:waxed_weathered_copper_panel"
+    }
+  },
+  "result": {
+    "item": "quin:waxed_weathered_copper_panel_slab",
+    "count": 6
+  }
+}

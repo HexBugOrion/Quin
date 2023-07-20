@@ -10,6 +10,7 @@
   "item.quin.petty_shard": "Petty Experience Shard",
   "item.quin.medium_shard": "Medium Experience Shard",
   "item.quin.greater_shard": "Greater Experience Shard",
+  "item.quin.underwater_torch": "Underwater Torch",
 
   "block.quin.resin_block": "Block Of Resin",
   "block.quin.gelrene_block": "Block Of Gelrene",
@@ -54,5 +55,28 @@
   "block.quin.waxed_copper_panel": "Waxed Copper Panel",
   "block.quin.waxed_exposed_copper_panel": "Waxed Exposed Copper Panel",
   "block.quin.waxed_weathered_copper_panel": "Waxed Weathered Copper Panel",
-  "block.quin.waxed_oxidized_copper_panel": "Waxed Oxidized Copper Panel"
+  "block.quin.waxed_oxidized_copper_panel": "Waxed Oxidized Copper Panel",
+
+  "block.quin.copper_panel_stairs": "Copper Panel Stairs",
+  "block.quin.exposed_copper_panel_stairs": "Exposed Copper Panel Stairs",
+  "block.quin.weathered_copper_panel_stairs": "Weathered Copper Panel Stairs",
+  "block.quin.oxidized_copper_panel_stairs": "Oxidized Copper Panel Stairs",
+  "block.quin.waxed_copper_panel_stairs": "Waxed Copper Panel Stairs",
+  "block.quin.waxed_exposed_copper_panel_stairs": "Waxed Exposed Copper Panel Stairs",
+  "block.quin.waxed_weathered_copper_panel_stairs": "Waxed Weathered Copper Panel Stairs",
+  "block.quin.waxed_oxidized_copper_panel_stairs": "Waxed Oxidized Copper Panel Stairs",
+
+  "block.quin.copper_panel_slab": "Copper Panel Slab",
+  "block.quin.exposed_copper_panel_slab": "Exposed Copper Panel Slab",
+  "block.quin.weathered_copper_panel_slab": "Weathered Copper Panel Slab",
+  "block.quin.oxidized_copper_panel_slab": "Oxidized Copper Panel Slab",
+  "block.quin.waxed_copper_panel_slab": "Waxed Copper Panel Slab",
+  "block.quin.waxed_exposed_copper_panel_slab": "Waxed Exposed Copper Panel Slab",
+  "block.quin.waxed_weathered_copper_panel_slab": "Waxed Weathered Copper Panel Slab",
+  "block.quin.waxed_oxidized_copper_panel_slab": "Waxed Oxidized Copper Panel Slab",
+
+  "block.quin.underwater_torch": "Underwater Torch",
+  "block.quin.underwater_wall_torch": "Underwater Wall Torch",
+
+  "e": "e"
 }

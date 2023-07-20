@@ -37,7 +37,6 @@ public class DataGenMain implements DataGeneratorEntrypoint {
 
         @Override
         public void generate() {
-
         }
     }
 
