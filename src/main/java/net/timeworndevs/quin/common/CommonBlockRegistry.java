@@ -64,6 +64,10 @@ public class CommonBlockRegistry {
 
     public static Block IRON_BUTTON;
     public static Block GOLD_BUTTON;
+
+    public static Block OXIDIZED_COPPER_BUTTON;
+    public static Block WEATHERED_COPPER_BUTTON;
+    public static Block EXPOSED_COPPER_BUTTON;
     public static Block COPPER_BUTTON;
 
     public static Block OXIDIZED_COPPER_PANEL;
@@ -149,6 +153,10 @@ public class CommonBlockRegistry {
 
         IRON_BUTTON = QuinRegistry.register("iron_button", new ButtonBlock(FabricBlockSettings.of().mapColor(MapColor.GOLD).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.METAL), BlockSetType.STONE, 40, false));
         GOLD_BUTTON = QuinRegistry.register("gold_button", new ButtonBlock(FabricBlockSettings.of().mapColor(MapColor.WHITE).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.METAL), BlockSetType.STONE, 5, false));
+
+        OXIDIZED_COPPER_BUTTON = QuinRegistry.register("oxidized_copper_button", new ButtonBlock(FabricBlockSettings.of().mapColor(MapColor.TEAL).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.COPPER), BlockSetType.STONE, 10, false));
+        WEATHERED_COPPER_BUTTON = QuinRegistry.register("weathered_copper_button", new ButtonBlock(FabricBlockSettings.of().mapColor(MapColor.DARK_AQUA).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.COPPER), BlockSetType.STONE, 10, false));
+        EXPOSED_COPPER_BUTTON = QuinRegistry.register("exposed_copper_button", new ButtonBlock(FabricBlockSettings.of().mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.COPPER), BlockSetType.STONE, 10, false));
         COPPER_BUTTON = QuinRegistry.register("copper_button", new ButtonBlock(FabricBlockSettings.of().mapColor(MapColor.ORANGE).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.COPPER), BlockSetType.STONE, 10, false));
 
         OXIDIZED_COPPER_PANEL = QuinRegistry.register("oxidized_copper_panel", new OxidizableBlock(Oxidizable.OxidationLevel.OXIDIZED,FabricBlockSettings.of().mapColor(MapColor.TEAL).strength(3.0F, 6.0F).sounds(BlockSoundGroup.COPPER).requiresTool()));

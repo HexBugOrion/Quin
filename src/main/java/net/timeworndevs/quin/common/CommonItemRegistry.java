@@ -52,6 +52,10 @@ public class CommonItemRegistry {
 
     public static BlockItem IRON_BUTTON;
     public static BlockItem GOLD_BUTTON;
+
+    public static BlockItem OXIDIZED_COPPER_BUTTON;
+    public static BlockItem WEATHERED_COPPER_BUTTON;
+    public static BlockItem EXPOSED_COPPER_BUTTON;
     public static BlockItem COPPER_BUTTON;
 
     public static BlockItem OXIDIZED_COPPER_PANEL;
@@ -134,6 +138,10 @@ public class CommonItemRegistry {
 
         IRON_BUTTON = QuinRegistry.register("iron_button", new BlockItem(CommonBlockRegistry.IRON_BUTTON, new Item.Settings()));
         GOLD_BUTTON = QuinRegistry.register("gold_button", new BlockItem(CommonBlockRegistry.GOLD_BUTTON, new Item.Settings()));
+
+        OXIDIZED_COPPER_BUTTON = QuinRegistry.register("oxidized_copper_button", new BlockItem(CommonBlockRegistry.OXIDIZED_COPPER_BUTTON, new Item.Settings()));
+        WEATHERED_COPPER_BUTTON = QuinRegistry.register("weathered_copper_button", new BlockItem(CommonBlockRegistry.WEATHERED_COPPER_BUTTON, new Item.Settings()));
+        EXPOSED_COPPER_BUTTON = QuinRegistry.register("exposed_copper_button", new BlockItem(CommonBlockRegistry.EXPOSED_COPPER_BUTTON, new Item.Settings()));
         COPPER_BUTTON = QuinRegistry.register("copper_button", new BlockItem(CommonBlockRegistry.COPPER_BUTTON, new Item.Settings()));
 
         OXIDIZED_COPPER_PANEL = QuinRegistry.register("oxidized_copper_panel", new BlockItem(CommonBlockRegistry.OXIDIZED_COPPER_PANEL, new Item.Settings()));
@@ -213,6 +221,10 @@ public class CommonItemRegistry {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(Items.IRON_BLOCK, IRON_BUTTON);});
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(Items.GOLD_BLOCK, GOLD_BUTTON);});
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(Items.OXIDIZED_CUT_COPPER_SLAB, OXIDIZED_COPPER_BUTTON);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(Items.WEATHERED_CUT_COPPER_SLAB, WEATHERED_COPPER_BUTTON);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(Items.EXPOSED_CUT_COPPER_SLAB, EXPOSED_COPPER_BUTTON);});
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(Items.CUT_COPPER_SLAB, COPPER_BUTTON);});
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(Items.OXIDIZED_COPPER, OXIDIZED_COPPER_PANEL);});
