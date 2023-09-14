@@ -48,6 +48,10 @@
   "block.quin.magenta_crystal": "Magenta Crystal",
   "block.quin.pink_crystal": "Pink Crystal",
 
+  "block.quin.iron_button": "Iron Button",
+  "block.quin.gold_button": "Gold Button",
+  "block.quin.copper_button": "Copper Button",
+
   "block.quin.copper_panel": "Copper Panel",
   "block.quin.exposed_copper_panel": "Exposed Copper Panel",
   "block.quin.weathered_copper_panel": "Weathered Copper Panel",

@@ -50,6 +50,10 @@ public class CommonItemRegistry {
     public static BlockItem MAGENTA_CRYSTAL;
     public static BlockItem PINK_CRYSTAL;
 
+    public static BlockItem IRON_BUTTON;
+    public static BlockItem GOLD_BUTTON;
+    public static BlockItem COPPER_BUTTON;
+
     public static BlockItem OXIDIZED_COPPER_PANEL;
     public static BlockItem WEATHERED_COPPER_PANEL;
     public static BlockItem EXPOSED_COPPER_PANEL;
@@ -77,7 +81,8 @@ public class CommonItemRegistry {
     public static BlockItem WAXED_EXPOSED_COPPER_PANEL_SLAB;
     public static BlockItem WAXED_COPPER_PANEL_SLAB;
 
-    public static BlockItem UNDERWATER_TORCH;
+
+    //public static BlockItem UNDERWATER_TORCH;
 
     //public static SignItem DRIFTWOOD_SIGN;
     //public static HangingSignItem DRIFTWOOD_HANGING_SIGN;
@@ -127,6 +132,10 @@ public class CommonItemRegistry {
         MAGENTA_CRYSTAL = QuinRegistry.register("magenta_crystal", new BlockItem(CommonBlockRegistry.MAGENTA_CRYSTAL, new Item.Settings()));
         PINK_CRYSTAL = QuinRegistry.register("pink_crystal", new BlockItem(CommonBlockRegistry.PINK_CRYSTAL, new Item.Settings()));
 
+        IRON_BUTTON = QuinRegistry.register("iron_button", new BlockItem(CommonBlockRegistry.IRON_BUTTON, new Item.Settings()));
+        GOLD_BUTTON = QuinRegistry.register("gold_button", new BlockItem(CommonBlockRegistry.GOLD_BUTTON, new Item.Settings()));
+        COPPER_BUTTON = QuinRegistry.register("copper_button", new BlockItem(CommonBlockRegistry.COPPER_BUTTON, new Item.Settings()));
+
         OXIDIZED_COPPER_PANEL = QuinRegistry.register("oxidized_copper_panel", new BlockItem(CommonBlockRegistry.OXIDIZED_COPPER_PANEL, new Item.Settings()));
         WEATHERED_COPPER_PANEL = QuinRegistry.register("weathered_copper_panel", new BlockItem(CommonBlockRegistry.WEATHERED_COPPER_PANEL, new Item.Settings()));
         EXPOSED_COPPER_PANEL = QuinRegistry.register("exposed_copper_panel", new BlockItem(CommonBlockRegistry.EXPOSED_COPPER_PANEL, new Item.Settings()));
@@ -154,7 +163,7 @@ public class CommonItemRegistry {
         WAXED_EXPOSED_COPPER_PANEL_SLAB = QuinRegistry.register("waxed_exposed_copper_panel_slab", new BlockItem(CommonBlockRegistry.WAXED_EXPOSED_COPPER_PANEL_SLAB, new Item.Settings()));
         WAXED_COPPER_PANEL_SLAB = QuinRegistry.register("waxed_copper_panel_slab", new BlockItem(CommonBlockRegistry.WAXED_COPPER_PANEL_SLAB, new Item.Settings()));
 
-        UNDERWATER_TORCH = QuinRegistry.register("underwater_torch", new VerticallyAttachableBlockItem(CommonBlockRegistry.UNDERWATER_TORCH, CommonBlockRegistry.UNDERWATER_WALL_TORCH, new Item.Settings(), Direction.DOWN));
+        //UNDERWATER_TORCH = QuinRegistry.register("underwater_torch", new VerticallyAttachableBlockItem(CommonBlockRegistry.UNDERWATER_TORCH, CommonBlockRegistry.UNDERWATER_WALL_TORCH, new Item.Settings(), Direction.DOWN));
         itemGroupAdditions();
         addFurnaceFuels();
     }
@@ -201,6 +210,10 @@ public class CommonItemRegistry {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(content -> {content.add(PURPLE_CRYSTAL);});
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(content -> {content.add(MAGENTA_CRYSTAL);});
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(content -> {content.add(PINK_CRYSTAL);});
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(Items.IRON_BLOCK, IRON_BUTTON);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(Items.GOLD_BLOCK, GOLD_BUTTON);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(Items.CUT_COPPER_SLAB, COPPER_BUTTON);});
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(Items.OXIDIZED_COPPER, OXIDIZED_COPPER_PANEL);});
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(Items.WEATHERED_COPPER, WEATHERED_COPPER_PANEL);});

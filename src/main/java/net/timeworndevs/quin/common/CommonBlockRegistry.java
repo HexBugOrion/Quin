@@ -62,6 +62,10 @@ public class CommonBlockRegistry {
     public static Block MAGENTA_CRYSTAL;
     public static Block PINK_CRYSTAL;
 
+    public static Block IRON_BUTTON;
+    public static Block GOLD_BUTTON;
+    public static Block COPPER_BUTTON;
+
     public static Block OXIDIZED_COPPER_PANEL;
     public static Block WEATHERED_COPPER_PANEL;
     public static Block EXPOSED_COPPER_PANEL;
@@ -90,8 +94,8 @@ public class CommonBlockRegistry {
     public static Block WAXED_EXPOSED_COPPER_PANEL_SLAB;
     public static Block WAXED_COPPER_PANEL_SLAB;
 
-    public static Block UNDERWATER_TORCH;
-    public static Block UNDERWATER_WALL_TORCH;
+    //public static Block UNDERWATER_TORCH;
+    //public static Block UNDERWATER_WALL_TORCH;
 
 
     //public static TerraformSignBlock DRIFTWOOD_SIGN;
@@ -143,6 +147,10 @@ public class CommonBlockRegistry {
         MAGENTA_CRYSTAL = QuinRegistry.register("magenta_crystal", new StainedGlassBlock(DyeColor.MAGENTA, FabricBlockSettings.of().mapColor(MapColor.MAGENTA).nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS).requiresTool()));
         PINK_CRYSTAL = QuinRegistry.register("pink_crystal", new StainedGlassBlock(DyeColor.PINK, FabricBlockSettings.of().mapColor(MapColor.PINK).nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS).requiresTool()));
 
+        IRON_BUTTON = QuinRegistry.register("iron_button", new ButtonBlock(FabricBlockSettings.of().mapColor(MapColor.GOLD).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.METAL), BlockSetType.STONE, 40, false));
+        GOLD_BUTTON = QuinRegistry.register("gold_button", new ButtonBlock(FabricBlockSettings.of().mapColor(MapColor.WHITE).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.METAL), BlockSetType.STONE, 5, false));
+        COPPER_BUTTON = QuinRegistry.register("copper_button", new ButtonBlock(FabricBlockSettings.of().mapColor(MapColor.ORANGE).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.COPPER), BlockSetType.STONE, 10, false));
+
         OXIDIZED_COPPER_PANEL = QuinRegistry.register("oxidized_copper_panel", new OxidizableBlock(Oxidizable.OxidationLevel.OXIDIZED,FabricBlockSettings.of().mapColor(MapColor.TEAL).strength(3.0F, 6.0F).sounds(BlockSoundGroup.COPPER).requiresTool()));
         WEATHERED_COPPER_PANEL = QuinRegistry.register("weathered_copper_panel", new OxidizableBlock(Oxidizable.OxidationLevel.WEATHERED,FabricBlockSettings.of().mapColor(MapColor.DARK_AQUA).strength(3.0F, 6.0F).sounds(BlockSoundGroup.COPPER).requiresTool()));
         EXPOSED_COPPER_PANEL = QuinRegistry.register("exposed_copper_panel", new OxidizableBlock(Oxidizable.OxidationLevel.EXPOSED,FabricBlockSettings.of().mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).strength(3.0F, 6.0F).sounds(BlockSoundGroup.COPPER).requiresTool()));
@@ -170,8 +178,8 @@ public class CommonBlockRegistry {
         WAXED_EXPOSED_COPPER_PANEL_SLAB = QuinRegistry.register("waxed_exposed_copper_panel_slab", new SlabBlock(FabricBlockSettings.of().mapColor(MapColor.TEAL).strength(3.0F, 6.0F).sounds(BlockSoundGroup.COPPER).requiresTool()));
         WAXED_COPPER_PANEL_SLAB = QuinRegistry.register("waxed_copper_panel_slab", new SlabBlock(FabricBlockSettings.of().mapColor(MapColor.TEAL).strength(3.0F, 6.0F).sounds(BlockSoundGroup.COPPER).requiresTool()));
 
-        UNDERWATER_TORCH = QuinRegistry.register("underwater_torch", new UnderwaterTorchBlock(FabricBlockSettings.of().mapColor(MapColor.DARK_AQUA).breakInstantly().noCollision().luminance((state) -> {return 14;}).sounds(BlockSoundGroup.WOOD).pistonBehavior(PistonBehavior.DESTROY), ParticleTypes.GLOW));
-        UNDERWATER_WALL_TORCH = QuinRegistry.register("underwater_wall_torch", new UnderwaterWallTorchBlock(FabricBlockSettings.of().mapColor(MapColor.DARK_AQUA).breakInstantly().noCollision().luminance((state) -> {return 14;}).sounds(BlockSoundGroup.WOOD).pistonBehavior(PistonBehavior.DESTROY), ParticleTypes.GLOW));
+        //UNDERWATER_TORCH = QuinRegistry.register("underwater_torch", new UnderwaterTorchBlock(FabricBlockSettings.of().mapColor(MapColor.DARK_AQUA).breakInstantly().noCollision().luminance((state) -> {return 14;}).sounds(BlockSoundGroup.WOOD).pistonBehavior(PistonBehavior.DESTROY), ParticleTypes.GLOW));
+        //UNDERWATER_WALL_TORCH = QuinRegistry.register("underwater_wall_torch", new UnderwaterWallTorchBlock(FabricBlockSettings.of().mapColor(MapColor.DARK_AQUA).breakInstantly().noCollision().luminance((state) -> {return 14;}).sounds(BlockSoundGroup.WOOD).pistonBehavior(PistonBehavior.DESTROY), ParticleTypes.GLOW));
 
         addBurnables();
         registerOxidized();

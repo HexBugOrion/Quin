@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "wooden_button",
+  "ingredients": [
+    {
+      "item": "minecraft:iron_nugget"
+    }
+  ],
+  "result": {
+    "item": "quin:iron_button"
+  }
+}
