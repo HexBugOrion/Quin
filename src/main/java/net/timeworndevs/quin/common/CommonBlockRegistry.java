@@ -1,26 +1,14 @@
 package net.timeworndevs.quin.common;
 
-import com.terraformersmc.terraform.sign.block.TerraformHangingSignBlock;
-import com.terraformersmc.terraform.sign.block.TerraformSignBlock;
-import com.terraformersmc.terraform.sign.block.TerraformWallHangingSignBlock;
-import com.terraformersmc.terraform.sign.block.TerraformWallSignBlock;
-import com.terraformersmc.terraform.wood.block.PillarLogHelper;
-import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry;
-import net.fabricmc.fabric.impl.blockrenderlayer.BlockRenderLayerMapImpl;
 import net.minecraft.block.*;
+import net.minecraft.block.enums.Instrument;
 import net.minecraft.block.piston.PistonBehavior;
-import net.minecraft.client.render.RenderLayer;
-import net.minecraft.particle.ParticleTypes;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.DyeColor;
-import net.minecraft.util.Identifier;
-import net.timeworndevs.quin.QuinMain;
 import net.timeworndevs.quin.block.TreeTapBlock;
-import net.timeworndevs.quin.block.UnderwaterTorchBlock;
-import net.timeworndevs.quin.block.UnderwaterWallTorchBlock;
 import net.timeworndevs.quin.init.QuinRegistry;
 
 
@@ -97,6 +85,18 @@ public class CommonBlockRegistry {
     public static Block WAXED_WEATHERED_COPPER_PANEL_SLAB;
     public static Block WAXED_EXPOSED_COPPER_PANEL_SLAB;
     public static Block WAXED_COPPER_PANEL_SLAB;
+
+    public static Block CRACKED_RED_NETHER_BRICKS;
+    public static Block CHISELED_RED_NETHER_BRICKS;
+    public static Block RED_NETHER_BRICK_FENCE;
+
+    public static Block CRACKED_TEAL_NETHER_BRICKS;
+    //public static Block CHISELED_TEAL_NETHER_BRICKS;
+    //public static Block TEAL_NETHER_BRICK_FENCE;
+    //public static Block TEAL_NETHER_BRICKS;
+    //public static Block TEAL_NETHER_BRICK_STAIRS;
+    //public static Block TEAL_NETHER_BRICK_SLAB;
+    //public static Block TEAL_NETHER_BRICK_WALL;
 
     //public static Block UNDERWATER_TORCH;
     //public static Block UNDERWATER_WALL_TORCH;
@@ -186,7 +186,14 @@ public class CommonBlockRegistry {
         WAXED_EXPOSED_COPPER_PANEL_SLAB = QuinRegistry.register("waxed_exposed_copper_panel_slab", new SlabBlock(FabricBlockSettings.of().mapColor(MapColor.TEAL).strength(3.0F, 6.0F).sounds(BlockSoundGroup.COPPER).requiresTool()));
         WAXED_COPPER_PANEL_SLAB = QuinRegistry.register("waxed_copper_panel_slab", new SlabBlock(FabricBlockSettings.of().mapColor(MapColor.TEAL).strength(3.0F, 6.0F).sounds(BlockSoundGroup.COPPER).requiresTool()));
 
-        //UNDERWATER_TORCH = QuinRegistry.register("underwater_torch", new UnderwaterTorchBlock(FabricBlockSettings.of().mapColor(MapColor.DARK_AQUA).breakInstantly().noCollision().luminance((state) -> {return 14;}).sounds(BlockSoundGroup.WOOD).pistonBehavior(PistonBehavior.DESTROY), ParticleTypes.GLOW));
+        CRACKED_RED_NETHER_BRICKS = QuinRegistry.register("cracked_red_nether_bricks", new Block(FabricBlockSettings.of().mapColor(MapColor.DARK_RED).strength(2.0F, 6.0F).sounds(BlockSoundGroup.NETHER_BRICKS).instrument(Instrument.BASEDRUM).requiresTool()));
+        CHISELED_RED_NETHER_BRICKS = QuinRegistry.register("chiseled_red_nether_bricks", new Block(FabricBlockSettings.of().mapColor(MapColor.DARK_RED).strength(2.0F, 6.0F).sounds(BlockSoundGroup.NETHER_BRICKS).instrument(Instrument.BASEDRUM).requiresTool()));
+        RED_NETHER_BRICK_FENCE = QuinRegistry.register("red_nether_brick_fence", new FenceBlock(FabricBlockSettings.of().mapColor(MapColor.DARK_RED).strength(2.0F, 6.0F).sounds(BlockSoundGroup.NETHER_BRICKS).requiresTool()));
+
+        //CRACKED_TEAL_NETHER_BRICKS = QuinRegistry.register("cracked_teal_nether_bricks")
+        TEAL_NETHER_BRICKS = QuinRegistry.register("teal_nether_bricks", new Block(FabricBlockSettings.of().mapColor(MapColor.DARK_AQUA).strength(2.0F, 6.0F).sounds(BlockSoundGroup.NETHER_BRICKS).requiresTool()));
+
+    //UNDERWATER_TORCH = QuinRegistry.register("underwater_torch", new UnderwaterTorchBlock(FabricBlockSettings.of().mapColor(MapColor.DARK_AQUA).breakInstantly().noCollision().luminance((state) -> {return 14;}).sounds(BlockSoundGroup.WOOD).pistonBehavior(PistonBehavior.DESTROY), ParticleTypes.GLOW));
         //UNDERWATER_WALL_TORCH = QuinRegistry.register("underwater_wall_torch", new UnderwaterWallTorchBlock(FabricBlockSettings.of().mapColor(MapColor.DARK_AQUA).breakInstantly().noCollision().luminance((state) -> {return 14;}).sounds(BlockSoundGroup.WOOD).pistonBehavior(PistonBehavior.DESTROY), ParticleTypes.GLOW));
 
         addBurnables();

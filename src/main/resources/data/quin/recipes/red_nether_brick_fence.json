@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "W#W",
+    "W#W"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:nether_brick"
+    },
+    "W": {
+      "item": "minecraft:red_nether_bricks"
+    }
+  },
+  "result": {
+    "item": "quin:red_nether_brick_fence",
+    "count": 6
+  }
+}

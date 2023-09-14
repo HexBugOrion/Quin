@@ -83,8 +83,9 @@
   "block.quin.waxed_weathered_copper_panel_slab": "Waxed Weathered Copper Panel Slab",
   "block.quin.waxed_oxidized_copper_panel_slab": "Waxed Oxidized Copper Panel Slab",
 
-  "block.quin.underwater_torch": "Underwater Torch",
-  "block.quin.underwater_wall_torch": "Underwater Wall Torch",
+  "block.quin.cracked_red_nether_bricks": "Cracked Red Nether Bricks",
+  "block.quin.chiseled_red_nether_bricks": "Chiseled Red Nether Bricks",
+  "block.quin.red_nether_brick_fence": "Red Nether Brick Fence",
 
   "e": "e"
 }

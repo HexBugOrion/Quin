@@ -48,6 +48,10 @@
     "quin:waxed_oxidized_copper_panel_slab",
     "quin:waxed_weathered_copper_panel_slab",
     "quin:waxed_exposed_copper_panel_slab",
-    "quin:waxed_copper_panel_slab"
+    "quin:waxed_copper_panel_slab",
+
+    "quin:cracked_red_nether_bricks",
+    "quin:chiseled_red_nether_bricks",
+    "quin:red_nether_brick_fence"
   ]
 }

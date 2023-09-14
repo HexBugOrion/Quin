@@ -2,10 +2,7 @@ package net.timeworndevs.quin.common;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.WallTorchBlock;
 import net.minecraft.item.*;
-import net.minecraft.util.math.Direction;
 import net.timeworndevs.quin.init.QuinRegistry;
 
 
@@ -85,6 +82,18 @@ public class CommonItemRegistry {
     public static BlockItem WAXED_EXPOSED_COPPER_PANEL_SLAB;
     public static BlockItem WAXED_COPPER_PANEL_SLAB;
 
+    public static BlockItem CRACKED_RED_NETHER_BRICKS;
+    public static BlockItem CHISELED_RED_NETHER_BRICKS;
+    public static BlockItem RED_NETHER_BRICK_FENCE;
+
+
+    //public static BlockItem CRACKED_TEAL_NETHER_BRICKS;
+    //public static BlockItem CHISELED_TEAL_NETHER_BRICKS;
+    //public static BlockItem TEAL_NETHER_BRICK_FENCE;
+    public static BlockItem TEAL_NETHER_BRICKS;
+    //public static BlockItem TEAL_NETHER_BRICK_STAIRS;
+    //public static BlockItem TEAL_NETHER_BRICK_SLAB;
+    //public static BlockItem TEAL_NETHER_BRICK_WALL;
 
     //public static BlockItem UNDERWATER_TORCH;
 
@@ -171,6 +180,13 @@ public class CommonItemRegistry {
         WAXED_EXPOSED_COPPER_PANEL_SLAB = QuinRegistry.register("waxed_exposed_copper_panel_slab", new BlockItem(CommonBlockRegistry.WAXED_EXPOSED_COPPER_PANEL_SLAB, new Item.Settings()));
         WAXED_COPPER_PANEL_SLAB = QuinRegistry.register("waxed_copper_panel_slab", new BlockItem(CommonBlockRegistry.WAXED_COPPER_PANEL_SLAB, new Item.Settings()));
 
+        CRACKED_RED_NETHER_BRICKS = QuinRegistry.register("cracked_red_nether_bricks", new BlockItem(CommonBlockRegistry.CRACKED_RED_NETHER_BRICKS, new Item.Settings()));
+        CHISELED_RED_NETHER_BRICKS = QuinRegistry.register("chiseled_red_nether_bricks", new BlockItem(CommonBlockRegistry.CHISELED_RED_NETHER_BRICKS, new Item.Settings()));
+        RED_NETHER_BRICK_FENCE = QuinRegistry.register("red_nether_brick_fence", new BlockItem(CommonBlockRegistry.RED_NETHER_BRICK_FENCE, new Item.Settings()));
+
+        TEAL_NETHER_BRICKS = QuinRegistry.register("teal_nether_bricks", new BlockItem(CommonBlockRegistry.TEAL_NETHER_BRICKS, new Item.Settings()));
+
+
         //UNDERWATER_TORCH = QuinRegistry.register("underwater_torch", new VerticallyAttachableBlockItem(CommonBlockRegistry.UNDERWATER_TORCH, CommonBlockRegistry.UNDERWATER_WALL_TORCH, new Item.Settings(), Direction.DOWN));
         itemGroupAdditions();
         addFurnaceFuels();
@@ -253,6 +269,10 @@ public class CommonItemRegistry {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(WAXED_WEATHERED_COPPER_PANEL_STAIRS, WAXED_WEATHERED_COPPER_PANEL_SLAB);});
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(WAXED_EXPOSED_COPPER_PANEL_STAIRS, WAXED_EXPOSED_COPPER_PANEL_SLAB);});
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(WAXED_COPPER_PANEL_STAIRS, WAXED_COPPER_PANEL_SLAB);});
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(Items.RED_NETHER_BRICKS, CRACKED_RED_NETHER_BRICKS);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(RED_NETHER_BRICK_FENCE, CHISELED_RED_NETHER_BRICKS);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(Items.RED_NETHER_BRICK_WALL, RED_NETHER_BRICK_FENCE);});
     }
 
     public static void addFurnaceFuels() {
