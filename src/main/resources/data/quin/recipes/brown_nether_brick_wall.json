@@ -6,11 +6,11 @@
   ],
   "key": {
     "#": {
-      "item": "quin:teal_nether_bricks"
+      "item": "quin:brown_nether_bricks"
     }
   },
   "result": {
-    "item": "quin:teal_nether_brick_wall",
+    "item": "quin:brown_nether_brick_wall",
     "count": 6
   }
 }
