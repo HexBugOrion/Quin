@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "quin:driftwood_fence",
-    "quin:red_nether_brick_fence"
+    "quin:red_nether_brick_fence",
+    "quin:teal_nether_brick_fence",
+    "quin:brown_nether_brick_fence"
   ]
 }

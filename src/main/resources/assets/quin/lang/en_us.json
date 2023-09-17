@@ -87,5 +87,21 @@
   "block.quin.chiseled_red_nether_bricks": "Chiseled Red Nether Bricks",
   "block.quin.red_nether_brick_fence": "Red Nether Brick Fence",
 
+  "block.quin.teal_nether_bricks": "Teal Nether Bricks",
+  "block.quin.chiseled_teal_nether_bricks": "Chiseled Teal Nether Bricks",
+  "block.quin.cracked_teal_nether_bricks": "Cracked Teal Nether Bricks",
+  "block.quin.teal_nether_brick_Stairs": "Teal Nether Brick Stairs",
+  "block.quin.teal_nether_brick_slab": "Teal Nether Brick Slab",
+  "block.quin.teal_nether_brick_wall": "Teal Nether Brick Wall",
+  "block.quin.teal_nether_brick_fence": "Teal Nether Brick Fence",
+
+  "block.quin.brown_nether_bricks": "Brown Nether Bricks",
+  "block.quin.chiseled_brown_nether_bricks": "Chiseled Brown Nether Bricks",
+  "block.quin.cracked_brown_nether_bricks": "Cracked Brown Nether Bricks",
+  "block.quin.brown_nether_brick_Stairs": "Brown Nether Brick Stairs",
+  "block.quin.brown_nether_brick_slab": "Brown Nether Brick Slab",
+  "block.quin.brown_nether_brick_wall": "Brown Nether Brick Wall",
+  "block.quin.brown_nether_brick_fence": "Brown Nether Brick Fence",
+
   "e": "e"
 }

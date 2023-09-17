@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "NW",
+    "WN"
+  ],
+  "key": {
+    "N": {
+      "item": "minecraft:nether_brick"
+    },
+    "W": {
+      "tag": "minecraft:soul_fire_base_blocks"
+    }
+  },
+  "result": {
+    "item": "quin:brown_nether_bricks"
+  }
+}

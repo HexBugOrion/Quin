@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "quin:block/cracked_teal_nether_bricks"
+  }
+}

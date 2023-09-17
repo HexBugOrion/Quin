@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "quin:block/brown_nether_bricks",
+    "side": "quin:block/brown_nether_bricks",
+    "top": "quin:block/brown_nether_bricks"
+  }
+}

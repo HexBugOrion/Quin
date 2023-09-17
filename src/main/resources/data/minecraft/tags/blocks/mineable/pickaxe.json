@@ -52,6 +52,22 @@
 
     "quin:cracked_red_nether_bricks",
     "quin:chiseled_red_nether_bricks",
-    "quin:red_nether_brick_fence"
+    "quin:red_nether_brick_fence",
+
+    "quin:cracked_teal_nether_bricks",
+    "quin:teal_nether_bricks",
+    "quin:teal_nether_brick_wall",
+    "quin:teal_nether_brick_stairs",
+    "quin:teal_nether_brick_slab",
+    "quin:chiseled_teal_nether_bricks",
+    "quin:teal_nether_brick_fence",
+
+    "quin:cracked_brown_nether_bricks",
+    "quin:brown_nether_bricks",
+    "quin:brown_nether_brick_wall",
+    "quin:brown_nether_brick_stairs",
+    "quin:brown_nether_brick_slab",
+    "quin:chiseled_brown_nether_bricks",
+    "quin:brown_nether_brick_fence"
   ]
 }

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_stairs",
+  "category": "building",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "quin:teal_nether_bricks"
+    }
+  },
+  "result": {
+    "item": "quin:teal_nether_brick_slab",
+    "count": 4
+  }
+}

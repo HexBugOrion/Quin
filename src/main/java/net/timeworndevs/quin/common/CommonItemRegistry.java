@@ -87,15 +87,21 @@ public class CommonItemRegistry {
     public static BlockItem RED_NETHER_BRICK_FENCE;
 
 
-    //public static BlockItem CRACKED_TEAL_NETHER_BRICKS;
-    //public static BlockItem CHISELED_TEAL_NETHER_BRICKS;
-    //public static BlockItem TEAL_NETHER_BRICK_FENCE;
+    public static BlockItem CRACKED_TEAL_NETHER_BRICKS;
+    public static BlockItem CHISELED_TEAL_NETHER_BRICKS;
+    public static BlockItem TEAL_NETHER_BRICK_FENCE;
     public static BlockItem TEAL_NETHER_BRICKS;
-    //public static BlockItem TEAL_NETHER_BRICK_STAIRS;
-    //public static BlockItem TEAL_NETHER_BRICK_SLAB;
-    //public static BlockItem TEAL_NETHER_BRICK_WALL;
+    public static BlockItem TEAL_NETHER_BRICK_STAIRS;
+    public static BlockItem TEAL_NETHER_BRICK_SLAB;
+    public static BlockItem TEAL_NETHER_BRICK_WALL;
 
-    //public static BlockItem UNDERWATER_TORCH;
+    public static BlockItem CRACKED_BROWN_NETHER_BRICKS;
+    public static BlockItem CHISELED_BROWN_NETHER_BRICKS;
+    public static BlockItem BROWN_NETHER_BRICK_FENCE;
+    public static BlockItem BROWN_NETHER_BRICKS;
+    public static BlockItem BROWN_NETHER_BRICK_STAIRS;
+    public static BlockItem BROWN_NETHER_BRICK_SLAB;
+    public static BlockItem BROWN_NETHER_BRICK_WALL;
 
     //public static SignItem DRIFTWOOD_SIGN;
     //public static HangingSignItem DRIFTWOOD_HANGING_SIGN;
@@ -184,10 +190,22 @@ public class CommonItemRegistry {
         CHISELED_RED_NETHER_BRICKS = QuinRegistry.register("chiseled_red_nether_bricks", new BlockItem(CommonBlockRegistry.CHISELED_RED_NETHER_BRICKS, new Item.Settings()));
         RED_NETHER_BRICK_FENCE = QuinRegistry.register("red_nether_brick_fence", new BlockItem(CommonBlockRegistry.RED_NETHER_BRICK_FENCE, new Item.Settings()));
 
+        CRACKED_TEAL_NETHER_BRICKS = QuinRegistry.register("cracked_teal_nether_bricks", new BlockItem(CommonBlockRegistry.CRACKED_TEAL_NETHER_BRICKS, new Item.Settings()));
+        CHISELED_TEAL_NETHER_BRICKS = QuinRegistry.register("chiseled_teal_nether_bricks", new BlockItem(CommonBlockRegistry.CHISELED_TEAL_NETHER_BRICKS, new Item.Settings()));
         TEAL_NETHER_BRICKS = QuinRegistry.register("teal_nether_bricks", new BlockItem(CommonBlockRegistry.TEAL_NETHER_BRICKS, new Item.Settings()));
+        TEAL_NETHER_BRICK_STAIRS = QuinRegistry.register("teal_nether_brick_stairs", new BlockItem(CommonBlockRegistry.TEAL_NETHER_BRICK_STAIRS, new Item.Settings()));
+        TEAL_NETHER_BRICK_SLAB = QuinRegistry.register("teal_nether_brick_slab", new BlockItem(CommonBlockRegistry.TEAL_NETHER_BRICK_SLAB, new Item.Settings()));
+        TEAL_NETHER_BRICK_WALL = QuinRegistry.register("teal_nether_brick_wall", new BlockItem(CommonBlockRegistry.TEAL_NETHER_BRICK_WALL, new Item.Settings()));
+        TEAL_NETHER_BRICK_FENCE = QuinRegistry.register("teal_nether_brick_fence", new BlockItem(CommonBlockRegistry.TEAL_NETHER_BRICK_FENCE, new Item.Settings()));
 
+        CRACKED_BROWN_NETHER_BRICKS = QuinRegistry.register("cracked_brown_nether_bricks", new BlockItem(CommonBlockRegistry.CRACKED_BROWN_NETHER_BRICKS, new Item.Settings()));
+        CHISELED_BROWN_NETHER_BRICKS = QuinRegistry.register("chiseled_brown_nether_bricks", new BlockItem(CommonBlockRegistry.CHISELED_BROWN_NETHER_BRICKS, new Item.Settings()));
+        BROWN_NETHER_BRICKS = QuinRegistry.register("brown_nether_bricks", new BlockItem(CommonBlockRegistry.BROWN_NETHER_BRICKS, new Item.Settings()));
+        BROWN_NETHER_BRICK_STAIRS = QuinRegistry.register("brown_nether_brick_stairs", new BlockItem(CommonBlockRegistry.BROWN_NETHER_BRICK_STAIRS, new Item.Settings()));
+        BROWN_NETHER_BRICK_SLAB = QuinRegistry.register("brown_nether_brick_slab", new BlockItem(CommonBlockRegistry.BROWN_NETHER_BRICK_SLAB, new Item.Settings()));
+        BROWN_NETHER_BRICK_WALL = QuinRegistry.register("brown_nether_brick_wall", new BlockItem(CommonBlockRegistry.BROWN_NETHER_BRICK_WALL, new Item.Settings()));
+        BROWN_NETHER_BRICK_FENCE = QuinRegistry.register("brown_nether_brick_fence", new BlockItem(CommonBlockRegistry.BROWN_NETHER_BRICK_FENCE, new Item.Settings()));
 
-        //UNDERWATER_TORCH = QuinRegistry.register("underwater_torch", new VerticallyAttachableBlockItem(CommonBlockRegistry.UNDERWATER_TORCH, CommonBlockRegistry.UNDERWATER_WALL_TORCH, new Item.Settings(), Direction.DOWN));
         itemGroupAdditions();
         addFurnaceFuels();
     }
@@ -271,8 +289,24 @@ public class CommonItemRegistry {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(WAXED_COPPER_PANEL_STAIRS, WAXED_COPPER_PANEL_SLAB);});
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(Items.RED_NETHER_BRICKS, CRACKED_RED_NETHER_BRICKS);});
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(RED_NETHER_BRICK_FENCE, CHISELED_RED_NETHER_BRICKS);});
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(Items.RED_NETHER_BRICK_WALL, RED_NETHER_BRICK_FENCE);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(RED_NETHER_BRICK_FENCE, CHISELED_RED_NETHER_BRICKS);});
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(CHISELED_RED_NETHER_BRICKS, TEAL_NETHER_BRICKS);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(TEAL_NETHER_BRICKS, CRACKED_TEAL_NETHER_BRICKS);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(CRACKED_TEAL_NETHER_BRICKS, TEAL_NETHER_BRICK_STAIRS);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(TEAL_NETHER_BRICK_STAIRS, TEAL_NETHER_BRICK_SLAB);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(TEAL_NETHER_BRICK_SLAB, TEAL_NETHER_BRICK_WALL);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(TEAL_NETHER_BRICK_WALL, TEAL_NETHER_BRICK_FENCE);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(TEAL_NETHER_BRICK_FENCE, CHISELED_TEAL_NETHER_BRICKS);});
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(CHISELED_TEAL_NETHER_BRICKS, BROWN_NETHER_BRICKS);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(BROWN_NETHER_BRICKS, CRACKED_BROWN_NETHER_BRICKS);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(CRACKED_BROWN_NETHER_BRICKS, BROWN_NETHER_BRICK_STAIRS);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(BROWN_NETHER_BRICK_STAIRS, BROWN_NETHER_BRICK_SLAB);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(BROWN_NETHER_BRICK_SLAB, BROWN_NETHER_BRICK_WALL);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(BROWN_NETHER_BRICK_WALL, BROWN_NETHER_BRICK_FENCE);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(BROWN_NETHER_BRICK_FENCE, CHISELED_BROWN_NETHER_BRICKS);});
     }
 
     public static void addFurnaceFuels() {

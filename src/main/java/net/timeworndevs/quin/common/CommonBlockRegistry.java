@@ -91,16 +91,20 @@ public class CommonBlockRegistry {
     public static Block RED_NETHER_BRICK_FENCE;
 
     public static Block CRACKED_TEAL_NETHER_BRICKS;
-    //public static Block CHISELED_TEAL_NETHER_BRICKS;
-    //public static Block TEAL_NETHER_BRICK_FENCE;
-    //public static Block TEAL_NETHER_BRICKS;
-    //public static Block TEAL_NETHER_BRICK_STAIRS;
-    //public static Block TEAL_NETHER_BRICK_SLAB;
-    //public static Block TEAL_NETHER_BRICK_WALL;
+    public static Block CHISELED_TEAL_NETHER_BRICKS;
+    public static Block TEAL_NETHER_BRICK_FENCE;
+    public static Block TEAL_NETHER_BRICKS;
+    public static Block TEAL_NETHER_BRICK_STAIRS;
+    public static Block TEAL_NETHER_BRICK_SLAB;
+    public static Block TEAL_NETHER_BRICK_WALL;
 
-    //public static Block UNDERWATER_TORCH;
-    //public static Block UNDERWATER_WALL_TORCH;
-
+    public static Block CRACKED_BROWN_NETHER_BRICKS;
+    public static Block CHISELED_BROWN_NETHER_BRICKS;
+    public static Block BROWN_NETHER_BRICK_FENCE;
+    public static Block BROWN_NETHER_BRICKS;
+    public static Block BROWN_NETHER_BRICK_STAIRS;
+    public static Block BROWN_NETHER_BRICK_SLAB;
+    public static Block BROWN_NETHER_BRICK_WALL;
 
     //public static TerraformSignBlock DRIFTWOOD_SIGN;
     //public static TerraformWallSignBlock DRIFTWOOD_WALL_SIGN;
@@ -190,11 +194,21 @@ public class CommonBlockRegistry {
         CHISELED_RED_NETHER_BRICKS = QuinRegistry.register("chiseled_red_nether_bricks", new Block(FabricBlockSettings.of().mapColor(MapColor.DARK_RED).strength(2.0F, 6.0F).sounds(BlockSoundGroup.NETHER_BRICKS).instrument(Instrument.BASEDRUM).requiresTool()));
         RED_NETHER_BRICK_FENCE = QuinRegistry.register("red_nether_brick_fence", new FenceBlock(FabricBlockSettings.of().mapColor(MapColor.DARK_RED).strength(2.0F, 6.0F).sounds(BlockSoundGroup.NETHER_BRICKS).requiresTool()));
 
-        //CRACKED_TEAL_NETHER_BRICKS = QuinRegistry.register("cracked_teal_nether_bricks")
+        CRACKED_TEAL_NETHER_BRICKS = QuinRegistry.register("cracked_teal_nether_bricks", new Block(FabricBlockSettings.of().mapColor(MapColor.DARK_AQUA).strength(2.0F, 6.0F).sounds(BlockSoundGroup.NETHER_BRICKS).requiresTool()));
+        CHISELED_TEAL_NETHER_BRICKS = QuinRegistry.register("chiseled_teal_nether_bricks", new Block(FabricBlockSettings.of().mapColor(MapColor.DARK_AQUA).strength(2.0F, 6.0F).sounds(BlockSoundGroup.NETHER_BRICKS).requiresTool()));
         TEAL_NETHER_BRICKS = QuinRegistry.register("teal_nether_bricks", new Block(FabricBlockSettings.of().mapColor(MapColor.DARK_AQUA).strength(2.0F, 6.0F).sounds(BlockSoundGroup.NETHER_BRICKS).requiresTool()));
+        TEAL_NETHER_BRICK_STAIRS = QuinRegistry.register("teal_nether_brick_stairs", new StairsBlock(TEAL_NETHER_BRICKS.getDefaultState(), FabricBlockSettings.of().mapColor(MapColor.DARK_AQUA).strength(2.0F, 6.0F).sounds(BlockSoundGroup.NETHER_BRICKS).requiresTool()));
+        TEAL_NETHER_BRICK_SLAB = QuinRegistry.register("teal_nether_brick_slab", new SlabBlock(FabricBlockSettings.of().mapColor(MapColor.DARK_AQUA).strength(2.0F, 6.0F).sounds(BlockSoundGroup.NETHER_BRICKS).requiresTool()));
+        TEAL_NETHER_BRICK_WALL = QuinRegistry.register("teal_nether_brick_wall", new WallBlock(FabricBlockSettings.of().mapColor(MapColor.DARK_AQUA).strength(2.0F, 6.0F).sounds(BlockSoundGroup.NETHER_BRICKS).requiresTool()));
+        TEAL_NETHER_BRICK_FENCE = QuinRegistry.register("teal_nether_brick_fence", new FenceBlock(FabricBlockSettings.of().mapColor(MapColor.DARK_AQUA).strength(2.0F, 6.0F).sounds(BlockSoundGroup.NETHER_BRICKS).requiresTool()));
 
-    //UNDERWATER_TORCH = QuinRegistry.register("underwater_torch", new UnderwaterTorchBlock(FabricBlockSettings.of().mapColor(MapColor.DARK_AQUA).breakInstantly().noCollision().luminance((state) -> {return 14;}).sounds(BlockSoundGroup.WOOD).pistonBehavior(PistonBehavior.DESTROY), ParticleTypes.GLOW));
-        //UNDERWATER_WALL_TORCH = QuinRegistry.register("underwater_wall_torch", new UnderwaterWallTorchBlock(FabricBlockSettings.of().mapColor(MapColor.DARK_AQUA).breakInstantly().noCollision().luminance((state) -> {return 14;}).sounds(BlockSoundGroup.WOOD).pistonBehavior(PistonBehavior.DESTROY), ParticleTypes.GLOW));
+        CRACKED_BROWN_NETHER_BRICKS = QuinRegistry.register("cracked_brown_nether_bricks", new Block(FabricBlockSettings.of().mapColor(MapColor.DIRT_BROWN).strength(2.0F, 6.0F).sounds(BlockSoundGroup.NETHER_BRICKS).requiresTool()));
+        CHISELED_BROWN_NETHER_BRICKS = QuinRegistry.register("chiseled_brown_nether_bricks", new Block(FabricBlockSettings.of().mapColor(MapColor.DIRT_BROWN).strength(2.0F, 6.0F).sounds(BlockSoundGroup.NETHER_BRICKS).requiresTool()));
+        BROWN_NETHER_BRICKS = QuinRegistry.register("brown_nether_bricks", new Block(FabricBlockSettings.of().mapColor(MapColor.DIRT_BROWN).strength(2.0F, 6.0F).sounds(BlockSoundGroup.NETHER_BRICKS).requiresTool()));
+        BROWN_NETHER_BRICK_STAIRS = QuinRegistry.register("brown_nether_brick_stairs", new StairsBlock(TEAL_NETHER_BRICKS.getDefaultState(), FabricBlockSettings.of().mapColor(MapColor.DIRT_BROWN).strength(2.0F, 6.0F).sounds(BlockSoundGroup.NETHER_BRICKS).requiresTool()));
+        BROWN_NETHER_BRICK_SLAB = QuinRegistry.register("brown_nether_brick_slab", new SlabBlock(FabricBlockSettings.of().mapColor(MapColor.DIRT_BROWN).strength(2.0F, 6.0F).sounds(BlockSoundGroup.NETHER_BRICKS).requiresTool()));
+        BROWN_NETHER_BRICK_WALL = QuinRegistry.register("brown_nether_brick_wall", new WallBlock(FabricBlockSettings.of().mapColor(MapColor.DIRT_BROWN).strength(2.0F, 6.0F).sounds(BlockSoundGroup.NETHER_BRICKS).requiresTool()));
+        BROWN_NETHER_BRICK_FENCE = QuinRegistry.register("brown_nether_brick_fence", new FenceBlock(FabricBlockSettings.of().mapColor(MapColor.DIRT_BROWN).strength(2.0F, 6.0F).sounds(BlockSoundGroup.NETHER_BRICKS).requiresTool()));
 
         addBurnables();
         registerOxidized();

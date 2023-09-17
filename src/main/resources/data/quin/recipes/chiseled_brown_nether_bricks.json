@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "quin:brown_nether_brick_slab"
+    }
+  },
+  "result": {
+    "item": "quin:chiseled_brown_nether_bricks"
+  }
+}
