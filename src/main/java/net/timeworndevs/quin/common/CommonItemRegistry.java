@@ -47,6 +47,24 @@ public class CommonItemRegistry {
     public static BlockItem MAGENTA_CRYSTAL;
     public static BlockItem PINK_CRYSTAL;
 
+
+    public static BlockItem WHITE_CRYSTAL_PANE;
+    public static BlockItem LIGHT_GRAY_CRYSTAL_PANE;
+    public static BlockItem GRAY_CRYSTAL_PANE;
+    public static BlockItem BLACK_CRYSTAL_PANE;
+    public static BlockItem BROWN_CRYSTAL_PANE;
+    public static BlockItem RED_CRYSTAL_PANE;
+    public static BlockItem ORANGE_CRYSTAL_PANE;
+    public static BlockItem YELLOW_CRYSTAL_PANE;
+    public static BlockItem LIME_CRYSTAL_PANE;
+    public static BlockItem GREEN_CRYSTAL_PANE;
+    public static BlockItem CYAN_CRYSTAL_PANE;
+    public static BlockItem LIGHT_BLUE_CRYSTAL_PANE;
+    public static BlockItem BLUE_CRYSTAL_PANE;
+    public static BlockItem PURPLE_CRYSTAL_PANE;
+    public static BlockItem MAGENTA_CRYSTAL_PANE;
+    public static BlockItem PINK_CRYSTAL_PANE;
+
     public static BlockItem IRON_BUTTON;
     public static BlockItem GOLD_BUTTON;
 
@@ -132,7 +150,6 @@ public class CommonItemRegistry {
 
         ROPE = QuinRegistry.register("rope", new BlockItem(CommonBlockRegistry.ROPE, new Item.Settings()));
 
-
         TINTED_CRYSTAL = QuinRegistry.register("tinted_crystal", new BlockItem(CommonBlockRegistry.TINTED_CRYSTAL, new Item.Settings()));
         WHITE_CRYSTAL = QuinRegistry.register("white_crystal", new BlockItem(CommonBlockRegistry.WHITE_CRYSTAL, new Item.Settings()));
         LIGHT_GRAY_CRYSTAL = QuinRegistry.register("light_gray_crystal", new BlockItem(CommonBlockRegistry.LIGHT_GRAY_CRYSTAL, new Item.Settings()));
@@ -150,6 +167,23 @@ public class CommonItemRegistry {
         PURPLE_CRYSTAL = QuinRegistry.register("purple_crystal", new BlockItem(CommonBlockRegistry.PURPLE_CRYSTAL, new Item.Settings()));
         MAGENTA_CRYSTAL = QuinRegistry.register("magenta_crystal", new BlockItem(CommonBlockRegistry.MAGENTA_CRYSTAL, new Item.Settings()));
         PINK_CRYSTAL = QuinRegistry.register("pink_crystal", new BlockItem(CommonBlockRegistry.PINK_CRYSTAL, new Item.Settings()));
+
+        WHITE_CRYSTAL_PANE = QuinRegistry.register("white_crystal_pane", new BlockItem(CommonBlockRegistry.WHITE_CRYSTAL_PANE, new Item.Settings()));
+        LIGHT_GRAY_CRYSTAL_PANE = QuinRegistry.register("light_gray_crystal_pane", new BlockItem(CommonBlockRegistry.LIGHT_GRAY_CRYSTAL_PANE, new Item.Settings()));
+        GRAY_CRYSTAL_PANE = QuinRegistry.register("gray_crystal_pane", new BlockItem(CommonBlockRegistry.GRAY_CRYSTAL_PANE, new Item.Settings()));
+        BLACK_CRYSTAL_PANE = QuinRegistry.register("black_crystal_pane", new BlockItem(CommonBlockRegistry.BLACK_CRYSTAL_PANE, new Item.Settings()));
+        BROWN_CRYSTAL_PANE = QuinRegistry.register("brown_crystal_pane", new BlockItem(CommonBlockRegistry.BROWN_CRYSTAL_PANE, new Item.Settings()));
+        RED_CRYSTAL_PANE = QuinRegistry.register("red_crystal_pane", new BlockItem(CommonBlockRegistry.RED_CRYSTAL_PANE, new Item.Settings()));
+        ORANGE_CRYSTAL_PANE = QuinRegistry.register("orange_crystal_pane", new BlockItem(CommonBlockRegistry.ORANGE_CRYSTAL_PANE, new Item.Settings()));
+        YELLOW_CRYSTAL_PANE = QuinRegistry.register("yellow_crystal_pane", new BlockItem(CommonBlockRegistry.YELLOW_CRYSTAL_PANE, new Item.Settings()));
+        LIME_CRYSTAL_PANE = QuinRegistry.register("lime_crystal_pane", new BlockItem(CommonBlockRegistry.LIME_CRYSTAL_PANE, new Item.Settings()));
+        GREEN_CRYSTAL_PANE = QuinRegistry.register("green_crystal_pane", new BlockItem(CommonBlockRegistry.GREEN_CRYSTAL_PANE, new Item.Settings()));
+        CYAN_CRYSTAL_PANE = QuinRegistry.register("cyan_crystal_pane", new BlockItem(CommonBlockRegistry.CYAN_CRYSTAL_PANE, new Item.Settings()));
+        LIGHT_BLUE_CRYSTAL_PANE = QuinRegistry.register("light_blue_crystal_pane", new BlockItem(CommonBlockRegistry.LIGHT_BLUE_CRYSTAL_PANE, new Item.Settings()));
+        BLUE_CRYSTAL_PANE = QuinRegistry.register("blue_crystal_pane", new BlockItem(CommonBlockRegistry.BLUE_CRYSTAL_PANE, new Item.Settings()));
+        PURPLE_CRYSTAL_PANE = QuinRegistry.register("purple_crystal_pane", new BlockItem(CommonBlockRegistry.PURPLE_CRYSTAL_PANE, new Item.Settings()));
+        MAGENTA_CRYSTAL_PANE = QuinRegistry.register("magenta_crystal_pane", new BlockItem(CommonBlockRegistry.MAGENTA_CRYSTAL_PANE, new Item.Settings()));
+        PINK_CRYSTAL_PANE = QuinRegistry.register("pink_crystal_pane", new BlockItem(CommonBlockRegistry.PINK_CRYSTAL_PANE, new Item.Settings()));
 
         IRON_BUTTON = QuinRegistry.register("iron_button", new BlockItem(CommonBlockRegistry.IRON_BUTTON, new Item.Settings()));
         GOLD_BUTTON = QuinRegistry.register("gold_button", new BlockItem(CommonBlockRegistry.GOLD_BUTTON, new Item.Settings()));
@@ -252,6 +286,23 @@ public class CommonItemRegistry {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(content -> {content.add(PURPLE_CRYSTAL);});
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(content -> {content.add(MAGENTA_CRYSTAL);});
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(content -> {content.add(PINK_CRYSTAL);});
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(content -> {content.add(WHITE_CRYSTAL_PANE);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(content -> {content.add(LIGHT_GRAY_CRYSTAL_PANE);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(content -> {content.add(GRAY_CRYSTAL_PANE);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(content -> {content.add(BLACK_CRYSTAL_PANE);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(content -> {content.add(BROWN_CRYSTAL_PANE);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(content -> {content.add(RED_CRYSTAL_PANE);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(content -> {content.add(ORANGE_CRYSTAL_PANE);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(content -> {content.add(YELLOW_CRYSTAL_PANE);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(content -> {content.add(LIME_CRYSTAL_PANE);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(content -> {content.add(GREEN_CRYSTAL_PANE);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(content -> {content.add(CYAN_CRYSTAL_PANE);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(content -> {content.add(LIGHT_BLUE_CRYSTAL_PANE);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(content -> {content.add(BLUE_CRYSTAL_PANE);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(content -> {content.add(PURPLE_CRYSTAL_PANE);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(content -> {content.add(MAGENTA_CRYSTAL_PANE);});
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(content -> {content.add(PINK_CRYSTAL_PANE);});
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(Items.IRON_BLOCK, IRON_BUTTON);});
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {content.addAfter(Items.GOLD_BLOCK, GOLD_BUTTON);});

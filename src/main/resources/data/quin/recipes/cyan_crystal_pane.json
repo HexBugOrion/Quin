@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "crystal_pane",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "quin:cyan_crystal"
+    }
+  },
+  "result": {
+    "item": "quin:cyan_crystal_pane",
+    "count": 16
+  }
+}

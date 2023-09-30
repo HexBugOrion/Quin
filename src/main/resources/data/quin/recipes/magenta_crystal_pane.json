@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "crystal_pane",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "quin:magenta_crystal"
+    }
+  },
+  "result": {
+    "item": "quin:magenta_crystal_pane",
+    "count": 16
+  }
+}

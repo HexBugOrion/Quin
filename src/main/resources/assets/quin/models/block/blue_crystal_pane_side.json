@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_glass_pane_side",
+  "textures": {
+    "edge": "quin:block/blue_crystal",
+    "pane": "quin:block/blue_crystal"
+  }
+}
