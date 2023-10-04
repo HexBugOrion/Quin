@@ -19,7 +19,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.timeworndevs.quin.QuinMain"
+      "net.timeworndevs.quin.Main"
     ],
     "client": [
       "net.timeworndevs.quin.QuinClient"

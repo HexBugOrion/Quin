@@ -6,7 +6,7 @@ import net.timeworndevs.quin.common.CommonItemRegistry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class QuinMain implements ModInitializer {
+public class Main implements ModInitializer {
 	public static final String MODID = "quin";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MODID);
 
