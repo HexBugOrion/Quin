@@ -142,7 +142,7 @@ public class CommonBlockRegistry {
         DRIFTWOOD_DOOR = QuinRegistry.register("driftwood_door", new DoorBlock(FabricBlockSettings.of().mapColor(MapColor.OFF_WHITE).sounds(BlockSoundGroup.NETHER_WOOD).strength(3.0F), BlockSetType.CRIMSON));
         DRIFTWOOD_TRAPDOOR = QuinRegistry.register("driftwood_trapdoor", new TrapdoorBlock(FabricBlockSettings.of().mapColor(MapColor.OFF_WHITE).sounds(BlockSoundGroup.NETHER_WOOD).strength(3.0F), BlockSetType.CRIMSON));
         DRIFTWOOD_PRESSURE_PLATE = QuinRegistry.register("driftwood_pressure_plate", new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.of().mapColor(MapColor.OFF_WHITE).sounds(BlockSoundGroup.NETHER_WOOD).strength(0.5F).pistonBehavior(PistonBehavior.DESTROY),BlockSetType.CRIMSON));
-        DRIFTWOOD_BUTTON = QuinRegistry.register("driftwood_button", new ButtonBlock(FabricBlockSettings.of().mapColor(MapColor.OFF_WHITE).sounds(BlockSoundGroup.NETHER_WOOD).pistonBehavior(PistonBehavior.DESTROY), BlockSetType.CRIMSON, 30, true));
+        DRIFTWOOD_BUTTON = QuinRegistry.register("driftwood_button", new ButtonBlock(FabricBlockSettings.of().mapColor(MapColor.OFF_WHITE).sounds(BlockSoundGroup.NETHER_WOOD).pistonBehavior(PistonBehavior.DESTROY).noCollision(), BlockSetType.CRIMSON, 30, true));
 
         //final Identifier DRIFTWOOD_SIGN_TEXTURE = Identifier.of(QuinMain.MODID, "entity/signs/driftwood_sign");
         //DRIFTWOOD_SIGN = QuinRegistry.register("driftwood_sign", new TerraformSignBlock(DRIFTWOOD_SIGN_TEXTURE, FabricBlockSettings.of().mapColor(MapColor.OFF_WHITE).sounds(BlockSoundGroup.NETHER_WOOD).noCollision()));
@@ -189,13 +189,13 @@ public class CommonBlockRegistry {
         MAGENTA_CRYSTAL_PANE = QuinRegistry.register("magenta_crystal_pane", new StainedGlassPaneBlock(DyeColor.MAGENTA, FabricBlockSettings.of().mapColor(MapColor.MAGENTA).nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS).requiresTool()));
         PINK_CRYSTAL_PANE = QuinRegistry.register("pink_crystal_pane", new StainedGlassPaneBlock(DyeColor.PINK, FabricBlockSettings.of().mapColor(MapColor.PINK).nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS).requiresTool()));
 
-        IRON_BUTTON = QuinRegistry.register("iron_button", new ButtonBlock(FabricBlockSettings.of().mapColor(MapColor.GOLD).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.METAL), BlockSetType.STONE, 40, false));
-        GOLD_BUTTON = QuinRegistry.register("gold_button", new ButtonBlock(FabricBlockSettings.of().mapColor(MapColor.WHITE).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.METAL), BlockSetType.STONE, 5, false));
+        IRON_BUTTON = QuinRegistry.register("iron_button", new ButtonBlock(FabricBlockSettings.of().mapColor(MapColor.GOLD).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.METAL).noCollision(), BlockSetType.STONE, 40, false));
+        GOLD_BUTTON = QuinRegistry.register("gold_button", new ButtonBlock(FabricBlockSettings.of().mapColor(MapColor.WHITE).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.METAL).noCollision(), BlockSetType.STONE, 5, false));
 
-        OXIDIZED_COPPER_BUTTON = QuinRegistry.register("oxidized_copper_button", new ButtonBlock(FabricBlockSettings.of().mapColor(MapColor.TEAL).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.COPPER), BlockSetType.STONE, 10, false));
-        WEATHERED_COPPER_BUTTON = QuinRegistry.register("weathered_copper_button", new ButtonBlock(FabricBlockSettings.of().mapColor(MapColor.DARK_AQUA).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.COPPER), BlockSetType.STONE, 10, false));
-        EXPOSED_COPPER_BUTTON = QuinRegistry.register("exposed_copper_button", new ButtonBlock(FabricBlockSettings.of().mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.COPPER), BlockSetType.STONE, 10, false));
-        COPPER_BUTTON = QuinRegistry.register("copper_button", new ButtonBlock(FabricBlockSettings.of().mapColor(MapColor.ORANGE).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.COPPER), BlockSetType.STONE, 10, false));
+        OXIDIZED_COPPER_BUTTON = QuinRegistry.register("oxidized_copper_button", new ButtonBlock(FabricBlockSettings.of().mapColor(MapColor.TEAL).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.COPPER).noCollision(), BlockSetType.STONE, 10, false));
+        WEATHERED_COPPER_BUTTON = QuinRegistry.register("weathered_copper_button", new ButtonBlock(FabricBlockSettings.of().mapColor(MapColor.DARK_AQUA).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.COPPER).noCollision(), BlockSetType.STONE, 10, false));
+        EXPOSED_COPPER_BUTTON = QuinRegistry.register("exposed_copper_button", new ButtonBlock(FabricBlockSettings.of().mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.COPPER).noCollision(), BlockSetType.STONE, 10, false));
+        COPPER_BUTTON = QuinRegistry.register("copper_button", new ButtonBlock(FabricBlockSettings.of().mapColor(MapColor.ORANGE).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.COPPER).noCollision(), BlockSetType.STONE, 10, false));
 
         OXIDIZED_COPPER_PANEL = QuinRegistry.register("oxidized_copper_panel", new OxidizableBlock(Oxidizable.OxidationLevel.OXIDIZED,FabricBlockSettings.of().mapColor(MapColor.TEAL).strength(3.0F, 6.0F).sounds(BlockSoundGroup.COPPER).requiresTool()));
         WEATHERED_COPPER_PANEL = QuinRegistry.register("weathered_copper_panel", new OxidizableBlock(Oxidizable.OxidationLevel.WEATHERED,FabricBlockSettings.of().mapColor(MapColor.DARK_AQUA).strength(3.0F, 6.0F).sounds(BlockSoundGroup.COPPER).requiresTool()));

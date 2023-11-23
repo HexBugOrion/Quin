@@ -15,4 +15,5 @@ public class Main implements ModInitializer {
 		CommonBlockRegistry.register();
 		CommonItemRegistry.register();
 	}
+
 }
