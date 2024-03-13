@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "crystal_pane",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "quin:blast_glass"
+    }
+  },
+  "result": {
+    "item": "quin:blast_glass_pane",
+    "count": 16
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "quin:blast_glass",
+    "quin:blast_glass_pane",
+    "quin:blast_crystal",
+    "quin:blast_crystal_pane"
+  ]
+}

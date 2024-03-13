@@ -33,6 +33,7 @@ public class CommonBlockRegistry {
     public static Block ROPE;
 
     public static Block TINTED_CRYSTAL;
+    public static Block BLAST_CRYSTAL;
     public static Block WHITE_CRYSTAL;
     public static Block LIGHT_GRAY_CRYSTAL;
     public static Block GRAY_CRYSTAL;
@@ -50,6 +51,7 @@ public class CommonBlockRegistry {
     public static Block MAGENTA_CRYSTAL;
     public static Block PINK_CRYSTAL;
 
+    public static Block BLAST_CRYSTAL_PANE;
     public static Block WHITE_CRYSTAL_PANE;
     public static Block LIGHT_GRAY_CRYSTAL_PANE;
     public static Block GRAY_CRYSTAL_PANE;
@@ -66,6 +68,9 @@ public class CommonBlockRegistry {
     public static Block PURPLE_CRYSTAL_PANE;
     public static Block MAGENTA_CRYSTAL_PANE;
     public static Block PINK_CRYSTAL_PANE;
+
+    public static Block BLAST_GLASS;
+    public static Block BLAST_GLASS_PANE;
 
     public static Block IRON_BUTTON;
     public static Block GOLD_BUTTON;
@@ -156,6 +161,7 @@ public class CommonBlockRegistry {
 
         TINTED_CRYSTAL = QuinRegistry.register("tinted_crystal", new TintedGlassBlock(FabricBlockSettings.of().mapColor(MapColor.GRAY).nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS)));
         WHITE_CRYSTAL = QuinRegistry.register("white_crystal", new StainedGlassBlock(DyeColor.WHITE, FabricBlockSettings.of().mapColor(MapColor.WHITE).nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS).requiresTool()));
+        BLAST_CRYSTAL = QuinRegistry.register("blast_crystal", new GlassBlock(FabricBlockSettings.of().mapColor(MapColor.BLACK).nonOpaque().strength(50,1200).sounds(BlockSoundGroup.GLASS).requiresTool().pistonBehavior(PistonBehavior.BLOCK)));
         LIGHT_GRAY_CRYSTAL = QuinRegistry.register("light_gray_crystal", new StainedGlassBlock(DyeColor.LIGHT_GRAY, FabricBlockSettings.of().mapColor(MapColor.LIGHT_GRAY).nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS).requiresTool()));
         GRAY_CRYSTAL = QuinRegistry.register("gray_crystal", new StainedGlassBlock(DyeColor.GRAY, FabricBlockSettings.of().mapColor(MapColor.GRAY).nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS).requiresTool()));
         BLACK_CRYSTAL = QuinRegistry.register("black_crystal", new StainedGlassBlock(DyeColor.BLACK, FabricBlockSettings.of().mapColor(MapColor.BLACK).nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS).requiresTool()));
@@ -172,6 +178,7 @@ public class CommonBlockRegistry {
         MAGENTA_CRYSTAL = QuinRegistry.register("magenta_crystal", new StainedGlassBlock(DyeColor.MAGENTA, FabricBlockSettings.of().mapColor(MapColor.MAGENTA).nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS).requiresTool()));
         PINK_CRYSTAL = QuinRegistry.register("pink_crystal", new StainedGlassBlock(DyeColor.PINK, FabricBlockSettings.of().mapColor(MapColor.PINK).nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS).requiresTool()));
 
+        BLAST_CRYSTAL_PANE = QuinRegistry.register("blast_crystal_pane", new PaneBlock(FabricBlockSettings.of().mapColor(MapColor.BLACK).nonOpaque().strength(50,1200).sounds(BlockSoundGroup.GLASS).requiresTool().pistonBehavior(PistonBehavior.BLOCK)));
         WHITE_CRYSTAL_PANE = QuinRegistry.register("white_crystal_pane", new StainedGlassPaneBlock(DyeColor.WHITE, FabricBlockSettings.of().mapColor(MapColor.WHITE).nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS).requiresTool()));
         LIGHT_GRAY_CRYSTAL_PANE = QuinRegistry.register("light_gray_crystal_pane", new StainedGlassPaneBlock(DyeColor.LIGHT_GRAY, FabricBlockSettings.of().mapColor(MapColor.LIGHT_GRAY).nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS).requiresTool()));
         GRAY_CRYSTAL_PANE = QuinRegistry.register("gray_crystal_pane", new StainedGlassPaneBlock(DyeColor.GRAY, FabricBlockSettings.of().mapColor(MapColor.GRAY).nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS).requiresTool()));
@@ -188,6 +195,11 @@ public class CommonBlockRegistry {
         PURPLE_CRYSTAL_PANE = QuinRegistry.register("purple_crystal_pane", new StainedGlassPaneBlock(DyeColor.PURPLE, FabricBlockSettings.of().mapColor(MapColor.PURPLE).nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS).requiresTool()));
         MAGENTA_CRYSTAL_PANE = QuinRegistry.register("magenta_crystal_pane", new StainedGlassPaneBlock(DyeColor.MAGENTA, FabricBlockSettings.of().mapColor(MapColor.MAGENTA).nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS).requiresTool()));
         PINK_CRYSTAL_PANE = QuinRegistry.register("pink_crystal_pane", new StainedGlassPaneBlock(DyeColor.PINK, FabricBlockSettings.of().mapColor(MapColor.PINK).nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS).requiresTool()));
+
+        BLAST_GLASS = QuinRegistry.register("blast_glass", new GlassBlock(FabricBlockSettings.of().mapColor(MapColor.BLACK).nonOpaque().strength(50,1200).sounds(BlockSoundGroup.GLASS).requiresTool().pistonBehavior(PistonBehavior.BLOCK)));
+        BLAST_GLASS_PANE = QuinRegistry.register("blast_glass_pane", new PaneBlock(FabricBlockSettings.of().mapColor(MapColor.BLACK).nonOpaque().strength(50,1200).sounds(BlockSoundGroup.GLASS).requiresTool().pistonBehavior(PistonBehavior.BLOCK)));
+
+
 
         IRON_BUTTON = QuinRegistry.register("iron_button", new ButtonBlock(FabricBlockSettings.of().mapColor(MapColor.GOLD).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.METAL).noCollision(), BlockSetType.STONE, 40, false));
         GOLD_BUTTON = QuinRegistry.register("gold_button", new ButtonBlock(FabricBlockSettings.of().mapColor(MapColor.WHITE).pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.METAL).noCollision(), BlockSetType.STONE, 5, false));

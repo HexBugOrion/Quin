@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_glass_pane_side_alt",
+  "textures": {
+    "edge": "quin:block/blast_crystal",
+    "pane": "quin:block/blast_crystal"
+  }
+}

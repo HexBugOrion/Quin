@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_glass_pane_post",
+  "textures": {
+    "edge": "quin:block/blast_glass_edge",
+    "pane": "quin:block/blast_glass"
+  }
+}

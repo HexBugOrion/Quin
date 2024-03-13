@@ -10,7 +10,6 @@
   "item.quin.petty_shard": "Petty Experience Shard",
   "item.quin.medium_shard": "Medium Experience Shard",
   "item.quin.greater_shard": "Greater Experience Shard",
-  "item.quin.underwater_torch": "Underwater Torch",
 
   "block.quin.resin_block": "Block Of Resin",
   "block.quin.gelrene_block": "Block Of Gelrene",
@@ -31,6 +30,7 @@
   "block.quin.rope": "Rope",
 
   "block.quin.tinted_crystal": "Tinted Crystal",
+  "block.quin.blast_crystal": "Blast Crystal",
   "block.quin.white_crystal": "White Crystal",
   "block.quin.light_gray_crystal": "Light Gray Crystal",
   "block.quin.gray_crystal": "Gray Crystal",
@@ -48,6 +48,10 @@
   "block.quin.magenta_crystal": "Magenta Crystal",
   "block.quin.pink_crystal": "Pink Crystal",
 
+  "block.quin.blast_glass": "Blast Glass",
+  "block.quin.blast_glass_pane": "Blast Glass Pane",
+
+  "block.quin.blast_crystal_pane": "Blast Crystal Pane",
   "block.quin.white_crystal_pane": "White Crystal Pane",
   "block.quin.light_gray_crystal_pane": "Light Gray Crystal Pane",
   "block.quin.gray_crystal_pane": "Gray Crystal Pane",

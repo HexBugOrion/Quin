@@ -3,6 +3,7 @@
   "values": [
     "quin:tree_tap",
 
+    "quin:blast_crystal",
     "quin:white_crystal",
     "quin:light_gray_crystal",
     "quin:gray_crystal",
@@ -20,6 +21,7 @@
     "quin:magenta_crystal",
     "quin:pink_crystal",
 
+    "quin:blast_crystal_pane",
     "quin:white_crystal_pane",
     "quin:light_gray_crystal_pane",
     "quin:gray_crystal_pane",
@@ -36,6 +38,9 @@
     "quin:purple_crystal_pane",
     "quin:magenta_crystal_pane",
     "quin:pink_crystal_pane",
+
+    "quin:blast_glass",
+    "quin:blast_glass_pane",
 
     "quin:oxidized_copper_panel",
     "quin:weathered_copper_panel",
