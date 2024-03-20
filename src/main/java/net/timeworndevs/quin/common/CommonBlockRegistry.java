@@ -160,8 +160,8 @@ public class CommonBlockRegistry {
         ROPE = QuinRegistry.register("rope", new ChainBlock(FabricBlockSettings.of().mapColor(MapColor.OAK_TAN).sounds(BlockSoundGroup.WOOL).noCollision()));
 
         TINTED_CRYSTAL = QuinRegistry.register("tinted_crystal", new TintedGlassBlock(FabricBlockSettings.of().mapColor(MapColor.GRAY).nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS)));
-        WHITE_CRYSTAL = QuinRegistry.register("white_crystal", new StainedGlassBlock(DyeColor.WHITE, FabricBlockSettings.of().mapColor(MapColor.WHITE).nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS).requiresTool()));
         BLAST_CRYSTAL = QuinRegistry.register("blast_crystal", new GlassBlock(FabricBlockSettings.of().mapColor(MapColor.BLACK).nonOpaque().strength(50,1200).sounds(BlockSoundGroup.GLASS).requiresTool().pistonBehavior(PistonBehavior.BLOCK)));
+        WHITE_CRYSTAL = QuinRegistry.register("white_crystal", new StainedGlassBlock(DyeColor.WHITE, FabricBlockSettings.of().mapColor(MapColor.WHITE).nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS).requiresTool()));
         LIGHT_GRAY_CRYSTAL = QuinRegistry.register("light_gray_crystal", new StainedGlassBlock(DyeColor.LIGHT_GRAY, FabricBlockSettings.of().mapColor(MapColor.LIGHT_GRAY).nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS).requiresTool()));
         GRAY_CRYSTAL = QuinRegistry.register("gray_crystal", new StainedGlassBlock(DyeColor.GRAY, FabricBlockSettings.of().mapColor(MapColor.GRAY).nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS).requiresTool()));
         BLACK_CRYSTAL = QuinRegistry.register("black_crystal", new StainedGlassBlock(DyeColor.BLACK, FabricBlockSettings.of().mapColor(MapColor.BLACK).nonOpaque().strength(0.3F).sounds(BlockSoundGroup.GLASS).requiresTool()));
